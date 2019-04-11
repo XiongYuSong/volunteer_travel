@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--[endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>创药网 </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="创药网是服务于新药研发的网络技术平台，面向全国医药中小企业开展对外技术服务和情报服务，提供仪器设施、专业技术服务、寻求项目合作及转让信息，共享药物研发最新科学数据、文献、情报，评估临床前新药研发项目。" />
+    <meta name="keywords" content="创药网,药学,生物,数据库,疾病,STS,药物,情报,医药数据,药物研发,新药研发,技术平台,临床批件转让,新药技术转让,全球药物创新快讯,生物医药决策参考,疾病报告,专利,临床前研究,新药临床前评价,生物医药,热点化合物" />
+    <meta name="author" content="iddds" />
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="images/Iconpic.png" />
+</head>
+
+<body>
+    <!-- preloader Start -->
+    <div id="preloader">
+        <!-- <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader"> -->
+        <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader">
+        </div>
+    </div>
+    <!--top header start-->
+    <div class="top_header_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="top_header_add">
+                        <ul>
+                            <li><i class="fa fa-home" aria-hidden="true"></i> 中国科学院上海药物研究所</li>
+
+                        </ul>
+                    </div>
+                    <div class="top_login">
+                        <ul>
+                            <li><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请<a href="index-login.html">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+                                    href="index-register.html">注册</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header menu wrapper-->
+    <div class="menu_wrapper header-area hidden-menu-bar stick">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+                    <div class="header_logo">
+                        <a href="index.html" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-12">
+                    <nav class="navbar hidden-xs">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse respose_nav" id="bs-example-navbar-collapse-1">
+                            <div class="et_navbar_search_wrapper hidden-xs">
+                                <div class="et_search_bar" id="search_button">
+                                    <a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </div>
+                                <div id="search_open" class="et_search_box">
+                                    <input type="text" placeholder="请输入关键词">
+                                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <ul class="nav navbar-nav" id="nav_filter">
+                                <li><a href="index.html">首页</a></li>
+                                <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">每日药闻 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-mednews-new.html">最新</a></li>
+                                        <li><a href="javascript:void(0);">独家报道</a></li>
+                                        <li><a href="javascript:void(0);">科研动态</a></li>
+                                        <li><a href="javascript:void(0);">行业观察</a></li>
+                                        <li><a href="javascript:void(0);">政策动向</a></li>
+                                        <li><a href="javascript:void(0);">知识产权</a></li>
+                                        <li><a href="javascript:void(0);">专题报道</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">文献荟萃 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-thesisnews-new.html">最新</a></li>
+                                        <li><a href="javascript:void(0);">科研动态</a></li>
+                                        <li><a href="javascript:void(0);">行业观察</a></li>
+                                        <li><a href="javascript:void(0);">政策动向</a></li>
+                                        <li><a href="javascript:void(0);">知识产权</a></li>
+                                        <li><a href="javascript:void(0);">专题报道</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">产品服务 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-intelligence-journal.html">快讯</a></li>
+                                        <li><a href="index-intelligence-booklet.html">报告</a></li>
+                                        <li><a href="javascript:void(0);">决策资讯库</a></li>
+                                        <li><a href="index-newdrug.html">中科院新药数据库</a></li>
+                                        <li><a href="javascript:void(0);">热点化合物</a></li>
+                                        <li><a href="javascript:void(0);">情报服务</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">专家技术 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-expert.html">专家</a></li>
+                                        <li><a href="index-technology.html">仪器技术服务</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                        <!-- /.navbar-collapse -->
+
+                        <!-- /.container-fluid -->
+                    </nav>
+                    <div class="rp_mobail_menu_main_wrapper visible-xs">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="gc_logo logo_hidn">
+                                    <h1><a href="#"><span>创药网</span> IDDDS</a></h1>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div id="toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.177 31.177" style="enable-background:new 0 0 31.177 31.177;"
+                                        xml:space="preserve" width="25px" height="25px">
+                                        <g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sidebar">
+                            <h1>创药网 IDDDS</h1>
+                            <div id="toggle_close">&times;</div>
+                            <div id='cssmenu' class="wd_single_index_menu">
+                                <ul>
+                                    <li><a href='index.html'>首页</a></li>
+                                    <li class='has-sub'><a href="javascript:void(0);">每日药闻</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">最新</a></li>
+                                            <li><a href="javascript:void(0);">独家报道</a></li>
+                                            <li><a href="javascript:void(0);">科研动态</a></li>
+                                            <li><a href="javascript:void(0);">行业观察</a></li>
+                                            <li><a href="javascript:void(0);">政策动向</a></li>
+                                            <li><a href="javascript:void(0);">知识产权</a></li>
+                                            <li><a href="javascript:void(0);">专题报道</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>文献荟萃</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">最新</a></li>
+                                            <li><a href="javascript:void(0);">科研动态</a></li>
+                                            <li><a href="javascript:void(0);">行业观察</a></li>
+                                            <li><a href="javascript:void(0);">政策动向</a></li>
+                                            <li><a href="javascript:void(0);">知识产权</a></li>
+                                            <li><a href="javascript:void(0);">专题报道</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>产品服务</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">快讯</a></li>
+                                            <li><a href="javascript:void(0);">报告</a></li>
+                                            <li><a href="javascript:void(0);">决策资讯库</a></li>
+                                            <li><a href="javascript:void(0);">中科院新药数据库</a></li>
+                                            <li><a href="javascript:void(0);">热点化合物</a></li>
+                                            <li><a href="javascript:void(0);">情报服务</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>专家技术</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">专家</a></li>
+                                            <li><a href="javascript:void(0);">仪器技术服务</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><a href="#">登录 / 注册</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header wrapper end-->
+    <!--med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">首页</a></li>
+                                <li>产品服务</li>
+                                <li>中科院新药数据库</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- med_tittle_section End -->
+    <!--service section start-->
+    <div class="page-container">
+        <div class="container">
+            <div class="row med_toppadder50 med_bottompadder50">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="filter-type-box">
+                       
+                        <dl>
+                            <dt>所属单位：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>   
+                                <span> <a href="javascript:void(0);" >上海药物所</a></span>  
+                                <span> <a href="javascript:void(0);" >昆明动物所</a></span>  
+                                <span> <a href="javascript:void(0);" >成都生物所</a></span>  
+                                <span> <a href="javascript:void(0);" >新疆理化所</a></span>  
+                                <span> <a href="javascript:void(0);" >复旦大学药学院</a></span>  
+                                <span> <a href="javascript:void(0);" >其他单位</a></span>  
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>研究方向：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>   
+                                <span> <a href="javascript:void(0);" >化药</a></span>  
+                                <span> <a href="javascript:void(0);" >中药</a></span>  
+                                <span> <a href="javascript:void(0);" >生物药</a></span>  
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>项目阶段：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>   
+                                <span> <a href="javascript:void(0);" >临床前研究</a></span>  
+                                <span> <a href="javascript:void(0);" >已申报临床</a></span>  
+                                <span> <a href="javascript:void(0);" >已获得临床批件</a></span>  
+                                <span> <a href="javascript:void(0);" >已获得生产批件</a></span>  
+                            </dd>
+                        </dl>
+                        <div class="search-tags text-right">
+                            <form action="" class="form-inline">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" type="button"><i class="fa fa-search"></i> 搜索</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item drug-grid">
+                                <div class="cy-drug-thumbnail pull-left">
+                                    <img src="images/pic-drug01.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <p>名称：盐酸美呋哌瑞</p>
+                                        <p>适应症：恶性肿瘤</p>
+                                        <p>阶段：获得临床批件</p>
+                                        <p>研发机构：中国科学院上海药物研究所</p>
+                                        <p>发布时间：2016-12-23</p>
+                                        <p> 
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-detail" >详细介绍</a>  
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-contact">联系方式</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item drug-grid">
+                                <div class="cy-drug-thumbnail pull-left">
+                                    <img src="images/pic-drug01.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <p>名称：盐酸美呋哌瑞</p>
+                                        <p>适应症：恶性肿瘤</p>
+                                        <p>阶段：获得临床批件</p>
+                                        <p>研发机构：中国科学院上海药物研究所</p>
+                                        <p>发布时间：2016-12-23</p>
+                                        <p> 
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-detail" >详细介绍</a>  
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-contact">联系方式</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item drug-grid">
+                                <div class="cy-drug-thumbnail pull-left">
+                                    <img src="images/pic-drug01.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <p>名称：盐酸美呋哌瑞</p>
+                                        <p>适应症：恶性肿瘤</p>
+                                        <p>阶段：获得临床批件</p>
+                                        <p>研发机构：中国科学院上海药物研究所</p>
+                                        <p>发布时间：2016-12-23</p>
+                                        <p> 
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-detail" >详细介绍</a>  
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-contact">联系方式</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item drug-grid">
+                                <div class="cy-drug-thumbnail pull-left">
+                                    <img src="images/pic-drug01.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <p>名称：盐酸美呋哌瑞</p>
+                                        <p>适应症：恶性肿瘤</p>
+                                        <p>阶段：获得临床批件</p>
+                                        <p>研发机构：中国科学院上海药物研究所</p>
+                                        <p>发布时间：2016-12-23</p>
+                                        <p> 
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-detail" >详细介绍</a>  
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-contact">联系方式</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item drug-grid">
+                                <div class="cy-drug-thumbnail pull-left">
+                                    <img src="images/pic-drug01.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <p>名称：盐酸美呋哌瑞</p>
+                                        <p>适应症：恶性肿瘤</p>
+                                        <p>阶段：获得临床批件</p>
+                                        <p>研发机构：中国科学院上海药物研究所</p>
+                                        <p>发布时间：2016-12-23</p>
+                                        <p> 
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-detail" >详细介绍</a>  
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-contact">联系方式</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item drug-grid">
+                                <div class="cy-drug-thumbnail pull-left">
+                                    <img src="images/pic-drug01.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <p>名称：盐酸美呋哌瑞</p>
+                                        <p>适应症：恶性肿瘤</p>
+                                        <p>阶段：获得临床批件</p>
+                                        <p>研发机构：中国科学院上海药物研究所</p>
+                                        <p>发布时间：2016-12-23</p>
+                                        <p> 
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-detail" >详细介绍</a>  
+                                            <a href="javascript:void(0);" class="btn btn-default btn-sm drug-contact">联系方式</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        
+                        
+                    </div>
+                   
+                   
+                   
+
+                    <div class="page-pagination clearfix">
+                        <div class="pull-left form-control-static">共<b class="text-info">110</b>条记录，每页</div>
+                        <select class="form-control pull-left width-70 input-sm text-center">
+                            <option value="9" selected="">10</option>
+                            <option value="27">20</option>
+                            <option value="36">50</option>
+                            <option value="45">100</option>
+                        </select>
+                        <div class="pull-left form-control-static">条，跳转到第</div>
+                        <input type="text" class="form-control pull-left width-60 input-sm text-center" placeholder="共6页">
+                        <div class="pull-left form-control-static">页</div>
+                        <ul class="pagination pagination-sm pull-right">
+                            <li class="disabled page-item"><a class="page-link" href="javascript:void(0);">
+                                    上一页</a></li>
+                            <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">下一页</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+    <!--service section end-->
+
+
+
+    <!-- ser_footer section start-->
+    <div class="footer_wrapper">
+        <div class="container">
+            <div class="text-center">
+                <p><a href="javascript:void(0);">网站地图</a> | <a href="javascript:void(0);">帮助中心</a> | <a href="javascript:void(0);">联系我们</a>
+                    | <a href="javascript:void(0);">关于平台</a> | <a href="javascript:void(0);">网站维护</a></p>
+                <p>版权所有 ©中国科学院上海药物研究所</p>
+                <p>沪ICP备05005386号-3</p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="up_wrapper">
+                <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--main js files-->
+    <script src="js/jquery_min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="plugins/perfect-scrollbar/perfect-scrollbar.jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!--js code-->
+    <script>
+     $('.filter-type-box span a').click(function () {
+        if ($(this).hasClass('active'))
+            $(this).removeClass('active')
+        else
+            $(this).addClass('active')
+    });
+   
+
+    $(document).ready(function() {
+        $(".drug-detail").popover({
+            placement: 'top',
+            container:'body',
+            html: 'true',
+            title : '<span class="text-info"><strong>详细介绍</strong></span>'+
+                    '<button type="button" id="close" class="close pull-right" onclick="$(&quot;.drug-detail&quot;).popover(&quot;hide&quot;);">&times;</button>',
+            content : '<div data-scroll class="drug-content">'+
+                    '<p>聚腺苷二磷酸核糖聚合酶[Poly(ADP-ribose)polymerase，PARP]是重要的DNA修复酶，也是近年体现肿瘤精准治疗理念的热点药物靶标。2014年AstraZeneca研发的奥拉帕尼(olaparib；AZD2281)同时在欧盟和美国被批准上市用于晚期卵巢癌的治疗，标志着PARP1作为抗肿瘤靶点和协同致死理论的可行性首次在临床确立；2016年Tesaro研制的niraparib和Clovis Oncology研制的rucaparib在晚期卵巢癌III期临床试验中取得巨大成功，进一步巩固了PARP抑制剂在抗肿瘤领域的重要地位。我国至今无同类药物上市。</p>'+
+                      '<p>中国科学院上海药物研究所是我国最早开始PARP新型抑制剂研究开发的单位之一，组建了由杨春皓、缪泽鸿、丁健等组成的优势团队，针对已有PARP抑制剂水溶性差、生物利用度较低、组织分布较少、多数不能透过血脑屏障、制剂欠稳定并存在安全性风险等不足，采用类天然优势结构进行药物设计并开展系列结构优化，最终获得PARP全新抑制剂盐酸美呋哌瑞。盐酸美呋哌瑞的发明专利在中国、欧洲、俄罗斯、美国、日本、加拿大等国家均已获得授权。已于2016年11月29日获国家食品药品监督管理总局颁发临床批件。</p>'+ 
+                      '<p>临床前研究结果显示，盐酸美呋哌瑞安全有效，具有以下特点和优势：</p>'+ 
+                      '<p>1． 原料药优势显著：溶解性好(>35 mg/ml；比奥拉帕尼高350倍以上)；合成工艺简洁高效、快速、易纯化、产品纯度高，环境友好，成本低，稳定性高。</p>'+ 
+                      '<p>2． 制剂优势显著突出：本品拟用临床制剂为普通片剂(不含表面活性剂)，预计服用剂量为隔日一次2~4片，使用方便，临床顺应性高，稳定性好。</p>'+ 
+                      '<p>3． 抗肿瘤作用突出：PARP抑制活性强、选择性高，体内外抗肿瘤作用强：盐酸美呋哌瑞抑制PARP1活性的IC50为3.2 nM，强于抑制PARP家族其它成员活性406倍以上。盐酸美呋哌瑞对BRCA缺陷细胞具有选择性杀伤作用，比对BRCA完善细胞强47~98倍，显著优于奥拉帕尼（约22~26倍）。单独应用时比奥拉帕尼平均强2.6倍，与替莫唑胺、SN38、紫杉醇以及奥沙利铂联合应用时的增敏作用也明显优于奥拉帕尼。</p>'+ 
+                      '<p>4． 片剂药代性质好：在药效学相关剂量范围内，吸收迅速(Tmax: 2~4 h)；在与人代谢特征最相近的动物(猴)，其绝对生物利用度可达100%、血浆消除半衰期t1/2平均为2.5 h、稳态分布容积Vss9.56 L/kg、连续给药5天达稳态、在猴体内无明显蓄积、血浆蛋白结合率低；不是外排转运体P-gp的底物；对主要CYP450酶基本无抑制或诱导作用；组织高分布且易于透过血脑屏障，为神经胶质瘤等脑肿瘤治疗提供了可能；在治疗靶组织如卵巢、胰腺、结肠、子宫中的药物浓度均明显高于血浆中浓度，为其发挥优异的抗肿瘤作用创造了重要条件。</p>'+ 
+                      '<p>5． 安全性与奥拉帕尼相似：作为PARP新抑制剂，盐酸美呋哌瑞与奥拉帕尼的毒性性质和毒性谱相似，常见血液造血系统和胃肠道不良反应，所有药物相关性毒性可逆、停药后均可恢复。</p>'+ 
+                      '<p>以上特性显示盐酸美呋哌瑞成药前景明确且突出，预期临床开发成功率高、风险性小。</p>'+
+                      '</div>', 
+        });
+        $(".drug-contact").popover({
+            placement: 'top',
+            container:'body',
+            html: 'true',
+            title : '<span class="text-info"><strong>联系方式</strong></span>'+
+                    '<button type="button" id="close" class="close pull-right" onclick="$(&quot;.drug-contact&quot;).popover(&quot;hide&quot;);">&times;</button>',
+            content : '<p>联系邮箱: iddds@simm.ac.cn</p>', 
+        });
+    });  
+    </script>
+</body>
+
+</html>

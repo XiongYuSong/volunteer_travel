@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh" xmlns:th="http://www.w3.org/1999/xhtml">
+<!--[endif]-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>xxxxxxxxxxxx </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="xxxxxxxxxxxx"/>
+    <meta name="keywords" content="xxxxxxxxxxxx"/>
+    <meta name="author" content="xxxxxxxxxxxx"/>
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="images/Iconpic.png"/>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="page-wrapper">
+
+        <!-- preloader Start -->
+        <div id="preloader">
+            <!-- <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader"> -->
+            <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader">
+            </div>
+        </div>
+        <!--top header start-->
+        <div class="top_header_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="top_header_add">
+                            <ul>
+                                <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-home"
+                                                                                     aria-hidden="true"></i> 义工旅行 </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top_login">
+                            <ul>
+                                <li><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请<a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+                                        href="javascript:void(0);">注册</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header menu wrapper-->
+        <div class="menu_wrapper header-area hidden-menu-bar stick">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+                        <!--<div class="header_logo">-->
+                            <!--<a href="index.html" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网"-->
+                                                                        <!--class="img-responsive"></a>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-10 col-xs-12">
+                        <nav class="navbar hidden-xs">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#bs-example-navbar-collapse-1"
+                                        aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse respose_nav" id="bs-example-navbar-collapse-1">
+                                <div class="et_navbar_search_wrapper hidden-xs">
+                                    <div class="et_search_bar" id="search_button">
+                                        <a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div id="search_open" class="et_search_box">
+                                        <input type="text" placeholder="请输入关键词">
+                                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                                <ul class="nav navbar-nav" id="nav_filter">
+                                    <li><a th:href="@{/}">首页</a></li>
+                                    <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                            data-toggle="dropdown" role="button"
+                                                            aria-haspopup="true" aria-expanded="false">客栈列表</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                           role="button"
+                                           aria-haspopup="true" aria-expanded="false">旅行游记 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div layout:fragment="content">
+
+        </div>
+        <!-- ser_footer section start-->
+        <div class="footer_wrapper">
+            <div class="container">
+                <div class="text-center">
+                    <p><a href="javascript:void(0);">网站地图</a> | <a href="javascript:void(0);">帮助中心</a> | <a
+                            href="javascript:void(0);">联系我们</a>
+                        | <a href="javascript:void(0);">关于平台</a> | <a href="javascript:void(0);">网站维护</a></p>
+                    <p>版权所有 ©xxxxxxxxxxxx</p>
+                    <p>电话号码：xxxxxxxxxxxx</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="up_wrapper">
+                    <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--main js files-->
+<script src="js/jquery_min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+<!--js code-->
+<script th:inline="javascript" type="text/javascript">
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/vol_travel?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+  #    jdbc:mysql://127.0.0.1:3306/vol_travel?characterEncoding=utf-8&useSSl=falsed
+  jpa:
+    show-sql: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    cache: false
+
+server:
+  servlet:
+    context-path: /travel
+  port: 8765

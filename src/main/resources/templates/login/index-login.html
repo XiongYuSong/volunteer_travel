@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+        layout:decorate="~{base/layout}">
+<div layout:fragment="content">
+    <!--med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <ol class="breadcrumb">
+                                <li><a th:href="@{/}">首页</a></li>
+                                <li>登录</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--service section start-->
+    <div class="page-container">
+        <div class="container">
+            <div class="row med_toppadder50 med_bottompadder50">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3">
+                    <form th:action="@{/login}" method="post" class="cy-form boxed">
+                        <header>欢迎登录</header>
+                        <fieldset>
+                            <section>
+                                <label class="input state-error">
+                                    <i class="icon-append fa fa-user"></i>
+                                    <input required type="email" placeholder="用户名/邮箱地址">
+                                    <b class="tooltip tooltip-bottom-right">输入正确的用户名/邮箱地址</b>
+                                </label>
+                                <div class="note note-error">用户名/邮箱地址错误</div>
+                            </section>
+                            <section>
+                                <label class="input">
+                                    <i class="icon-append fa fa-lock"></i>
+                                    <input required type="password" placeholder="密码">
+                                    <b class="tooltip tooltip-bottom-right">建议使用字母加数字或符号组合</b>
+                                </label>
+                                <div class="note"><a href="index-findpw">忘记密码?</a></div>
+                            </section>
+                            <div class="row">
+                                <section class="col col-md-6">
+                                    <label class="input">
+                                        <i class="icon-append fa fa-key"></i>
+                                        <input required="" type="text" placeholder="验证码">
+                                        <b class="tooltip tooltip-bottom-right">输入验证码</b>
+                                    </label>
+                                </section>
+                                <section class="col col-md-6">
+                                    <label class="input med_toppadder5">
+                                        <img src="images/vcode.jpg">
+                                        <a class="change" href="javascript:void(0);">换一张</a>
+                                    </label>
+                                </section>
+                            </div>
+                            <section>
+                                <label class="checkbox"><input type="checkbox"
+                                                               name="checkbox-inline"><i></i>记住登录信息</label>
+                            </section>
+                        </fieldset>
+                        <footer>
+                            <button type="submit" class="button">登 录</button>
+                        </footer>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--service section end-->
+    <script th:inline="javascript">
+
+    </script>
+</div>
+</html>

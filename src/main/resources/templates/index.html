@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh" xmlns:th="http://www.w3.org/1999/xhtml">
+<!--[endif]-->
+
+<head>
+    <meta charset="utf-8"/>
+    <title>xxxxxxxxxxxx </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description"
+          content="xxxxxxxxxxxx"/>
+    <meta name="keywords"
+          content="xxxxxxxxxxxx"/>
+    <meta name="author" content="iddds"/>
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/linecons.css">
+    <link rel="stylesheet" type="text/css" href="plugins/slider-pro/css/slider-pro.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="images/Iconpic.png"/>
+</head>
+
+<body>
+<!-- preloader Start -->
+<div id="preloader">
+    <!-- <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader"> -->
+    <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader">
+    </div>
+</div>
+<!--top header start-->
+<div class="top_header_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="top_header_add">
+                    <ul>
+                        <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-home"
+                                                                             aria-hidden="true"></i> 义工旅行 </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top_login">
+                    <ul>
+                        <li><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请<a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+                                href="javascript:void(0);">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header menu wrapper-->
+<div class="menu_wrapper header-area hidden-menu-bar stick">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12 wow bounceInDown" data-wow-delay="0.6s">
+                <!--<div class="header_logo">-->
+                <!--<a href="javascript:void(0);" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网"-->
+                <!--class="img-responsive"></a>-->
+                <!--</div>-->
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-10 col-xs-12">
+                <nav class="navbar hidden-xs">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1"
+                                aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse respose_nav" id="bs-example-navbar-collapse-1">
+                        <div class="et_navbar_search_wrapper hidden-xs">
+                            <div class="et_search_bar" id="search_button">
+                                <a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            </div>
+                            <div id="search_open" class="et_search_box">
+                                <input type="text" placeholder="请输入关键词">
+                                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <ul class="nav navbar-nav" id="nav_filter">
+                            <li><a th:href="@{/}">首页</a></li>
+                            <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                    data-toggle="dropdown" role="button"
+                                                    aria-haspopup="true" aria-expanded="false">客栈列表</a>
+                                <!--<ul class="dropdown-menu hovr_nav_tab">-->
+                                <!--<li><a href="index-mednews-new.html">最新</a></li>-->
+                                <!--<li><a href="javascript:void(0);">独家报道</a></li>-->
+                                <!--<li><a href="javascript:void(0);">科研动态</a></li>-->
+                                <!--<li><a href="javascript:void(0);">行业观察</a></li>-->
+                                <!--<li><a href="javascript:void(0);">政策动向</a></li>-->
+                                <!--<li><a href="javascript:void(0);">知识产权</a></li>-->
+                                <!--<li><a href="javascript:void(0);">专题报道</a></li>-->
+                                <!--</ul>-->
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">旅行游记 </a>
+                                <!--<ul class="dropdown-menu hovr_nav_tab">-->
+                                <!--<li><a href="index-thesisnews-new.html">最新</a></li>-->
+                                <!--<li><a href="javascript:void(0);">科研动态</a></li>-->
+                                <!--<li><a href="javascript:void(0);">行业观察</a></li>-->
+                                <!--<li><a href="javascript:void(0);">政策动向</a></li>-->
+                                <!--<li><a href="javascript:void(0);">知识产权</a></li>-->
+                                <!--<li><a href="javascript:void(0);">专题报道</a></li>-->
+                                <!--</ul>-->
+                            </li>
+                            <!--<li class="dropdown">-->
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+                            <!--aria-haspopup="true" aria-expanded="false">产品服务 <i class="fa fa-angle-down"></i></a>-->
+                            <!--<ul class="dropdown-menu hovr_nav_tab">-->
+                            <!--<li><a href="index-intelligence-journal.html">快讯</a></li>-->
+                            <!--<li><a href="index-intelligence-booklet.html">报告</a></li>-->
+                            <!--<li><a href="javascript:void(0);">决策资讯库</a></li>-->
+                            <!--<li><a href="index-newdrug.html">中科院新药数据库</a></li>-->
+                            <!--<li><a href="javascript:void(0);">热点化合物</a></li>-->
+                            <!--<li><a href="javascript:void(0);">情报服务</a></li>-->
+                            <!--</ul>-->
+                            <!--</li>-->
+                            <!--<li class="dropdown">-->
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+                            <!--aria-haspopup="true" aria-expanded="false">专家技术 <i class="fa fa-angle-down"></i></a>-->
+                            <!--<ul class="dropdown-menu hovr_nav_tab">-->
+                            <!--<li><a href="index-expert.html">专家</a></li>-->
+                            <!--<li><a href="index-technology.html">仪器技术服务</a></li>-->
+                            <!--</ul>-->
+                            <!--</li>-->
+
+                        </ul>
+
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                    <!-- /.container-fluid -->
+                </nav>
+                <!--<div class="rp_mobail_menu_main_wrapper visible-xs">-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-6">-->
+                <!--<div class="gc_logo logo_hidn">-->
+                <!--<h1><a href="#"><span>创药网</span> IDDDS</a></h1>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-xs-6">-->
+                <!--<div id="toggle">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
+                <!--version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.177 31.177"-->
+                <!--style="enable-background:new 0 0 31.177 31.177;"-->
+                <!--xml:space="preserve" width="25px" height="25px">-->
+                <!--<g>-->
+                <!--<g>-->
+                <!--<path class="menubar"-->
+                <!--d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z"-->
+                <!--fill="#2ec8a6"/>-->
+                <!--</g>-->
+                <!--<g>-->
+                <!--<path class="menubar"-->
+                <!--d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z"-->
+                <!--fill="#2ec8a6"/>-->
+                <!--</g>-->
+                <!--<g>-->
+                <!--<path class="menubar"-->
+                <!--d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z"-->
+                <!--fill="#2ec8a6"/>-->
+                <!--</g>-->
+                <!--<g>-->
+                <!--<path class="menubar"-->
+                <!--d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z"-->
+                <!--fill="#2ec8a6"/>-->
+                <!--</g>-->
+                <!--<g>-->
+                <!--<path class="menubar"-->
+                <!--d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z"-->
+                <!--fill="#2ec8a6"/>-->
+                <!--</g>-->
+                <!--</g>-->
+                <!--</svg>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--<div id="sidebar">-->
+                <!--<h1>创药网 IDDDS</h1>-->
+                <!--<div id="toggle_close">&times;</div>-->
+                <!--<div id='cssmenu' class="wd_single_index_menu">-->
+                <!--<ul>-->
+                <!--<li><a href='javascript:void(0);'>首页</a></li>-->
+                <!--<li class='has-sub'><a href="javascript:void(0);">每日药闻</a>-->
+                <!--<ul>-->
+                <!--<li><a href="javascript:void(0);">最新</a></li>-->
+                <!--<li><a href="javascript:void(0);">独家报道</a></li>-->
+                <!--<li><a href="javascript:void(0);">科研动态</a></li>-->
+                <!--<li><a href="javascript:void(0);">行业观察</a></li>-->
+                <!--<li><a href="javascript:void(0);">政策动向</a></li>-->
+                <!--<li><a href="javascript:void(0);">知识产权</a></li>-->
+                <!--<li><a href="javascript:void(0);">专题报道</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <!--<li class='has-sub'><a href='javascript:void(0);'>文献荟萃</a>-->
+                <!--<ul>-->
+                <!--<li><a href="javascript:void(0);">最新</a></li>-->
+                <!--<li><a href="javascript:void(0);">科研动态</a></li>-->
+                <!--<li><a href="javascript:void(0);">行业观察</a></li>-->
+                <!--<li><a href="javascript:void(0);">政策动向</a></li>-->
+                <!--<li><a href="javascript:void(0);">知识产权</a></li>-->
+                <!--<li><a href="javascript:void(0);">专题报道</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <!--<li class='has-sub'><a href='javascript:void(0);'>产品服务</a>-->
+                <!--<ul>-->
+                <!--<li><a href="javascript:void(0);">快讯</a></li>-->
+                <!--<li><a href="javascript:void(0);">报告</a></li>-->
+                <!--<li><a href="javascript:void(0);">决策资讯库</a></li>-->
+                <!--<li><a href="javascript:void(0);">中科院新药数据库</a></li>-->
+                <!--<li><a href="javascript:void(0);">热点化合物</a></li>-->
+                <!--<li><a href="javascript:void(0);">情报服务</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <!--<li class='has-sub'><a href='javascript:void(0);'>专家技术</a>-->
+                <!--<ul>-->
+                <!--<li><a href="javascript:void(0);">专家</a></li>-->
+                <!--<li><a href="javascript:void(0);">仪器技术服务</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+
+                <!--<li><a href="#">登录 / 注册</a></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--header wrapper end-->
+<!--slider section-->
+<div class="slider_wrapper">
+    <div class="slider-pro" id="my-slider">
+        <div class="sp-slides">
+
+            <div class="sp-slide">
+                <h3 class="sp-layer sp-black sp-padding hide-small-screen" data-width="80%" data-position="topRight"
+                    data-horizontal="8%" data-vertical="25%" data-show-transition="right" data-hide-transition="up"
+                    data-show-delay="800" data-hide-delay="100">
+                    <span class="title-aaa">义工旅行</span>——呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                    <span class="read-more"><a href="javascript:void(0);">查看更多</a></span>
+                </h3>
+            </div>
+            <div class="sp-slide">
+                <h3 class="sp-layer sp-black sp-padding hide-small-screen" data-width="80%" data-position="topRight"
+                    data-horizontal="8%" data-vertical="25%" data-show-transition="right" data-hide-transition="up"
+                    data-show-delay="800" data-hide-delay="100">
+                    <span class="title-aaa">义工旅行</span>——呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                    <span class="read-more"><a href="javascript:void(0);">查看更多</a></span>
+                </h3>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- slider End -->
+<!--main section start-->
+<div class="main-page-container">
+    <div class="container">
+        <div class="row med_toppadder30">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="cy-title">
+                    <h2>热门客栈</h2>
+                    <div class="pull-right">
+
+                        <div class="main-tabs">
+                            <ul class="nav nav-tabs">
+                                <!--<li class="active">-->
+                                <!--<a href="#c01" data-toggle="tab">最新</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="#c02" data-toggle="tab">独家报道</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="#c03" data-toggle="tab">科研动态</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="#c04" data-toggle="tab">行业观察</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="#c05" data-toggle="tab">政策动向</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="#c06" data-toggle="tab">知识产权</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="#c07" data-toggle="tab">专题报道</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="javascript:void(0);" target="_blank">更多 <i-->
+                                <!--class="fa fa-angle-right"></i></a>-->
+                                <!--</li>-->
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="main-cont">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="c01">
+                            <div id="oc-news" class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="cy-news-post clearfix">
+                                        <div class="entry-image">
+                                            <a href="#"><img class="image_fade" src="images/pic-news01.jpg" alt="Image"></a>
+                                        </div>
+                                        <div class="entry-title">
+                                            <h4><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                                                   title="xxxxxxxxxxxxxxxxxxxxxxxx">888888888888888888888888</a></h4>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-news-post clearfix">
+                                        <div class="entry-image">
+                                            <a href="javascript:void(0);"><img class="image_fade" src="images/pic-news02.jpg" alt="Image"></a>
+                                        </div>
+                                        <div class="entry-title">
+                                            <h4><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                                                   title="xxxxxxxxxxxxxxxxxxxxxxxx">777777777777777777777777</a></h4>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-news-post clearfix">
+                                        <div class="entry-image">
+                                            <a href="javascript:void(0);"><img class="image_fade" src="images/pic-news03.jpg" alt="Image"></a>
+                                        </div>
+                                        <div class="entry-title">
+                                            <h4><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                                                   title="xxxxxxxxxxxxxxxxxxxxxxxx">666666666666666666666666</a></h4>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-news-post clearfix">
+                                        <div class="entry-image">
+                                            <a href="javascript:void(0);"><img class="image_fade" src="images/pic-news04.jpg" alt="Image"></a>
+                                        </div>
+                                        <div class="entry-title">
+                                            <h4><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                                                   title="xxxxxxxxxxxxxxxxxxxxxxxx">555555555555555555555555</a></h4>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-news-post clearfix">
+                                        <div class="entry-image">
+                                            <a href="javascript:void(0);"><img class="image_fade" src="images/pic-news01.jpg" alt="Image"></a>
+                                        </div>
+                                        <div class="entry-title">
+                                            <h4><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                                                   title="xxxxxxxxxxxxxxxxxxxxxxxx">444444444444444444444444</a></h4>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-news-post clearfix">
+                                        <div class="entry-image">
+                                            <a href="javascript:void(0);"><img class="image_fade" src="images/pic-news02.jpg" alt="Image"></a>
+                                        </div>
+                                        <div class="entry-title">
+                                            <h4><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                                                   title="xxxxxxxxxxxxxxxxxxxxxxxx">333333333333333333333333</a></h4>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-news-post clearfix">
+                                        <div class="entry-image">
+                                            <a href="javascript:void(0);"><img class="image_fade" src="images/pic-news03.jpg" alt="Image"></a>
+                                        </div>
+                                        <div class="entry-title">
+                                            <h4><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                                                   title="xxxxxxxxxxxxxxxxxxxxxxxx">222222222222222222222222</a></h4>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-news-post clearfix">
+                                        <div class="entry-image">
+                                            <a href="javascript:void(0);"><img class="image_fade" src="images/pic-news04.jpg" alt="Image"></a>
+                                        </div>
+                                        <div class="entry-title">
+                                            <h4><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                                                   title="xxxxxxxxxxxxxxxxxxxxxxxx">111111111111111111111111</a></h4>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="tab-pane" id="c02">...</div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row med_bottompadder30">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="cy-title">
+                    <h2>旅行游记</h2>
+                    <div class="pull-right">
+
+                        <div class="main-tabs">
+                            <ul class="nav nav-tabs">
+                                <li>
+                                    <a href="javascript:void(0);" target="_blank">更多 <i
+                                            class="fa fa-angle-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="main-cy-thesis">
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                           title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                </ul>
+                <div class="cy-title">
+                    <h2>热门景点</h2>
+                    <div class="pull-right">
+
+                        <div class="main-tabs">
+                            <ul class="nav nav-tabs">
+                                <!--<li class="active">-->
+                                <!--<a href="#cp01" data-toggle="tab">快讯</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="#cp02" data-toggle="tab">报告</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <!--<a href="#cp03" data-toggle="tab">自建数据库</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                <a href="javascript:void(0);" target="_blank">更多 <i
+                                        class="fa fa-angle-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-cont">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="cp01">
+                            <div id="oc-kx" class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="cy-kx-post clearfix">
+                                        <a href="javascript:void(0);">
+                                            <div class="entry-image">
+                                                <img class="image_fade" src="images/pic-kx01.jpg" alt="Image">
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <p>xxxxxxxxxxxx</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-kx-post clearfix">
+                                        <a href="javascript:void(0);">
+                                            <div class="entry-image">
+                                                <img class="image_fade" src="images/pic-kx02.jpg" alt="Image">
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <p>xxxxxxxxxxxx</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-kx-post clearfix">
+                                        <a href="javascript:void(0);">
+                                            <div class="entry-image">
+                                                <img class="image_fade" src="images/pic-kx03.jpg" alt="Image">
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <p>xxxxxxxxxxxx</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-kx-post clearfix">
+                                        <a href="javascript:void(0);">
+                                            <div class="entry-image">
+                                                <img class="image_fade" src="images/pic-kx04.jpg" alt="Image">
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <p>xxxxxxxxxxxx</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-kx-post clearfix">
+                                        <a href="javascript:void(0);">
+                                            <div class="entry-image">
+                                                <img class="image_fade" src="images/pic-kx01.jpg" alt="Image">
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <p>xxxxxxxxxxxx</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-kx-post clearfix">
+                                        <a href="javascript:void(0);">
+                                            <div class="entry-image">
+                                                <img class="image_fade" src="images/pic-kx02.jpg" alt="Image">
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <p>xxxxxxxxxxxx</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-kx-post clearfix">
+                                        <a href="javascript:void(0);">
+                                            <div class="entry-image">
+                                                <img class="image_fade" src="images/pic-kx03.jpg" alt="Image">
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <p>xxxxxxxxxxxx</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="cy-kx-post clearfix">
+                                        <a href="javascript:void(0);">
+                                            <div class="entry-image">
+                                                <img class="image_fade" src="images/pic-kx04.jpg" alt="Image">
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <p>xxxxxxxxxxxx</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- <div class="tab-pane" id="c02">...</div> -->
+                    </div>
+                </div>
+                <div class="cy-title">
+                    <h2>安全中心</h2>
+                </div>
+                <ul class="main-cy-service">
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div>
+                                <i class="li_lab"></i>
+                                <p>xxxxxxxxxxxx</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div>
+                                <i class="li_search"></i>
+                                <p>xxxxxxxxxxxx</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div>
+                                <i class="li_display"></i>
+                                <p>xxxxxxxxxxxx</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div>
+                                <i class="li_news"></i>
+                                <p>xxxxxxxxxxxx</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div>
+                                <i class="li_note"></i>
+                                <p>xxxxxxxxxxxx</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div>
+                                <i class="li_pen"></i>
+                                <p>xxxxxxxxxxxx</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="cy-title">
+                    <h2>订阅信息</h2>
+                </div>
+                <div class="text-center med_toppadder5">
+                    <img src="images/pic-wx-qrcode1.jpg" width="200px" alt="">
+                    <p class="med_toppadder10">请关注微信号</p>
+                </div>
+                <div class="cy-title">
+                    <h2>友情链接</h2>
+                </div>
+                <ul class="cy-link">
+                    <li><a href="javascript:void(0);">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);">xxxxxxxxxxxx</a></li>
+                    <li><a href="javascript:void(0);">xxxxxxxxxxxx</a></li>
+                </ul>
+                <div class="cy-title">
+                    <h2>联系我们</h2>
+                </div>
+                <ul class="cy-contact">
+                    <li><i class="fa fa-map-marker"></i> 地址：xxxxxxxxxxxx</li>
+                    <li><i class="fa fa-compass"></i> 邮编：xxxxxxxxxxxx</li>
+                    <li><i class="fa fa-phone"></i> 电话：xxxxxxxxxxxx</li>
+                    <li><i class="fa fa-envelope"></i> 电子邮箱：xxxxxxxxxxxx</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--main section end-->
+
+
+<!-- ser_footer section start-->
+<div class="footer_wrapper">
+    <div class="container">
+        <div class="text-center">
+            <p><a href="javascript:void(0);">网站地图</a> | <a href="javascript:void(0);">帮助中心</a> | <a
+                    href="javascript:void(0);">联系我们</a>
+                | <a href="javascript:void(0);">关于平台</a> | <a href="javascript:void(0);">网站维护</a></p>
+            <p>版权所有 ©xxxxxxxxxxxx</p>
+            <p>电话号码：xxxxxxxxxxxx</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="up_wrapper">
+            <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>
+<!--main js files-->
+<script src="js/jquery_min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="plugins/slider-pro/js/jquery.sliderPro.min.js"></script>
+<script src="plugins/owlcarousel/js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
+<!--js code-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#my-slider').sliderPro({
+            arrows: true,
+            waitForLayers: true,
+            autoplay: false,
+            fade: true,
+            buttons: false,
+            autoScaleLayers: false,
+            width: 1170,
+            height: 400
+        });
+        $('.image_fade').hover(function () {
+            $(this).filter(':not(:animated)').animate({opacity: 0.8}, 400);
+        }, function () {
+            $(this).animate({opacity: 1}, 400);
+        });
+        $("#oc-news").owlCarousel({
+            margin: 30,
+            nav: true,
+            loop: true,
+            // autoplay:true,
+            // autoplayTimeout:6000,
+            // autoplayHoverPause: true,
+            dots: false,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            responsive: {
+                0: {items: 1},
+                480: {items: 2},
+                768: {items: 3},
+                992: {items: 4}
+            }
+        });
+        $("#oc-kx").owlCarousel({
+            margin: 15,
+            nav: true,
+            loop: true,
+            // autoplay:true,
+            // autoplayTimeout:5000,
+            // autoplayHoverPause: true,
+            dots: false,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            responsive: {
+                0: {items: 1},
+                480: {items: 2},
+                768: {items: 3},
+                992: {items: 4}
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
