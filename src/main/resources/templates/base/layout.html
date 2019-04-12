@@ -12,19 +12,17 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>xxxxxxxxxxxx </title>
+    <title>义工旅行 </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta name="description" content="xxxxxxxxxxxx"/>
-    <meta name="keywords" content="xxxxxxxxxxxx"/>
-    <meta name="author" content="xxxxxxxxxxxx"/>
+    <meta name="description" content="义工旅行"/>
+    <meta name="keywords" content="义工旅行"/>
+    <meta name="author" content="义工旅行"/>
     <!--start theme style -->
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
-    <!-- favicon link-->
-    <link rel="shortcut icon" type="image/icon" href="images/Iconpic.png"/>
 </head>
 <body>
 
@@ -44,7 +42,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="top_header_add">
                             <ul>
-                                <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-home"
+                                <li><a th:href="@{/}"><i class="fa fa-home"
                                                                                      aria-hidden="true"></i> 义工旅行 </a>
                                 </li>
                             </ul>
@@ -52,7 +50,7 @@
                         <div class="top_login">
                             <ul>
                                 <li><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请<a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
-                                        href="javascript:void(0);">注册</a></li>
+                                        th:href="@{/registerUI}">注册</a></li>
                             </ul>
                         </div>
                     </div>

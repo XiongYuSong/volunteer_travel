@@ -18,8 +18,16 @@ public class LoginController {
 
     @RequestMapping("/login")
     public String login(Model model) {
-        String userName = "Xiong";
-        model.addAttribute("userName", userName);
+        return "index";
+    }
+
+    @RequestMapping("/registerUI")
+    public String registerUI() {
+        return "login/index-register";
+    }
+
+    @RequestMapping("/register")
+    public String register(Model model) {
         return "index";
     }
 }
