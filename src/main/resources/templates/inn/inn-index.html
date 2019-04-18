@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+        layout:decorate="~{base/layout}">
+<div layout:fragment="content">
+
+    <!--med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">首页</a></li>
+                                <li>客栈列表</li>
+                                <!--<li>最新</li>-->
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- med_tittle_section End -->
+    <!--service section start-->
+    <div class="page-container">
+        <div class="container">
+            <div class="row med_toppadder50 med_bottompadder50">
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                    <div class="filter-type-box cy-tabs">
+                        <ul class="nav nav-tabs mb-10">
+                            <li class="active">
+                                <a href="javascript:void(0);" ><i class="fa"></i>客栈列表</a>
+                            </li>
+                            <li class="pull-right">
+                                <div class="search-tags">
+                                    <form action="" class="form-inline">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-info" type="button"><i class="fa fa-search"></i> 搜索</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                        <dl>
+                            <dt>国家：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>
+                                <!--<span> <a href="javascript:void(0);" >上海药物所</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >昆明动物所 </a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >成都生物所</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >新疆理化所</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >复旦大学药学院</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >其他单位</a></span>-->
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>城市：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>
+                                <!--<span> <a href="javascript:void(0);" >新药筛选</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >药物代谢</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >药效学评价</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >安全性评价</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >剂型研究</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >药物质量标准研究</a></span>-->
+                                <!--<span> <a href="javascript:void(0);" >工艺研究</a></span>-->
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="cy-news-grid-item">
+                        <div class="cy-news-thumbnail pull-left">
+                            <a href="index-mednews-article-detail.html">
+                                <img src="images/pic-ywnews01.jpg" class="image_fade" alt="">
+                            </a>
+                        </div>
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5><a href="index-mednews-article-detail.html">XXXX景点XXX客栈</a></h5>
+                                <small>XXXXXXXXXXX这里是简介部分XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ...</small>
+                            </div>
+                            <div class="cy-btm-info">
+                                <div class="cy-btm-date">7小时前  XXX用户</div>
+                                <div class="cy-btm-tags"><a href="javascript:void(0);">湖北</a><a href="javascript:void(0);">武汉</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-news-thumbnail pull-left">
+                            <a href="index-mednews-article-detail.html">
+                                <img src="images/pic-ywnews01.jpg" class="image_fade" alt="">
+                            </a>
+                        </div>
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5><a href="index-mednews-article-detail.html">XXXX景点XXX客栈</a></h5>
+                                <small>XXXXXXXXXXX这里是简介部分XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ...</small>
+                            </div>
+                            <div class="cy-btm-info">
+                                <div class="cy-btm-date">7小时前  XXX用户</div>
+                                <div class="cy-btm-tags"><a href="javascript:void(0);">湖北</a><a href="javascript:void(0);">武汉</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-news-thumbnail pull-left">
+                            <a href="index-mednews-article-detail.html">
+                                <img src="images/pic-ywnews01.jpg" class="image_fade" alt="">
+                            </a>
+                        </div>
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5><a href="index-mednews-article-detail.html">XXXX景点XXX客栈</a></h5>
+                                <small>XXXXXXXXXXX这里是简介部分XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ...</small>
+                            </div>
+                            <div class="cy-btm-info">
+                                <div class="cy-btm-date">7小时前  XXX用户</div>
+                                <div class="cy-btm-tags"><a href="javascript:void(0);">湖北</a><a href="javascript:void(0);">武汉</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-pagination clearfix">
+                        <div class="pull-left form-control-static">共<b class="text-info">16</b>条记录，每页</div>
+                        <select class="form-control pull-left width-70 input-sm text-center">
+                            <option value="10" selected="">3</option>
+                            <option value="20">6</option>
+                            <option value="50">15</option>
+                            <option value="100">30</option>
+                        </select>
+                        <div class="pull-left form-control-static">条，跳转到第</div>
+                        <input type="text" class="form-control pull-left width-60 input-sm text-center" placeholder="共6页">
+                        <div class="pull-left form-control-static">页</div>
+                        <ul class="pagination pagination-sm pull-right">
+                            <li class="disabled page-item"><a class="page-link" href="javascript:void(0);">
+                                上一页</a></li>
+                            <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">下一页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="sider-card">
+                        <div class="sider-card-header">
+                            <h3>热门景点</h3>
+                        </div>
+                        <ul class="sider-list-model-a">
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                        </ul>
+                    </div>
+                    <div class="sider-card">
+                        <div class="sider-card-header">
+                            <h3>热门省份</h3>
+                        </div>
+                        <ul class="sider-list-model-b">
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li><a href="javascript:void(0);">XXXX</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--service section end-->
+
+    <!--main js files-->
+    <script src="js/jquery_min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!--js code-->
+    <script>
+        $('.filter-type-box span a').click(function () {
+            if ($(this).hasClass('active'))
+                $(this).removeClass('active')
+            else
+                $(this).addClass('active')
+        });
+
+    </script>
+</div>
+</html>
