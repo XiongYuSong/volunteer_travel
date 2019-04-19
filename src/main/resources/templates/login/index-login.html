@@ -26,21 +26,21 @@
         <div class="container">
             <div class="row med_toppadder50 med_bottompadder50">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3">
-                    <form th:action="@{/login}" method="post" class="cy-form boxed">
+                    <form name="form-submit" id="form-submit" method="post" class="cy-form boxed">
                         <header>欢迎登录</header>
                         <fieldset>
                             <section>
                                 <label class="input state-error">
                                     <i class="icon-append fa fa-user"></i>
-                                    <input required type="email" placeholder="用户名/邮箱地址">
+                                    <input name="username" id="username" type="text" placeholder="用户名/邮箱地址">
                                     <b class="tooltip tooltip-bottom-right">输入正确的用户名/邮箱地址</b>
                                 </label>
-                                <div class="note note-error">用户名/邮箱地址错误</div>
+                                <!--<div class="note note-error">用户名/邮箱地址错误</div>-->
                             </section>
                             <section>
                                 <label class="input">
                                     <i class="icon-append fa fa-lock"></i>
-                                    <input required type="password" placeholder="密码">
+                                    <input name="password" id="password" type="password" placeholder="密码">
                                     <b class="tooltip tooltip-bottom-right">建议使用字母加数字或符号组合</b>
                                 </label>
                                 <div class="note"><a href="index-findpw">忘记密码?</a></div>
@@ -49,7 +49,7 @@
                                 <section class="col col-md-6">
                                     <label class="input">
                                         <i class="icon-append fa fa-key"></i>
-                                        <input required="" type="text" placeholder="验证码">
+                                        <input type="text" placeholder="验证码">
                                         <b class="tooltip tooltip-bottom-right">输入验证码</b>
                                     </label>
                                 </section>
@@ -66,7 +66,7 @@
                             </section>
                         </fieldset>
                         <footer>
-                            <button type="submit" class="button">登 录</button>
+                            <button type="button" onclick="saveForm()" class="button">登 录</button>
                         </footer>
                     </form>
                 </div>
@@ -75,6 +75,34 @@
     </div>
     <!--service section end-->
     <script th:inline="javascript">
+
+        function saveForm() {
+            var username = $("input[name='username']").val();
+            // if ($.trim(username) == '') {
+            //     layer.msg("username不能为空");
+                // return;
+            // }
+            var password = $("input[name='password']").val();
+            console.log()
+            // if ($.trim(password) == '') {
+            //     layer.msg("password不能为空");
+                // return;
+            // }
+            $.ajax({
+                url: '/travel/login',
+                data: $("#form-submit").serialize(),
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code == 200) {
+                        window.location.href = "/travel";
+                    }else {
+                        alert(result.message);
+                    }
+                }
+            })
+        }
+
 
     </script>
 </div>

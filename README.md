@@ -25,3 +25,5 @@
     2. 返回类型响应错误码枚举 ResultCode
     3. 返回类型封装类 ResultGenerator
     4. 抛出异常类 ServiceException
+2. 完成登录功能
+3. 添加工具类，UUID生成
