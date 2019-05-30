@@ -4,11 +4,16 @@ import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.repository.UserRepository;
+import hue.edu.xiong.volunteer_travel.util.CookieUitl;
+import hue.edu.xiong.volunteer_travel.util.IdGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.Transient;
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Enumeration;
 
 /**
  * @Author Xiong YuSong
@@ -37,5 +42,36 @@ public class LoginService {
             }
         }
 
+    }
+
+    public void logout(HttpServletRequest request, HttpServletResponse response) {
+        Cookie cookie = CookieUitl.get(request, "username");
+        if(cookie != null){
+            CookieUitl.set(response,"username",null,0);
+        }
+
+
+//        String value = null;
+//
+//        Cookie[] cookies = request.getCookies();
+//        if (cookies == null){
+//            System.out.println("error");
+//        }else{
+//            for (int i = 0;i<cookies.length;i++){
+//                if(cookies[i].getName().equals("root")){
+//                    value = cookies[i].getValue();
+//                }
+//            }
+//        }
+//
+//        Cookie cookie = new Cookie("username",value);
+//        cookie.setMaxAge(-1);
+    }
+
+    public Result register(User user) {
+        //Todo 这里有一个事务操作
+        user.setId(IdGenerator.id());
+        userRepository.save(user);
+        return ResultGenerator.genSuccessResult();
     }
 }

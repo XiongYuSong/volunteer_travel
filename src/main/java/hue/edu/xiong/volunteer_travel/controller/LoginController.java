@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -28,9 +29,15 @@ public class LoginController {
 
     @RequestMapping("/login")
     @ResponseBody
-    public Result login(Model model, User user , HttpServletResponse response) {
+    public Result login(Model model, User user, HttpServletResponse response) {
+        return loginService.login(user, response);
+    }
 
-        return loginService.login(user,response);
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
+        loginService.logout(request, response);
+        //SpringMVC重定向
+        return "index.html";
     }
 
     @RequestMapping("/registerUI")
@@ -39,7 +46,8 @@ public class LoginController {
     }
 
     @RequestMapping("/register")
-    public String register(Model model) {
-        return "index";
+    @ResponseBody
+    public Result register(Model model, User user) {
+        return loginService.register(user);
     }
 }

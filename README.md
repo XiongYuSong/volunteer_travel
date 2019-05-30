@@ -1,6 +1,4 @@
-# volunteer_travel
-
-## XiongYuSong的互联网+项目，模仿创药网编写
+# travel
 
 ## IDDDS-page-front 包下为项目初始页面(创药网改编)
 
@@ -27,3 +25,8 @@
     4. 抛出异常类 ServiceException
 2. 完成登录功能
 3. 添加工具类，UUID生成
+
+## 2019-5-30 项目完成情况（CZ）
+1. 完成登出功能
+2. 完成注册功能
+
