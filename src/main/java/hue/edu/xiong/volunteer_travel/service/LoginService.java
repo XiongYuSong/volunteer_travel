@@ -6,8 +6,10 @@ import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.repository.UserRepository;
 import hue.edu.xiong.volunteer_travel.util.CookieUitl;
 import hue.edu.xiong.volunteer_travel.util.IdGenerator;
+import org.codehaus.groovy.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.thymeleaf.util.StringUtils;
 
 import javax.persistence.Transient;
 import javax.servlet.http.Cookie;
@@ -69,6 +71,10 @@ public class LoginService {
     }
 
     public Result register(User user) {
+        User userByUsername = userRepository.findUserByUsername(user.getUsername());
+        if(userByUsername != null){
+            return ResultGenerator.genFailResult("用户名重复!");
+        }
         //Todo 这里有一个事务操作
         user.setId(IdGenerator.id());
         userRepository.save(user);

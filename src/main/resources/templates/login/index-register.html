@@ -91,7 +91,7 @@
 
                         <footer>
                             <button type="reset" class="button button-secondary">重 置</button>
-                            <button type="submit" onclick="saveForm()" class="button">注 册</button>
+                            <button type="button" onclick="saveForm()" class="button">注 册</button>
                         </footer>
                     </form>
                 </div>
@@ -102,12 +102,12 @@
     <script th:inline="javascript">
 
         function saveForm() {
-            var username = $("input[name='username']").val();
+            // var username = $("input[name='username']").val();
             // if ($.trim(username) == '') {
             //     layer.msg("username不能为空");
             // return;
             // }
-            var password = $("input[name='password']").val();
+            // var password = $("input[name='password']").val();
             // console.log()
             // if ($.trim(password) == '') {
             //     layer.msg("password不能为空");
@@ -121,9 +121,9 @@
                 success: function (result) {
                     console.log(result);
                     if (result.code == 200) {
-                        // window.location.href = "/travel";
+                        window.location.href = "/travel/loginUI";
                     }else {
-                        // alert(result.message);
+                        alert(result.message);
                     }
                 }
             })
