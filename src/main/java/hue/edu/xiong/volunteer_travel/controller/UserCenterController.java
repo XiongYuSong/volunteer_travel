@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date 2019/6/1
  */
 @Controller
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserCenterController {
 
     @RequestMapping("/centerUI")
