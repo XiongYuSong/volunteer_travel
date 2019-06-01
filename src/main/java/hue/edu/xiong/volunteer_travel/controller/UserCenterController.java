@@ -1,6 +1,8 @@
 package hue.edu.xiong.volunteer_travel.controller;
 
+import hue.edu.xiong.volunteer_travel.model.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -12,7 +14,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserCenterController {
 
     @RequestMapping("/centerUI")
-    public String index(){
+    public String index(Model model) {
+        //1.cookie中取出username(不可能重复的)
+        //2.从数据库中取出user
+        //3.将user放到前端
+        //4.渲染数据
+        User user = new User();
+        user.setUsername("xiognxxxxxxx");
+        user.setPassword("123123123123123");
+        model.addAttribute("user", user);
         return "center/user-center";
     }
 }
