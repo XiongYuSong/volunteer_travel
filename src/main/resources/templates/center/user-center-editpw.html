@@ -3,7 +3,6 @@
         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
         layout:decorate="~{base/layout}">
 <div layout:fragment="content">
-    <!--header wrapper end-->
     <!--med_tittle_section-->
     <div class="med_tittle_section">
         <div class="med_img_overlay"></div>
@@ -13,7 +12,7 @@
                     <div class="med_tittle_cont_wrapper">
                         <div class="med_tittle_cont">
                             <ol class="breadcrumb">
-                                <li><a href="index.html">首页</a></li>
+                                <li><a th:href="@{/}">首页</a></li>
                                 <li>用户中心</li>
                             </ol>
                         </div>
@@ -46,163 +45,39 @@
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane active">
-                                        <form action="#" method="post" class="cy-form">
-
-                                            <fieldset>
-
-                                                <div class="row">
-                                                    <section>
-                                                        <label class="label col col-1">用户名</label>
-                                                        <div class="col col-2">
-                                                            <p class="form-control-static">testmyy</p>
-                                                        </div>
-                                                        <label class="label col col-1">密码(不可修改)</label>
-                                                        <div class="col col-2">
-                                                            <p class="form-control-static"></p>
-                                                        </div>
-
-                                                    </section>
-                                                    <section class="noborder">
-                                                        <label class="label col col-1">姓名</label>
-                                                        <div class="col col-2">
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3">
+                                                <form action="#" method="post" class="cy-form">
+                                                    <fieldset>
+                                                        <section>
                                                             <label class="input">
-                                                                <input name="name" type="text" placeholder="输入姓名">
+                                                                <!-- <em>*</em> -->
+                                                                <i class="icon-append fa fa-lock"></i>
+                                                                <input required type="password" placeholder="旧密码">
+                                                                <b class="tooltip tooltip-bottom-right">请输入旧密码</b>
                                                             </label>
-                                                        </div>
-                                                        <label class="label col col-1">性别</label>
-                                                        <div class="col col-2">
-                                                            <div class="inline-group">
-                                                                <label class="radio"><input type="radio"
-                                                                                            name="radio-inline"><i></i>男</label>
-                                                                <label class="radio"><input type="radio"
-                                                                                            name="radio-inline"><i></i>女</label>
-                                                            </div>
-                                                        </div>
-                                                        <label class="label col col-1">学历</label>
-                                                        <div class="col col-2">
-                                                            <label class="select">
-                                                                <select id="education" name="cmsMember.education">
-                                                                    <option value="不详" selected="selected">不详</option>
-                                                                    <option value="小学">小学</option>
-                                                                    <option value="初中">初中</option>
-                                                                    <option value="高中或中专">高中或中专</option>
-                                                                    <option value="大专或高职">大专或高职</option>
-                                                                    <option value="中师">中师</option>
-                                                                    <option value="本科">本科</option>
-                                                                    <option value="研究生">研究生</option>
-                                                                    <option value="博士研究生">博士研究生</option>
-                                                                    <option value="硕士研究生">硕士研究生</option>
-                                                                </select>
-                                                                <i></i>
-                                                            </label>
-                                                        </div>
-                                                        <label class="label col col-1">学位</label>
-                                                        <div class="col col-2">
-                                                            <label class="select">
-                                                                <select id="degree" name="cmsMember.degree">
-                                                                    <option value="不详">不详</option>
-                                                                    <option value="中专">中专</option>
-                                                                    <option value="中师">中师</option>
-                                                                    <option value="学士">学士</option>
-                                                                    <option value="硕士">硕士</option>
-                                                                    <option value="博士">博士</option>
-                                                                </select>
-                                                                <i></i>
-                                                            </label>
-                                                        </div>
-                                                        <label class="label col col-1">手机</label>
-                                                        <div class="col col-2">
+                                                        </section>
+                                                        <section>
                                                             <label class="input">
-                                                                <input type="text" placeholder="输入手机">
+                                                                <i class="icon-append fa fa-lock"></i>
+                                                                <input required type="password" placeholder="新密码">
+                                                                <b class="tooltip tooltip-bottom-right">请牢记新密码，以免丢失</b>
                                                             </label>
-                                                        </div>
-                                                        <label class="label col col-1">出生年月</label>
-                                                        <div class="col col-2">
+                                                        </section>
+                                                        <section>
                                                             <label class="input">
-                                                                <input type="text" class="datepicker-autoclose"
-                                                                       placeholder="">
-                                                                <div class="picker-pos"></div>
+                                                                <i class="icon-append fa fa-lock"></i>
+                                                                <input required type="password" placeholder="再次输入新密码">
+                                                                <b class="tooltip tooltip-bottom-right">请再次输入新密码</b>
                                                             </label>
-                                                        </div>
-                                                        <label class="label col col-1">电话</label>
-                                                        <div class="col col-2">
-                                                            <label class="input">
-                                                                <input type="text" placeholder="">
-                                                            </label>
-                                                        </div>
-
-                                                    </section>
-                                                    <section class="noborder">
-                                                        <label class="label col col-1">单位</label>
-                                                        <div class="col col-5">
-                                                            <label class="input">
-                                                                <input type="text" placeholder="">
-                                                            </label>
-                                                        </div>
-                                                        <label class="label col col-1">通讯地址</label>
-                                                        <div class="col col-5">
-                                                            <label class="input">
-                                                                <input type="text" placeholder="">
-                                                            </label>
-                                                        </div>
-                                                        <label class="label col col-1">职务</label>
-                                                        <div class="col col-2">
-                                                            <label class="input">
-                                                                <input type="text" placeholder="">
-                                                            </label>
-                                                        </div>
-                                                        <label class="label col col-1">所在地区</label>
-                                                        <div class="col col-2">
-                                                            <label class="select">
-                                                                <select id="location" name="cmsMember.location">
-                                                                    <option value="">--请选择--</option>
-                                                                    <option value="黄浦区">黄浦区</option>
-                                                                    <option value="虹口区">虹口区</option>
-                                                                    <option value="杨浦区">杨浦区</option>
-                                                                    <option value="闸北区">闸北区</option>
-                                                                    <option value="普陀区">普陀区</option>
-                                                                    <option value="长宁区">长宁区</option>
-                                                                    <option value="静安区">静安区</option>
-                                                                    <option value="徐汇区">徐汇区</option>
-                                                                    <option value="浦东新区" selected="selected">浦东新区
-                                                                    </option>
-                                                                    <option value="闵行区">闵行区</option>
-                                                                    <option value="奉贤区">奉贤区</option>
-                                                                    <option value="松江区">松江区</option>
-                                                                    <option value="青浦区">青浦区</option>
-                                                                    <option value="嘉定区">嘉定区</option>
-                                                                    <option value="宝山区">宝山区</option>
-                                                                    <option value="崇明县">崇明县</option>
-                                                                </select>
-                                                                <i></i>
-                                                            </label>
-                                                        </div>
-                                                        <label class="label col col-1">所属人群</label>
-                                                        <div class="col col-2">
-                                                            <label class="select">
-                                                                <select id="throng" name="cmsMember.throng">
-                                                                    <option value="">--请选择--</option>
-                                                                    <option value="科研">科研</option>
-                                                                    <option value="科技管理">科技管理</option>
-                                                                    <option value="技术">技术</option>
-                                                                    <option value="教师">教师</option>
-                                                                    <option value="学生">学生</option>
-                                                                    <option value="其他" selected="selected">其他</option>
-                                                                </select>
-                                                                <i></i>
-                                                            </label>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </fieldset>
-                                            <footer>
-                                                <button type="reset" class="button button-secondary">重 置</button>
-                                                <button type="button" class="button"
-                                                        onclick="javascript:window.open('index-user-center.html','_top');">
-                                                    保存返回
-                                                </button>
-                                            </footer>
-                                        </form>
+                                                        </section>
+                                                    </fieldset>
+                                                    <footer>
+                                                        <button type="button" class="button" onclick="javascript:window.open('index-user-center.html','_top');">保存返回</button>
+                                                    </footer>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -213,18 +88,5 @@
         </div>
     </div>
     <!--service section end-->
-
-
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-            $('.datepicker-autoclose').datepicker({
-                container: '.picker-pos',
-                autoclose: true,
-                language: "zh-CN",
-                format: "yyyy-mm-dd",
-                todayHighlight: true
-            });
-        });
-    </script>
 </div>
 </html>
