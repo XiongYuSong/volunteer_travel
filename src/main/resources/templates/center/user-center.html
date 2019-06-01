@@ -52,11 +52,13 @@
                                                     <section>
                                                         <label class="label col col-1">用户名</label>
                                                         <div class="col col-2">
-                                                            <p class="form-control-static" th:text="${user.username}"></p>
+                                                            <p class="form-control-static"
+                                                               th:text="${user.username}"></p>
                                                         </div>
                                                         <label class="label col col-1">密码</label>
                                                         <div class="col col-2">
-                                                            <p class="form-control-static" th:text="${user.password}"></p>
+                                                            <p class="form-control-static"
+                                                               th:text="${user.password}"></p>
                                                         </div>
                                                         <label class="label col col-1">姓名</label>
                                                         <div class="col col-2">
@@ -122,11 +124,11 @@
                                             </fieldset>
                                             <footer>
                                                 <button type="button" class="button"
-                                                        onclick="javascript:window.open('index-user-center-editpw.html','_top');">
+                                                        onclick="link('centerEditPWUI')">
                                                     修改密码
                                                 </button>
                                                 <button type="button" class="button"
-                                                        onclick="javascript:window.open('index-user-center-edit.html','_top');">
+                                                        onclick="link('centerEditUI')">
                                                     修改信息
                                                 </button>
                                             </footer>
@@ -141,5 +143,10 @@
         </div>
     </div>
     <!--service section end-->
+    <script>
+        function link(url) {
+            window.location.href = "/travel/user/" + url;
+        }
+    </script>
 </div>
 </html>

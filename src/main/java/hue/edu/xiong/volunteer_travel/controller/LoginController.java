@@ -37,7 +37,7 @@ public class LoginController {
     public String logout(HttpServletRequest request, HttpServletResponse response) {
         loginService.logout(request, response);
         //SpringMVC重定向
-        return "index.html";
+        return "redirect:/";
     }
 
     @RequestMapping("/registerUI")

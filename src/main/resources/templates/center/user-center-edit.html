@@ -47,7 +47,7 @@
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane active">
-                                        <form action="#" method="post" class="cy-form">
+                                        <form action="#" id="form-submit" name="form-submit" method="post" class="cy-form">
                                             <fieldset>
                                                 <div class="row">
                                                     <input type="hidden" name="id" th:value="${user.id}">
@@ -203,7 +203,7 @@
                                             <footer>
                                                 <button type="reset" class="button button-secondary">重 置</button>
                                                 <button type="button" class="button"
-                                                        onclick="javascript:window.open('index-user-center.html','_top');">
+                                                        onclick="saveForm()">
                                                     保存返回
                                                 </button>
                                             </footer>
@@ -221,15 +221,21 @@
 
 
     <script type="text/javascript">
-        jQuery(document).ready(function () {
-            $('.datepicker-autoclose').datepicker({
-                container: '.picker-pos',
-                autoclose: true,
-                language: "zh-CN",
-                format: "yyyy-mm-dd",
-                todayHighlight: true
-            });
-        });
+        function saveForm() {
+            $.ajax({
+                url: '/travel/user/centerEdit',
+                data: $("#form-submit").serialize(),
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code == 200) {
+                        window.location.href = "/travel/user/centerUI";
+                    }else {
+                        alert(result.message);
+                    }
+                }
+            })
+        }
     </script>
 
 </div>
