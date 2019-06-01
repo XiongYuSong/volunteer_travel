@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]>&lt;!&ndash;!-->
+<html lang="zh" xmlns:th="http://www.w3.org/1999/xhtml">
+<!--[endif] -->
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+
+<head>
+    <meta charset="UTF-8">
+    <title>明阳旅行后端管理系统</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style2.css}"/>
+</head>
+<body>
+
+<div id="wrapper" class="toggled">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    导航栏
+                </a>
+            </li>
+            <li class="dropdown open">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
+                        class="fa fa-fw fa-plus"></i> xxxxxxx <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">操作</li>
+                    <li><a href="/sell/seller/product/list">xx</a></li>
+                    <li><a href="/sell/seller/product/index">xx</a></li>
+                </ul>
+            </li>
+            <li class="dropdown open">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
+                        class="fa fa-fw fa-plus"></i> 类目 <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">操作</li>
+                    <li><a href="/sell/seller/category/list">xx</a></li>
+                    <li><a href="/sell/seller/category/index">xx</a></li>
+                </ul>
+            </li>
+            <li>
+                <a th:href="@{/system/logout}"><i class="fa fa-fw fa-list-alt"></i> 登出</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <h3 class="text-center">
+                明阳旅行后端管理系统
+            </h3>
+        </div>
+    </div>
+    <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+    <!--预留填充模块-->
+    <div layout:fragment="content">
+
+    </div>
+
+</div>
+<!--js code-->
+<script th:inline="javascript" type="text/javascript">
+</script>
+</body>
+</html>
