@@ -18,15 +18,15 @@
     <meta name="keywords" content="明阳旅行"/>
     <meta name="author" content="明阳旅行"/>
     <!--start theme style -->
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/linecons.css">
-    <link rel="stylesheet" type="text/css" href="plugins/slider-pro/css/slider-pro.min.css">
-    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/css/owl.theme.default.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/linecons.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/plugins/slider-pro/css/slider-pro.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/plugins/owlcarousel/css/owl.carousel.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/plugins/owlcarousel/css/owl.theme.default.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/responsive.css}"/>
 </head>
 <body>
 
@@ -36,7 +36,7 @@
         <!-- preloader Start 加载动画 -->
         <div id="preloader">
             <!-- <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader"> -->
-            <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader">
+            <div id="status"><img th:src="@{images/preloader.gif}" id="preloader_image" alt="loader">
             </div>
         </div>
         <!--top header start 项目头部 -->
@@ -57,7 +57,7 @@
                                         th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
                                         th:href="@{/registerUI}">注册</a></li>
                                 <li id="logout"><i class="fa fa-sign-in"></i> 你好，<a id="yonghuming"
-                                                                                    href="Javascript:void(0)"></a>&nbsp;&nbsp;<a
+                                                                                    th:href="@{/user/centerUI}"></a>&nbsp;&nbsp;<a
                                         th:href="@{/logout}">退出</a>
                                 </li>
                             </ul>
@@ -103,10 +103,17 @@
                                 </div>
                                 <ul class="nav navbar-nav" id="nav_filter">
                                     <li><a th:href="@{/}">首页</a></li>
-                                    <li class="dropdown"><a th:href="@{/innIndexUI}">客栈列表</a>
+                                    <li class="dropdown">
+                                        <a th:href="@{/innIndexUI}">客栈列表</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="javascript:void(0);">旅行游记 </a>
+                                        <a th:href="@{/innIndexUI}">旅行攻略 </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a th:href="@{/innIndexUI}">在线预订 </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a th:href="@{/innIndexUI}">旅游路线管理 </a>
                                     </li>
                                 </ul>
                             </div>
@@ -140,13 +147,13 @@
     </div>
 </div>
 <!--main js files 所有可能用到的js-->
-<script src="js/jquery_min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="plugins/slider-pro/js/jquery.sliderPro.min.js"></script>
-<script src="plugins/owlcarousel/js/owl.carousel.min.js"></script>
-<script src="layer/layer.js"></script>
+<script th:src="@{/js/jquery_min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/wow.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+<script th:src="@{/plugins/slider-pro/js/jquery.sliderPro.min.js}"></script>
+<script th:src="@{/plugins/owlcarousel/js/owl.carousel.min.js}"></script>
+<script th:src="@{/layer/layer.js}"></script>
 <!--js code-->
 <script th:inline="javascript" type="text/javascript">
 
