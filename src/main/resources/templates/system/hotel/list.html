@@ -7,95 +7,27 @@
     <div class="container">
         <h1>酒店管理</h1>
         <div class="row clearfix">
+            <form name="search-form" class="form-inline m-b-10 clearfix" th:action="@{/system/hotelListUI}"
+                  id="search-form">
+            </form>
             <div class="col-md-12 column">
                 <table class="table table-hover table-condensed">
                     <thead>
                     <tr>
-                        <th>
-                            编号
-                        </th>
-                        <th>
-                            产品
-                        </th>
-                        <th>
-                            交付时间
-                        </th>
-                        <th>
-                            状态
-                        </th>
+                        <th>name</th>
+                        <th>image</th>
+                        <th>describe</th>
+                        <th width="100px">操作</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            01/04/2012
-                        </td>
-                        <td>
-                            Default
-                        </td>
+                    <tr th:each="hotel:${page.content}">
+                        <td th:text="${hotel.name}"></td>
+                        <td th:text="${hotel.image}"></td>
+                        <td th:text="${hotel.describe}"></td>
+                        <td th:text="${hotel.id}"></td>
                     </tr>
-                    <tr class="success">
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            01/04/2012
-                        </td>
-                        <td>
-                            Approved
-                        </td>
-                    </tr>
-                    <tr class="error">
-                        <td>
-                            2
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            02/04/2012
-                        </td>
-                        <td>
-                            Declined
-                        </td>
-                    </tr>
-                    <tr class="warning">
-                        <td>
-                            3
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            03/04/2012
-                        </td>
-                        <td>
-                            Pending
-                        </td>
-                    </tr>
-                    <tr class="info">
-                        <td>
-                            4
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            04/04/2012
-                        </td>
-                        <td>
-                            Call in to confirm
-                        </td>
-                    </tr>
+
                     </tbody>
                 </table>
             </div>

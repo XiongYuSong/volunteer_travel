@@ -1,6 +1,7 @@
 package hue.edu.xiong.volunteer_travel.controller;
 
 import hue.edu.xiong.volunteer_travel.core.Result;
+import hue.edu.xiong.volunteer_travel.model.Hotel;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.Holder;
 
 /**
  * @Author Xiong YuSong
@@ -42,7 +44,7 @@ public class SystemController {
 
     @RequestMapping("/hotelListUI")
     public String hotelListUI(Model model, @PageableDefault(size = 10) Pageable pageable) {
-        Page<User> page = systemService.getUserPage(pageable);
+        Page<Hotel> page = systemService.getHotelPage(pageable);
         model.addAttribute("page", page);
         return "system/hotel/list";
     }
