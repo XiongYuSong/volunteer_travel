@@ -4,6 +4,9 @@ import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,9 +39,11 @@ public class SystemController {
     public String logout() {
         return "system/base/layout";
     }
-//    @RequestMapping("/login")
-//    @ResponseBody
-//    public Result login(Model model, User user, HttpServletResponse response) {
-//        return systemService.login(user, response);
-//    }
+
+    @RequestMapping("/hotelListUI")
+    public String hotelListUI(Model model, @PageableDefault(size = 10) Pageable pageable) {
+        Page<User> page = systemService.getUserPage(pageable);
+        model.addAttribute("page", page);
+        return "system/hotel/list";
+    }
 }
