@@ -53,27 +53,31 @@
                                                             <label class="input">
                                                                 <!-- <em>*</em> -->
                                                                 <i class="icon-append fa fa-lock"></i>
-                                                                <input required type="password" placeholder="旧密码">
+                                                                <input required name="oldPassword" type="password"
+                                                                       placeholder="旧密码">
                                                                 <b class="tooltip tooltip-bottom-right">请输入旧密码</b>
                                                             </label>
                                                         </section>
                                                         <section>
                                                             <label class="input">
                                                                 <i class="icon-append fa fa-lock"></i>
-                                                                <input required type="password" placeholder="新密码">
+                                                                <input required name="password" type="password"
+                                                                       placeholder="新密码">
                                                                 <b class="tooltip tooltip-bottom-right">请牢记新密码，以免丢失</b>
                                                             </label>
                                                         </section>
                                                         <section>
                                                             <label class="input">
                                                                 <i class="icon-append fa fa-lock"></i>
-                                                                <input required type="password" placeholder="再次输入新密码">
+                                                                <input required name="newPassword" type="password"
+                                                                       placeholder="再次输入新密码">
                                                                 <b class="tooltip tooltip-bottom-right">请再次输入新密码</b>
                                                             </label>
                                                         </section>
                                                     </fieldset>
                                                     <footer>
-                                                        <button type="button" class="button" onclick="javascript:window.open('index-user-center.html','_top');">保存返回</button>
+                                                        <button type="button" class="button" onclick="saveForm()">保存返回
+                                                        </button>
                                                     </footer>
                                                 </form>
                                             </div>
@@ -88,5 +92,37 @@
         </div>
     </div>
     <!--service section end-->
+    <!--service section end-->
+    <script th:inline="javascript">
+
+        function saveForm() {
+
+            var oldPassword = $("input[ name='oldPassword' ] ").val();
+            var password = $("input[ name='password' ] ").val();
+            var newPassword = $("input[ name='newPassword' ] ").val();
+
+            if (password !== newPassword) {
+                alert("新密码两次输入不一样!");
+                return;
+            }
+            var id = [[${id}]];
+            console.log(id);
+            $.ajax({
+                url: '/travel/user/centerEditPW',
+                data: {"id": id, "oldPassword": oldPassword, "newPassword": newPassword},
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code === 200) {
+                        confirm("修改成功,请重新登录!"); //在页面上弹出对话框
+                        window.location.href = "/travel/loginUI";
+                    } else {
+                        alert(result.message);
+                    }
+                }
+            })
+        }
+    </script>
 </div>
+
 </html>

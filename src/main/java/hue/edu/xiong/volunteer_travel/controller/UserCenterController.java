@@ -8,10 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @Author Xiong YuSong
@@ -26,22 +28,14 @@ public class UserCenterController {
 
     @RequestMapping("/centerUI")
     public String centerUI(Model model, HttpServletRequest request) {
-        Cookie cookie = CookieUitl.get(request, "username");
-        User user = null;
-        if (cookie != null) {
-            user = userCenterService.getUser(cookie.getValue());
-        }
+        User user = userCenterService.getUser(request);
         model.addAttribute("user", user);
         return "center/user-center";
     }
 
     @RequestMapping("/centerEditUI")
     public String centerEditUI(Model model, HttpServletRequest request) {
-        Cookie cookie = CookieUitl.get(request, "username");
-        User user = null;
-        if (cookie != null) {
-            user = userCenterService.getUser(cookie.getValue());
-        }
+        User user = userCenterService.getUser(request);
         model.addAttribute("user", user);
         return "center/user-center-edit";
     }
@@ -53,9 +47,15 @@ public class UserCenterController {
     }
 
     @RequestMapping("/centerEditPWUI")
-    public String centerEditPWUI(Model model) {
-        User user = new User();
+    public String centerEditPWUI(Model model, HttpServletRequest request) {
+        User user = userCenterService.getUser(request);
         model.addAttribute("id", user.getId());
         return "center/user-center-editpw";
+    }
+
+    @RequestMapping("/centerEditPW")
+    @ResponseBody
+    public Result centerEditPW(HttpServletRequest request, HttpServletResponse response, Model model, @RequestParam("id") String id, @RequestParam("oldPassword") String oldPassword, @RequestParam("newPassword") String newPassword) {
+        return userCenterService.centerEditPW(request, response, id, oldPassword, newPassword);
     }
 }

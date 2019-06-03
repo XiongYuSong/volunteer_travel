@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 02/06/2019 19:38:29
+ Date: 03/06/2019 22:22:53
 */
 
 SET NAMES utf8mb4;
@@ -26,42 +26,43 @@ CREATE TABLE `attractions`  (
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `status` int(2) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of attractions
 -- ----------------------------
-INSERT INTO `attractions` VALUES ('1', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('10', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('11', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('12', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('13', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('14', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('15', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('16', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('17', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('18', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('19', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('2', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('20', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('21', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('22', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('23', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('24', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('25', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('26', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('27', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('28', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('29', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('3', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('30', NULL, NULL, NULL);
-INSERT INTO `attractions` VALUES ('4', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('5', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('6', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('7', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('8', NULL, 'text1', NULL);
-INSERT INTO `attractions` VALUES ('9', NULL, 'text1', NULL);
+INSERT INTO `attractions` VALUES ('1', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('10', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('11', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('12', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('13', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('14', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('15', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('16', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('17', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('18', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('19', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('2', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('20', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('21', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('22', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('23', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('24', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('25', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('26', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('27', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('28', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('29', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('3', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('30', NULL, NULL, NULL, 0);
+INSERT INTO `attractions` VALUES ('4', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('5', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('6', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('7', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('8', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('9', NULL, 'text1', NULL, 0);
 
 -- ----------------------------
 -- Table structure for hotel
@@ -72,42 +73,59 @@ CREATE TABLE `hotel`  (
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `status` int(2) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of hotel
 -- ----------------------------
-INSERT INTO `hotel` VALUES ('1', NULL, 'test1', 'test1');
-INSERT INTO `hotel` VALUES ('10', NULL, 'test10', 'test10');
-INSERT INTO `hotel` VALUES ('11', NULL, 'test11', 'test11');
-INSERT INTO `hotel` VALUES ('12', NULL, 'test12', 'test12');
-INSERT INTO `hotel` VALUES ('13', NULL, 'test13', 'test13');
-INSERT INTO `hotel` VALUES ('14', NULL, 'test14', 'test14');
-INSERT INTO `hotel` VALUES ('15', NULL, 'test15', 'test15');
-INSERT INTO `hotel` VALUES ('16', NULL, 'test16', 'test16');
-INSERT INTO `hotel` VALUES ('17', NULL, 'test17', 'test17');
-INSERT INTO `hotel` VALUES ('18', NULL, 'test18', 'test18');
-INSERT INTO `hotel` VALUES ('19', NULL, 'test19', 'test19');
-INSERT INTO `hotel` VALUES ('2', NULL, 'test2', 'test2');
-INSERT INTO `hotel` VALUES ('20', NULL, 'test20', 'test20');
-INSERT INTO `hotel` VALUES ('21', NULL, 'test21', 'test21');
-INSERT INTO `hotel` VALUES ('22', NULL, 'test22', 'test22');
-INSERT INTO `hotel` VALUES ('23', NULL, 'tes23', 'tes23');
-INSERT INTO `hotel` VALUES ('24', NULL, 'test24', 'test24');
-INSERT INTO `hotel` VALUES ('25', NULL, 'test25', 'test25');
-INSERT INTO `hotel` VALUES ('26', NULL, 'test26', 'test26');
-INSERT INTO `hotel` VALUES ('27', NULL, 'test27', 'test27');
-INSERT INTO `hotel` VALUES ('28', NULL, 'test28', 'test28');
-INSERT INTO `hotel` VALUES ('29', NULL, 'test29', 'test29');
-INSERT INTO `hotel` VALUES ('3', NULL, 'test3', 'test3');
-INSERT INTO `hotel` VALUES ('30', NULL, 'test30', 'test30');
-INSERT INTO `hotel` VALUES ('4', NULL, 'test4', 'test4');
-INSERT INTO `hotel` VALUES ('5', NULL, 'test5', 'test5');
-INSERT INTO `hotel` VALUES ('6', NULL, 'test6', 'test6');
-INSERT INTO `hotel` VALUES ('7', NULL, 'test7', 'test7');
-INSERT INTO `hotel` VALUES ('8', NULL, 'test8', 'test8');
-INSERT INTO `hotel` VALUES ('9', NULL, 'test9', 'test9');
+INSERT INTO `hotel` VALUES ('1', NULL, 'test1', 'test1', 0);
+INSERT INTO `hotel` VALUES ('10', NULL, 'test10', 'test10', 0);
+INSERT INTO `hotel` VALUES ('11', NULL, 'test11', 'test11', 0);
+INSERT INTO `hotel` VALUES ('12', NULL, 'test12', 'test12', 0);
+INSERT INTO `hotel` VALUES ('13', NULL, 'test13', 'test13', 0);
+INSERT INTO `hotel` VALUES ('14', NULL, 'test14', 'test14', 0);
+INSERT INTO `hotel` VALUES ('15', NULL, 'test15', 'test15', 0);
+INSERT INTO `hotel` VALUES ('16', NULL, 'test16', 'test16', 0);
+INSERT INTO `hotel` VALUES ('17', NULL, 'test17', 'test17', 0);
+INSERT INTO `hotel` VALUES ('18', NULL, 'test18', 'test18', 0);
+INSERT INTO `hotel` VALUES ('19', NULL, 'test19', 'test19', 0);
+INSERT INTO `hotel` VALUES ('2', NULL, 'test2', 'test2', 0);
+INSERT INTO `hotel` VALUES ('20', NULL, 'test20', 'test20', 0);
+INSERT INTO `hotel` VALUES ('21', NULL, 'test21', 'test21', 0);
+INSERT INTO `hotel` VALUES ('22', NULL, 'test22', 'test22', 0);
+INSERT INTO `hotel` VALUES ('23', NULL, 'tes23', 'tes23', 0);
+INSERT INTO `hotel` VALUES ('24', NULL, 'test24', 'test24', 0);
+INSERT INTO `hotel` VALUES ('25', NULL, 'test25', 'test25', 0);
+INSERT INTO `hotel` VALUES ('26', NULL, 'test26', 'test26', 0);
+INSERT INTO `hotel` VALUES ('27', NULL, 'test27', 'test27', 0);
+INSERT INTO `hotel` VALUES ('28', NULL, 'test28', 'test28', 0);
+INSERT INTO `hotel` VALUES ('29', NULL, 'test29', 'test29', 0);
+INSERT INTO `hotel` VALUES ('3', NULL, 'test3', 'test3', 0);
+INSERT INTO `hotel` VALUES ('30', NULL, 'test30', 'test30', 0);
+INSERT INTO `hotel` VALUES ('4', NULL, 'test4', 'test4', 0);
+INSERT INTO `hotel` VALUES ('5', NULL, 'test5', 'test5', 0);
+INSERT INTO `hotel` VALUES ('6', NULL, 'test6', 'test6', 0);
+INSERT INTO `hotel` VALUES ('7', NULL, 'test7', 'test7', 0);
+INSERT INTO `hotel` VALUES ('8', NULL, 'test8', 'test8', 0);
+INSERT INTO `hotel` VALUES ('9', NULL, 'test9', 'test9', 0);
+
+-- ----------------------------
+-- Table structure for sys_user
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_user`;
+CREATE TABLE `sys_user`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1236 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of sys_user
+-- ----------------------------
+INSERT INTO `sys_user` VALUES (1, 'admin', 'admin');
 
 -- ----------------------------
 -- Table structure for user
@@ -124,7 +142,7 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('123123123', 'root', '123456', 'admin');
+INSERT INTO `user` VALUES ('123123123', 'root', '1234', 'admin');
 
 -- ----------------------------
 -- Table structure for user_attractions
