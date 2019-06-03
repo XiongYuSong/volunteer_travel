@@ -29,6 +29,14 @@
             </li>
             <li class="dropdown open">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
+                        class="fa fa-fw fa-plus"></i> 用户模块 <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">操作</li>
+                    <li><a th:href="@{/system/userListUI}">用户管理</a></li>
+                </ul>
+            </li>
+            <li class="dropdown open">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
                         class="fa fa-fw fa-plus"></i> xxxxxxx <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">操作</li>
@@ -58,7 +66,7 @@
             </h3>
         </div>
     </div>
-    <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+    <hr style="height:1px;border:none;border-top:1px solid #555555;"/>
     <!--预留填充模块-->
     <div layout:fragment="content">
 

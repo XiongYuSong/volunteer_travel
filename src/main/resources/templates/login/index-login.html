@@ -77,17 +77,6 @@
     <script th:inline="javascript">
 
         function saveForm() {
-            var username = $("input[name='username']").val();
-            // if ($.trim(username) == '') {
-            //     layer.msg("username不能为空");
-                // return;
-            // }
-            var password = $("input[name='password']").val();
-            console.log()
-            // if ($.trim(password) == '') {
-            //     layer.msg("password不能为空");
-                // return;
-            // }
             $.ajax({
                 url: '/travel/login',
                 data: $("#form-submit").serialize(),

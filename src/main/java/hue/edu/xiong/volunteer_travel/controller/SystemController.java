@@ -35,7 +35,7 @@ public class SystemController {
     @RequestMapping("/login")
     public String login() {
         return "system/user/list";
-    }
+}
 
     @RequestMapping("/logout")
     public String logout() {
