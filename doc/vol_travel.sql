@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 03/06/2019 22:22:53
+ Date: 04/06/2019 20:02:31
 */
 
 SET NAMES utf8mb4;
@@ -24,45 +24,47 @@ DROP TABLE IF EXISTS `attractions`;
 CREATE TABLE `attractions`  (
   `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `status` int(2) NOT NULL DEFAULT 0,
+  `attractions_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `attractions_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `attractions_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `attractions_status` int(2) DEFAULT 0,
+  `create_date` datetime(0) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of attractions
 -- ----------------------------
-INSERT INTO `attractions` VALUES ('1', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('10', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('11', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('12', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('13', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('14', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('15', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('16', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('17', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('18', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('19', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('2', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('20', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('21', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('22', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('23', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('24', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('25', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('26', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('27', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('28', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('29', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('3', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('30', NULL, NULL, NULL, 0);
-INSERT INTO `attractions` VALUES ('4', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('5', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('6', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('7', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('8', NULL, 'text1', NULL, 0);
-INSERT INTO `attractions` VALUES ('9', NULL, 'text1', NULL, 0);
+INSERT INTO `attractions` VALUES ('1', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('10', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('11', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('12', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('13', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('14', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('15', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('16', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('17', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('18', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('19', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('2', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('20', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('21', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('22', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('23', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('24', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('25', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('26', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('27', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('28', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('29', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('3', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('30', NULL, NULL, NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('4', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('5', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('6', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('7', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('8', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
+INSERT INTO `attractions` VALUES ('9', NULL, 'text1', NULL, NULL, 0, '2019-06-04 20:00:09');
 
 -- ----------------------------
 -- Table structure for hotel
@@ -70,46 +72,53 @@ INSERT INTO `attractions` VALUES ('9', NULL, 'text1', NULL, 0);
 DROP TABLE IF EXISTS `hotel`;
 CREATE TABLE `hotel`  (
   `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `status` int(2) NOT NULL DEFAULT 0,
+  `hotel_image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `hotel_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `hotel_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `hotel_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `hotel_status` int(2) DEFAULT 0,
+  `create_date` datetime(0) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of hotel
 -- ----------------------------
-INSERT INTO `hotel` VALUES ('1', NULL, 'test1', 'test1', 0);
-INSERT INTO `hotel` VALUES ('10', NULL, 'test10', 'test10', 0);
-INSERT INTO `hotel` VALUES ('11', NULL, 'test11', 'test11', 0);
-INSERT INTO `hotel` VALUES ('12', NULL, 'test12', 'test12', 0);
-INSERT INTO `hotel` VALUES ('13', NULL, 'test13', 'test13', 0);
-INSERT INTO `hotel` VALUES ('14', NULL, 'test14', 'test14', 0);
-INSERT INTO `hotel` VALUES ('15', NULL, 'test15', 'test15', 0);
-INSERT INTO `hotel` VALUES ('16', NULL, 'test16', 'test16', 0);
-INSERT INTO `hotel` VALUES ('17', NULL, 'test17', 'test17', 0);
-INSERT INTO `hotel` VALUES ('18', NULL, 'test18', 'test18', 0);
-INSERT INTO `hotel` VALUES ('19', NULL, 'test19', 'test19', 0);
-INSERT INTO `hotel` VALUES ('2', NULL, 'test2', 'test2', 0);
-INSERT INTO `hotel` VALUES ('20', NULL, 'test20', 'test20', 0);
-INSERT INTO `hotel` VALUES ('21', NULL, 'test21', 'test21', 0);
-INSERT INTO `hotel` VALUES ('22', NULL, 'test22', 'test22', 0);
-INSERT INTO `hotel` VALUES ('23', NULL, 'tes23', 'tes23', 0);
-INSERT INTO `hotel` VALUES ('24', NULL, 'test24', 'test24', 0);
-INSERT INTO `hotel` VALUES ('25', NULL, 'test25', 'test25', 0);
-INSERT INTO `hotel` VALUES ('26', NULL, 'test26', 'test26', 0);
-INSERT INTO `hotel` VALUES ('27', NULL, 'test27', 'test27', 0);
-INSERT INTO `hotel` VALUES ('28', NULL, 'test28', 'test28', 0);
-INSERT INTO `hotel` VALUES ('29', NULL, 'test29', 'test29', 0);
-INSERT INTO `hotel` VALUES ('3', NULL, 'test3', 'test3', 0);
-INSERT INTO `hotel` VALUES ('30', NULL, 'test30', 'test30', 0);
-INSERT INTO `hotel` VALUES ('4', NULL, 'test4', 'test4', 0);
-INSERT INTO `hotel` VALUES ('5', NULL, 'test5', 'test5', 0);
-INSERT INTO `hotel` VALUES ('6', NULL, 'test6', 'test6', 0);
-INSERT INTO `hotel` VALUES ('7', NULL, 'test7', 'test7', 0);
-INSERT INTO `hotel` VALUES ('8', NULL, 'test8', 'test8', 0);
-INSERT INTO `hotel` VALUES ('9', NULL, 'test9', 'test9', 0);
+INSERT INTO `hotel` VALUES ('1', '', '吉安国际酒店111', '吉安县城庐陵大道庐陵广场111', '酒店功能完善，设有包括总统套房、豪华商务套房等各色客房297间，酒店拥有中餐厅、西餐厅、韩国餐厅、火锅餐厅四个不同风味的餐饮场所，就餐总座位数1600余位，另设有可接待500人的宴会厅、可容纳400人的国际会议中心以及夜总会、spa桑拿及足道、露天泳池、健身中心和网球场，可为宾客提供各式全新五星水准的酒店住宿、饮食、宴会、会议、康体和娱乐一体化的服务。另500多个车位的大型停车场，为宾客的出行提供了更多的便利。', 0, '2019-06-05 19:36:37');
+INSERT INTO `hotel` VALUES ('10', '', 'test10', '21312321312312', 'test10123123123', 0, '2019-06-04 19:37:01');
+INSERT INTO `hotel` VALUES ('11', NULL, 'test11', NULL, 'test11', 0, '2019-06-04 19:37:04');
+INSERT INTO `hotel` VALUES ('12', NULL, 'test12', NULL, 'test12', 0, '2019-06-04 19:37:06');
+INSERT INTO `hotel` VALUES ('12da045fb5cc4f16a28f0c46c2ba3d7f', '', '213123123', '12312312321', '3213213123123', 1, '2019-06-04 11:50:32');
+INSERT INTO `hotel` VALUES ('13', NULL, 'test13', NULL, 'test13', 0, '2019-06-04 19:37:11');
+INSERT INTO `hotel` VALUES ('14', NULL, 'test14', NULL, 'test14', 0, '2019-06-04 19:37:15');
+INSERT INTO `hotel` VALUES ('15', NULL, 'test15', NULL, 'test15', 0, '2019-06-04 19:37:17');
+INSERT INTO `hotel` VALUES ('16', NULL, 'test16', NULL, 'test16', 0, '2019-06-04 19:37:19');
+INSERT INTO `hotel` VALUES ('17', NULL, 'test17', NULL, 'test17', 0, '2019-06-04 19:37:21');
+INSERT INTO `hotel` VALUES ('18', NULL, 'test18', NULL, 'test18', 0, '2019-06-04 19:37:23');
+INSERT INTO `hotel` VALUES ('19', NULL, 'test19', NULL, 'test19', 0, '2019-06-04 19:37:24');
+INSERT INTO `hotel` VALUES ('2', NULL, 'test2', NULL, 'test2', 0, '2019-06-04 19:36:57');
+INSERT INTO `hotel` VALUES ('20', NULL, 'test20', NULL, 'test20', 0, '2019-06-04 19:37:26');
+INSERT INTO `hotel` VALUES ('21', NULL, 'test21', NULL, 'test21', 0, '2019-06-04 19:37:28');
+INSERT INTO `hotel` VALUES ('22', NULL, 'test22', NULL, 'test22', 0, '2019-06-04 19:37:33');
+INSERT INTO `hotel` VALUES ('23', NULL, 'tes23', NULL, 'tes23', 0, '2019-06-04 19:37:35');
+INSERT INTO `hotel` VALUES ('24', NULL, 'test24', NULL, 'test24', 0, '2019-06-04 19:37:37');
+INSERT INTO `hotel` VALUES ('25', NULL, 'test25', NULL, 'test25', 0, '2019-06-04 19:37:39');
+INSERT INTO `hotel` VALUES ('26', NULL, 'test26', NULL, 'test26', 0, '2019-06-04 19:37:40');
+INSERT INTO `hotel` VALUES ('27', NULL, 'test27', NULL, 'test27', 0, '2019-06-04 19:37:42');
+INSERT INTO `hotel` VALUES ('28', NULL, 'test28', NULL, 'test28', 0, '2019-06-04 19:37:43');
+INSERT INTO `hotel` VALUES ('29', NULL, 'test29', NULL, 'test29', 0, '2019-06-04 19:37:49');
+INSERT INTO `hotel` VALUES ('2b330bf809484945ad9ffa95a41f95fd', '', '21312312', '3123123123', '312312312312', 0, '2019-06-04 19:37:47');
+INSERT INTO `hotel` VALUES ('3', NULL, 'test3', NULL, 'test3', 0, '2019-06-04 19:32:56');
+INSERT INTO `hotel` VALUES ('30', NULL, 'test30', NULL, 'test30', 0, '2019-06-04 19:32:54');
+INSERT INTO `hotel` VALUES ('4', NULL, 'test4', NULL, 'test4', 0, '2019-06-04 19:32:51');
+INSERT INTO `hotel` VALUES ('5', NULL, 'test5', NULL, 'test5', 0, '2019-06-04 19:32:48');
+INSERT INTO `hotel` VALUES ('6', NULL, 'test6', NULL, 'test6', 0, '2019-06-04 19:32:46');
+INSERT INTO `hotel` VALUES ('7', NULL, 'test7', NULL, 'test7', 0, '2019-06-04 19:32:43');
+INSERT INTO `hotel` VALUES ('8', NULL, 'test8', NULL, 'test8', 0, '2019-06-04 19:32:41');
+INSERT INTO `hotel` VALUES ('84756b62364c4ac79bd42df482ffcdbe', '', '12312', '3123123', '12312312', 0, '2019-06-04 19:32:38');
+INSERT INTO `hotel` VALUES ('8477c26de2bd493394849358ef0b1107', '', '123123', '3123123123', '1231232131231', 0, '2019-06-04 19:32:35');
+INSERT INTO `hotel` VALUES ('9', NULL, 'test9', NULL, 'test9', 0, '2019-06-04 19:32:31');
+INSERT INTO `hotel` VALUES ('a681c8c228724482a5635b5706665f4d', '', '111111111111', '11111111111111', '111111111111111111', 1, '2019-06-04 11:51:32');
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -120,7 +129,7 @@ CREATE TABLE `sys_user`  (
   `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1236 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_user
