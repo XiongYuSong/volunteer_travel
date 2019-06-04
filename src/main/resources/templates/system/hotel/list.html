@@ -4,7 +4,7 @@
         layout:decorate="~{system/base/layout}">
 <div layout:fragment="content">
 
-    <div class="container">
+    <div class="container" style="width: 1400px">
         <h1>酒店管理</h1>
         <div class="row clearfix">
             <form name="search-form" class="form-inline m-b-10 clearfix" th:action="@{/system/hotelListUI}"
@@ -18,26 +18,28 @@
                 <table class="table table-hover table-condensed">
                     <thead>
                     <tr>
-                        <th>name</th>
-                        <th>image</th>
-                        <th>describe</th>
+                        <th width="150px">name</th>
+                        <th width="170px">image</th>
+                        <th width="150px">address</th>
+                        <th width="700px">describe</th>
                         <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr th:each="hotel:${page.content}">
                         <td th:text="${hotel.name}"></td>
-                        <td th:text="${hotel.image}"></td>
+                        <td><img width="170px" th:src="@{/images/pic-ywnews03.jpg}"></td>
+                        <td th:text="${hotel.address}"></td>
                         <td th:text="${hotel.describe}"></td>
                         <td>
                             <div align="left" style="float:left">
-                                <button type="button" class="btn btn-default btn-info">按钮</button>
+                                <button type="button" th:onclick="updateMember([[${hotel.id}]])" class="btn btn-default btn-info">修改</button>
                             </div>
-                            <div th:if="${hotel.status== 0}" align="left">
-                                <button type="button" class="btn btn-default btn-danger">禁用</button>
+                            <div th:if="${hotel.status == 0}" align="left">
+                                <button type="button" th:onclick="updateStatus([[${hotel.id}]])" class="btn btn-default btn-danger">禁用</button>
                             </div>
-                            <div th:if="${hotel.status== 1}" align="left">
-                                <button type="button" class="btn btn-default btn-success">启用</button>
+                            <div th:if="${hotel.status == 1}" align="left">
+                                <button type="button" th:onclick="updateStatus([[${hotel.id}]])" class="btn btn-default btn-success">启用</button>
                             </div>
                         </td>
                     </tr>
@@ -60,113 +62,135 @@
                     <form method="post" name="insertMember"
                           id="insertMember" class="form-horizontal">
                         <!--隐藏的-->
-                        <input type="text" id="userId" name="userId" hidden>
+                        <input type="text" id="id" name="id" hidden>
 
-                        <div class="form-group m-b-10" style="text-align:right">
-                            <label class="col-sm-4 control-label">用户组：</label>
-                            <div class="col-sm-7">
-                                <select id="groupId" name="groupId" class="form-control">
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group m-b-10" style="text-align:right">
-                            <label class="col-sm-4 control-label">角色：</label>
-                            <div class="col-sm-7">
-                                <select name="role" id="role" class="form-control">
-                                </select>
-                            </div>
-                        </div>
                         <div id="usernameDiv" class="form-group m-b-10" style="text-align:right">
                             <label class="col-sm-4 control-label">
-                                <label id="showCheckUserName"
-                                       style="color: red;display: none;">该用户名已存在</label>
-                                <label style="color: red">*</label>用户名：
+                                <label style="color: red">*</label>酒店名:
                             </label>
                             <div class="col-sm-7">
-                                <input type="text" th:onblur="'javascript:checkUserName(this.value)'"
-                                       class="form-control" id="username" name="username">
-                            </div>
-                        </div>
-                        <div class="form-group m-b-10" style="text-align:right">
-                            <label class="col-sm-4 control-label">邮箱：</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="trueEmail" name="trueEmail">
+                                <input type="text" class="form-control" id="name" name="name">
                             </div>
                         </div>
                         <div class="form-group m-b-10" style="text-align:right">
                             <label class="col-sm-4 control-label">
-                                <label style="color: red">*</label>真实姓名：
-                            </label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="trueName" name="trueName">
-                            </div>
-                        </div>
-                        <div class="form-group m-b-10" style="text-align:right">
-                            <label class="col-sm-4 control-label">所在单位：</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="organization"
-                                       name="organization">
-                            </div>
-                        </div>
-                        <div class="form-group m-b-10" style="text-align:right">
-                            <label class="col-sm-4 control-label">通讯地址：</label>
+                                <label style="color: red">*</label>酒店地址:</label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" id="address" name="address">
                             </div>
                         </div>
                         <div class="form-group m-b-10" style="text-align:right">
-                            <label class="col-sm-4 control-label">邮编：</label>
+                            <label class="col-sm-4 control-label">
+                                酒店描述:
+                            </label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="postalcode"
-                                       name="postalcode">
-                            </div>
-                        </div>
-                        <div class="form-group m-b-10" style="text-align:right">
-                            <label class="col-sm-4 control-label">手机号码：</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="phone" name="phone">
-                            </div>
-                        </div>
-                        <div class="form-group m-b-10" style="text-align:right">
-                            <label class="col-sm-4 control-label">固定电话：</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="telephone" name="telephone">
+                                <textarea type="text" rows="7" cols="20" class="form-control" id="describe"
+                                          name="describe">
+                                </textarea>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-info" onclick="submitMarker()">提交</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    <button type="button" class="btn btn-info" onclick="saveForm()">提交</button>
                 </div>
             </div>
         </div>
     </div>
     <script th:inline="javascript">
         function reset() {
+            //全部清空
             $('#exampleModalLabel').text('新增酒店');
-            //用户名----显示
-            $('#username').val('');
-            $('#usernameDiv').show();
-            $('#showCheckUserName').hide();
-            //邮箱
-            $('#trueEmail').val('');
-            //真实姓名
-            $('#trueName').val('');
-            //所在单位
-            $('#organization').val('');
-            //通讯地址
+            //id
+            $('#id').val('');
+            //name
+            $('#name').val('');
+            //address
             $('#address').val('');
-            //邮编
-            $('#postalcode').val('');
-            //手机号码
-            $('#phone').val('');
-            //固定号码
-            $('#telephone').val('');
-            //其他属性 userId
-            $('#userId').val('');
-            //打开模态框
+            //describe
+            $('#describe').val('');
+            //显示模态框
             $('#exampleModal').modal('show')
+        }
+
+        function updateMember(id) {
+            console.log(id);
+            $.ajax({
+                url: '/travel/system/getHotelById',
+                data: {"id": id},
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code == 200) {
+                        hotel = result.data;
+                        //全部清空
+                        $('#exampleModalLabel').text('修改酒店');
+                        //id
+                        $('#id').val(hotel.id);
+                        //name
+                        $('#name').val(hotel.name);
+                        //address
+                        $('#address').val(hotel.address);
+                        //describe
+                        $('#describe').val(hotel.describe);
+                        //显示模态框
+                        $('#exampleModal').modal('show')
+                    }
+                }
+            });
+        }
+
+        function updateStatus(id) {
+            $.ajax({
+                url: '/travel/system/updateStatus',
+                data: {"id": id},
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code === 200) {
+                        window.location.reload();
+                    } else {
+                        layer.open({
+                            title: '错误提示',
+                            content: result.message
+                        });
+                    }
+                }
+            })
+        }
+
+        function saveForm() {
+            //name
+            var name = $('#name').val();
+            //address
+            var address = $('#address').val();
+
+
+            if ($.trim(name) === '') {
+                layer.msg("酒店名不能为空");
+                return;
+            }
+            if ($.trim(address) === '') {
+                layer.msg("酒店地址不能为空!");
+                return;
+            }
+            $.ajax({
+                url: '/travel/system/saveHotel',
+                data: $("#insertMember").serialize(),
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code === 200) {
+                        window.location.href = "/travel/system/hotelListUI";
+                    } else {
+                        layer.open({
+                            title: '错误提示',
+                            content: result.message
+                        });
+                    }
+                }
+            })
         }
     </script>
 </div>

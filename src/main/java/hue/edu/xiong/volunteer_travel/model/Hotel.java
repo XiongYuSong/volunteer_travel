@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * @Author Xiong YuSong
@@ -16,14 +17,34 @@ public class Hotel {
     @Id
     @Column(name = "id")
     private String id;
-    @Column(name = "image")
+    @Column(name = "hotelImage")
     private String image;
-    @Column(name = "name")
+    @Column(name = "hotelName")
     private String name;
-    @Column(name = "describe")
+    @Column(name = "hotelAddress")
+    private String address;
+    @Column(name = "hotelDescribe")
     private String describe;
-    @Column(name = "status")
+    @Column(name = "HotelStatus")
     private Integer status;
+    @Column(name = "createDate")
+    private Date createDate;
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public Integer getStatus() {
         return status;

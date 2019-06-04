@@ -36,22 +36,14 @@ public class UserCenterService {
     }
 
     public Result centerEdit(User user) {
-        Optional<User> optional = userRepository.findById(user.getId());
-        User oldUser = optional.get();
-        if (oldUser == null) {
-            return ResultGenerator.genFailResult("查无此人");
-        }
+        User oldUser = userRepository.findById(user.getId()).orElseThrow(() -> new ServiceException("用户ID错误!"));
         oldUser.setName(user.getName());
         userRepository.save(oldUser);
         return ResultGenerator.genSuccessResult();
     }
 
     public Result centerEditPW(HttpServletRequest request, HttpServletResponse response, String id, String oldPassword, String newPassword) {
-        Optional<User> optional = userRepository.findById(id);
-        User oldUser = optional.get();
-        if (oldUser == null) {
-            return ResultGenerator.genFailResult("查无此人!");
-        }
+        User oldUser = userRepository.findById(id).orElseThrow(() -> new ServiceException("用户ID错误!"));
         if (!oldUser.getPassword().equals(oldPassword)) {
             return ResultGenerator.genFailResult("原始密码错误!");
         }

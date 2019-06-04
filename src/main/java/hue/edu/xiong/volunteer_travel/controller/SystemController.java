@@ -1,6 +1,7 @@
 package hue.edu.xiong.volunteer_travel.controller;
 
 import hue.edu.xiong.volunteer_travel.core.Result;
+import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
 import hue.edu.xiong.volunteer_travel.model.Hotel;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.service.SystemService;
@@ -35,7 +36,7 @@ public class SystemController {
     @RequestMapping("/login")
     public String login() {
         return "system/user/list";
-}
+    }
 
     @RequestMapping("/logout")
     public String logout() {
@@ -47,5 +48,22 @@ public class SystemController {
         Page<Hotel> page = systemService.getHotelPage(pageable);
         model.addAttribute("page", page);
         return "system/hotel/list";
+    }
+
+    @RequestMapping("/saveHotel")
+    @ResponseBody
+    public Result saveHotel(Hotel hotel) {
+        return systemService.saveHotel(hotel);
+    }
+    @RequestMapping("/updateStatus")
+    @ResponseBody
+    public Result updateStatus(String id) {
+        return systemService.updateStatus(id);
+    }
+
+    @RequestMapping("/getHotelById")
+    @ResponseBody
+    public Result getHotelById(String id) {
+        return ResultGenerator.genSuccessResult(systemService.getHotelById(id));
     }
 }
