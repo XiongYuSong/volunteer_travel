@@ -3,6 +3,7 @@ package hue.edu.xiong.volunteer_travel.controller;
 import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
 import hue.edu.xiong.volunteer_travel.model.Hotel;
+import hue.edu.xiong.volunteer_travel.model.SysUser;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.ws.Holder;
 
 /**
  * @Author Xiong YuSong
@@ -34,13 +35,22 @@ public class SystemController {
     }
 
     @RequestMapping("/login")
-    public String login() {
+    @ResponseBody
+    public Result login(SysUser sysUser, HttpServletResponse response) {
+
+       return systemService.login(sysUser,response);
+    }
+    @RequestMapping("/userListUI")
+    public String userListUI(Model model, @PageableDefault(size = 10) Pageable pageable) {
+        Page<User> page = systemService.getUserPage(pageable);
+        model.addAttribute("page",page);
         return "system/user/list";
     }
 
     @RequestMapping("/logout")
-    public String logout() {
-        return "system/base/layout";
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
+       systemService.logout(request,response);
+        return "redirect:/system";
     }
 
     @RequestMapping("/hotelListUI")
