@@ -24,6 +24,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -50,7 +51,7 @@ public class SystemService {
              return ResultGenerator.genFailResult("用户名错误！");
         }else{
             if (sysUser.getPassword().equals(sysUserByUsrname.getPassword())){
-                CookieUitl.set(response,"username",sysUser.getUsername(),3600);
+                CookieUitl.set(response,"sysUsername",sysUser.getUsername(),3600);
                 return ResultGenerator.genSuccessResult();
             }else{
                 return  ResultGenerator.genFailResult("密码错误");
@@ -60,9 +61,9 @@ public class SystemService {
     }
 
     public void logout(HttpServletRequest request, HttpServletResponse response) {
-        Cookie cookie = CookieUitl.get(request, "username");
+        Cookie cookie = CookieUitl.get(request, "sysUsername");
         if (cookie != null) {
-            CookieUitl.set(response, "username", null, 0);
+            CookieUitl.set(response, "sysUsername", null, 0);
         }
     }
 
@@ -95,6 +96,7 @@ public class SystemService {
             if (hotel.getStatus() == null) {
                 //默认为停用
                 hotel.setStatus(StatusEnum.DOWM_STATUS.getCode());
+                hotel.setCreateDate(new Date());
             }
         } else {
             //有id的情况

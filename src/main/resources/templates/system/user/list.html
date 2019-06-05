@@ -4,29 +4,45 @@
         layout:decorate="~{system/base/layout}">
 <div layout:fragment="content">
 
-    <h1>这里是userList</h1>
-    <div class="col-md-12 column">
-        <table class="table table-hover table-condensed">
-            <thead>
-            <tr>
-                <th width="150px">id</th>
-                <th width="170px">username</th>
-                <th width="150px">password</th>
-                <th width="700px">name</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="user:${page.content}">
-                <td th:text="${user.id}"></td>
-                <td th:text="${user.username}"></td>
-                <td th:text="${user.password}"></td>
-                <td th:text="${user.name}"></td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="container" style="width: 1400px">
+        <h1>用户管理</h1>
+        <div class="row clearfix">
+            <form name="search-form" class="form-inline m-b-10 clearfix" th:action="@{/system/userListUI}"
+                  id="search-form">
+            </form>
+
+            <div class="col-md-12 column">
+                <table class="table table-hover table-condensed">
+                    <thead>
+                    <tr>
+                        <th width="150px">id</th>
+                        <th width="170px">username</th>
+                        <th width="150px">password</th>
+                        <th width="700px">name</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user:${page.content}">
+                        <td th:text="${user.id}"></td>
+                        <td th:text="${user.username}"></td>
+                        <td th:text="${user.password}"></td>
+                        <td th:text="${user.name}"></td>
+                        <th>
+                            <div align="left" style="float:left">
+                                <button type="button"
+                                        class="btn btn-default btn-success">重置密码
+                                </button>
+                            </div>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div th:insert="~{base/pageable}"></div>
     </div>
-    <div th:insert="~{base/pageable}"></div>
+
     <script th:inline="javascript">
     </script>
 </div>
