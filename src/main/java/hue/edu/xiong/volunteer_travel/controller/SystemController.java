@@ -3,6 +3,7 @@ package hue.edu.xiong.volunteer_travel.controller;
 import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
 import hue.edu.xiong.volunteer_travel.model.Hotel;
+import hue.edu.xiong.volunteer_travel.model.Attractions;
 import hue.edu.xiong.volunteer_travel.model.SysUser;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.service.SystemService;
@@ -47,6 +48,20 @@ public class SystemController {
         return "system/user/list";
     }
 
+    @RequestMapping("/saveUser")
+    @ResponseBody
+    public Result saveUser(User user) {
+        return systemService.saveUser(user);
+    }
+
+    @RequestMapping("/getUserById")
+    @ResponseBody
+    public Result getUserById(String id) {
+        return ResultGenerator.genSuccessResult(systemService.getUserById(id));
+    }
+
+
+
     @RequestMapping("/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) {
        systemService.logout(request,response);
@@ -65,6 +80,7 @@ public class SystemController {
     public Result saveHotel(Hotel hotel) {
         return systemService.saveHotel(hotel);
     }
+
     @RequestMapping("/updateStatus")
     @ResponseBody
     public Result updateStatus(String id) {
@@ -75,5 +91,30 @@ public class SystemController {
     @ResponseBody
     public Result getHotelById(String id) {
         return ResultGenerator.genSuccessResult(systemService.getHotelById(id));
+    }
+
+    @RequestMapping("/attractionsListUI")
+    public String attractionsListUI(Model model, @PageableDefault(size = 10) Pageable pageable) {
+        Page<Attractions> page = systemService.getAttractionsPage(pageable);
+        model.addAttribute("page", page);
+        return "system/attractions/list";
+    }
+
+    @RequestMapping("/getAttractionsById")
+    @ResponseBody
+    public Result getAttractionsById(String id) {
+        return ResultGenerator.genSuccessResult(systemService.getAttractionsById(id));
+    }
+
+    @RequestMapping("/updateAttractionsStatus")
+    @ResponseBody
+    public Result updateAttractionsStatus(String id) {
+        return systemService.updateAttractionsStatus(id);
+    }
+
+    @RequestMapping("/saveAttractions")
+    @ResponseBody
+    public Result saveAttractions(Attractions attractions) {
+        return systemService.saveAttractions(attractions);
     }
 }

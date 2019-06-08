@@ -1,10 +1,10 @@
 package hue.edu.xiong.volunteer_travel.controller;
 
 import hue.edu.xiong.volunteer_travel.core.Result;
+import hue.edu.xiong.volunteer_travel.model.Attractions;
 import hue.edu.xiong.volunteer_travel.model.Hotel;
 import hue.edu.xiong.volunteer_travel.model.UserHotel;
 import hue.edu.xiong.volunteer_travel.service.ReserveService;
-import hue.edu.xiong.volunteer_travel.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -60,5 +58,19 @@ public class ReserveController {
     @ResponseBody
     public Result cancelReserve(HttpServletRequest request,String id) {
         return reserveService.cancelReserve(request,id);
+    }
+
+    @RequestMapping("/reserveAttractionsListUI")
+    public String reserveAttractionsListUI(Model model, @ModelAttribute("searchName") String searchName, @PageableDefault(size = 10) Pageable pageable) {
+        Page<Attractions> page = reserveService.reserveAttractionsListUI(searchName,pageable);
+        model.addAttribute("page", page);
+        return "reserve/reserve-attractions";
+    }
+
+    @RequestMapping("/attractionsDetailsUI")
+    public String attractionsDetailsUI(Model model, @RequestParam(name = "id") String id) {
+        Attractions attractions = reserveService.findAttractionsById(id);
+        model.addAttribute("attractions", attractions);
+        return "reserve/reserve-attractions-details";
     }
 }

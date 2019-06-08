@@ -3,9 +3,11 @@ package hue.edu.xiong.volunteer_travel.service;
 import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
 import hue.edu.xiong.volunteer_travel.core.ServiceException;
+import hue.edu.xiong.volunteer_travel.model.Attractions;
 import hue.edu.xiong.volunteer_travel.model.Hotel;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.model.UserHotel;
+import hue.edu.xiong.volunteer_travel.repository.AttractionsRepository;
 import hue.edu.xiong.volunteer_travel.repository.HotelRepository;
 import hue.edu.xiong.volunteer_travel.repository.UserHotelRepository;
 import hue.edu.xiong.volunteer_travel.repository.UserRepository;
@@ -36,10 +38,13 @@ public class ReserveService {
     private HotelRepository hotelRepository;
 
     @Autowired
+    private AttractionsRepository attractionsRepository;
+    @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private UserHotelRepository userHotelRepository;
+
 
     public Page<Hotel> reserveHotelListUI(String searchName, Pageable pageable) {
         //查询启用的酒店列表
@@ -62,6 +67,28 @@ public class ReserveService {
         return hotelRepository.findById(id).orElseThrow(() -> new ServiceException("酒店id错误!"));
     }
 
+    public Page<Attractions> reserveAttractionsListUI(String searchName, Pageable pageable) {
+        //查询启用的景点列表
+        Page<Attractions> attractionsPage = attractionsRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            //status状态,查询状态为0,启动的酒店
+            predicates.add((cb.equal(root.get("status"), 0)));
+            //酒店name模糊查询
+            if (!StringUtils.isEmpty(searchName)) {
+                predicates.add((cb.like(root.get("name"), "%" + searchName + "%")));
+            }
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("createDate")));
+            return null;
+        }, pageable);
+        return attractionsPage;
+    }
+
+    public Attractions findAttractionsById(String id) {
+        return attractionsRepository.findById(id).orElseThrow(() -> new ServiceException("景点id错误!"));
+    }
+
+
     public List<UserHotel> getReserveHotelByUser(HttpServletRequest request) {
         Cookie cookie = CookieUitl.get(request, "username");
         if (cookie == null) {
@@ -71,7 +98,7 @@ public class ReserveService {
         return userHotelRepository.findUserHotelsByUser(user);
     }
 
-    @Transactional(rollbackFor = Exception.class  )
+    @Transactional(rollbackFor = Exception.class)
     public Result cancelReserve(HttpServletRequest request, String id) {
         Cookie cookie = CookieUitl.get(request, "username");
         if (cookie == null) {
@@ -108,3 +135,4 @@ public class ReserveService {
         return false;
     }
 }
+

@@ -4,12 +4,14 @@ import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
 import hue.edu.xiong.volunteer_travel.core.ServiceException;
 import hue.edu.xiong.volunteer_travel.enums.StatusEnum;
+import hue.edu.xiong.volunteer_travel.model.Attractions;
 import hue.edu.xiong.volunteer_travel.model.Hotel;
 import hue.edu.xiong.volunteer_travel.model.SysUser;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.repository.HotelRepository;
 import hue.edu.xiong.volunteer_travel.repository.SysUserRepository;
 import hue.edu.xiong.volunteer_travel.repository.UserRepository;
+import hue.edu.xiong.volunteer_travel.repository.AttractionsRepository;
 import hue.edu.xiong.volunteer_travel.util.CookieUitl;
 import hue.edu.xiong.volunteer_travel.util.IdGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +45,10 @@ public class SystemService {
     @Autowired
     private HotelRepository hotelRepository;
 
+    @Autowired
+    private AttractionsRepository attractionsRepository;
+
+
     public Result login(SysUser sysUser, HttpServletResponse response) {
 
 
@@ -75,6 +81,30 @@ public class SystemService {
             return null;
         },pageable);
         return userPage;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public Result saveUser(User user) {
+
+        System.out .println(user.getId());
+
+
+        if (StringUtils.isEmpty(user.getId())) {//没有id的情况
+            user.setId(IdGenerator.id());
+        }else{
+            User oldUser = getUserById(user.getId());
+            user.setUsername(oldUser.getUsername());
+            user.setName(oldUser.getName());
+            oldUser.setPassword(user.getPassword());
+        }
+
+        userRepository.saveAndFlush(user);
+        return ResultGenerator.genSuccessResult();
+    }
+
+    public User getUserById(String id) {
+        User user = userRepository.findById(id).orElseThrow(() -> new ServiceException("用户ID错误"));
+        return user;
     }
 
 
@@ -122,6 +152,53 @@ public class SystemService {
             hotel.setStatus(StatusEnum.DOWM_STATUS.getCode());
         }
         hotelRepository.saveAndFlush(hotel);
+        return ResultGenerator.genSuccessResult();
+    }
+
+    public Page<Attractions> getAttractionsPage(Pageable pageable) {
+        Page<Attractions> attractionsPage = attractionsRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("createDate")));
+            return null;
+        }, pageable);
+        return attractionsPage;
+    }
+
+    public Attractions getAttractionsById(String id) {
+        Attractions attractions = attractionsRepository.findById(id).orElseThrow(() -> new ServiceException("景点ID错误"));
+        return attractions;
+    }
+
+    public Result updateAttractionsStatus(String id) {
+        Attractions attractions = getAttractionsById(id);
+        if (attractions.getStatus().equals(StatusEnum.DOWM_STATUS.getCode())) {
+            //改变状态
+            attractions.setStatus(StatusEnum.UP_STATUS.getCode());
+        } else {
+            attractions.setStatus(StatusEnum.DOWM_STATUS.getCode());
+        }
+        attractionsRepository.saveAndFlush(attractions);
+        return ResultGenerator.genSuccessResult();
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public Result saveAttractions(Attractions attractions) {
+        attractions.setImage("");
+        if (StringUtils.isEmpty(attractions.getId())) {//没有id的情况
+            attractions.setId(IdGenerator.id());
+            if (attractions.getStatus() == null) {
+                //默认为停用
+                attractions.setStatus(StatusEnum.DOWM_STATUS.getCode());
+                attractions.setCreateDate(new Date());
+            }
+        } else {
+            //有id的情况
+            Attractions oldAttractions = getAttractionsById(attractions.getId());
+            attractions.setStatus(oldAttractions.getStatus());
+            attractions.setCreateDate(oldAttractions.getCreateDate());
+        }
+        attractionsRepository.saveAndFlush(attractions);
         return ResultGenerator.genSuccessResult();
     }
 }
