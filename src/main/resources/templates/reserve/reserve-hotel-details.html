@@ -40,7 +40,13 @@
                             <p th:text="${hotel.describe}">
                             </p>
                             <div align="right" style="float:right">
-                                <button type="button" class="btn btn-default btn-info">预订</button>
+                                <button th:if="${flag == false}" th:onclick="cancelReserve([[${hotel.id}]],'预订')"
+                                        type="button" class="btn btn-default btn-info">预订
+                                </button>
+                                <button th:if="${flag == true }" th:onclick="cancelReserve([[${hotel.id}]],'取消预订')"
+                                        type="button" class="btn btn-default btn-info">
+                                    取消预订
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -87,6 +93,31 @@
         </div>
     </div>
     <!--service section end-->
-
+    <script th:inline="javascript">
+        function cancelReserve(id, str) {
+            $.ajax({
+                url: '/travel/reserve/cancelReserve',
+                data: {"id": id},
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code === 200) {
+                        if(str == '预订'){
+                            confirm(str + "成功!"); //在页面上弹出对话框
+                            window.location.href = "/travel/reserve/reserveManageUI";
+                        }else{
+                            confirm(str + "成功!"); //在页面上弹出对话框
+                            window.location.href = "/travel/reserve/reserveHotelListUI";
+                        }
+                    } else {
+                        layer.open({
+                            title: '错误提示',
+                            content: result.message
+                        });
+                    }
+                }
+            })
+        }
+    </script>
 </div>
 </html>

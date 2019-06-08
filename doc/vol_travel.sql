@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 05/06/2019 18:34:54
+ Date: 08/06/2019 12:59:44
 */
 
 SET NAMES utf8mb4;
@@ -105,9 +105,9 @@ INSERT INTO `hotel` VALUES ('24', NULL, '丽豪酒店', '云南省昆明市', '�
 INSERT INTO `hotel` VALUES ('25', NULL, '静澜栈酒店', '陕西省西安市', '酒店按欧式风格设计装修，环境优美，格调高雅。客房舒适、豪华，餐饮风味独特，各类康乐休闲设施一应俱全，设施先进的商务中心随时为您提供周到、快捷的服务。', 0, '2019-06-04 19:37:39');
 INSERT INTO `hotel` VALUES ('26', NULL, '品尚酒店', '江西省南昌市', '酒店功能完善，设有包括总统套房、豪华商务套房等各色客房297间，酒店拥有中餐厅、西餐厅、韩国餐厅、火锅餐厅四个不同风味的餐饮场所，就餐总座位数1600余位，另设有可接待500人的宴会厅、可容纳400人的国际会议中心以及夜总会、spa桑拿及足道、露天泳池、健身中心和网球场', 0, '2019-06-04 19:37:40');
 INSERT INTO `hotel` VALUES ('27', NULL, '她他酒店', '四川省成都市', '酒店按欧式风格设计装修，环境优美，格调高雅。客房舒适、豪华，餐饮风味独特，各类康乐休闲设施一应俱全，设施先进的商务中心随时为您提供周到、快捷的服务。', 0, '2019-06-04 19:37:42');
-INSERT INTO `hotel` VALUES ('28', NULL, '丹枫白露酒店', '贵州省贵阳市', '酒店店拥有三百余间客房和套房，步入其中令人耳目一新。每间客房均配有景观阳台，置身于此，便可一览壮丽的曲江盛景。房内配有特色睡床，及备受喜爱的Bliss洗浴用品、先进的娱乐设施等，为您打造潮奢的入住体验。', 0, '2019-06-04 19:37:43');
+INSERT INTO `hotel` VALUES ('28', NULL, '丹枫白露酒店', '贵州省贵阳市', '酒店店拥有三百余间客房和套房，步入其中令人耳目一新。每间客房均配有景观阳台，置身于此，便可一览壮丽的曲江盛景。房内配有特色睡床，及备受喜爱的Bliss洗浴用品、先进的娱乐设施等，为您打造潮奢的入住体验。', 1, '2019-06-04 19:37:43');
 INSERT INTO `hotel` VALUES ('29', NULL, '米兰酒店', '广西省南宁市', '酒店按欧式风格设计装修，环境优美，格调高雅。客房舒适、豪华，餐饮风味独特，各类康乐休闲设施一应俱全，设施先进的商务中心随时为您提供周到、快捷的服务。', 0, '2019-06-04 19:37:49');
-INSERT INTO `hotel` VALUES ('2b330bf809484945ad9ffa95a41f95fd', '', '东方大酒店', '武汉市武昌区', '酒店店拥有三百余间客房和套房，步入其中令人耳目一新。每间客房均配有景观阳台，置身于此，便可一览壮丽的曲江盛景。房内配有特色睡床，及备受喜爱的Bliss洗浴用品、先进的娱乐设施等，为您打造潮奢的入住体验。', 0, '2019-06-04 19:37:47');
+INSERT INTO `hotel` VALUES ('2b330bf809484945ad9ffa95a41f95fd', '', '东方大酒店', '武汉市武昌区', '酒店店拥有三百余间客房和套房，步入其中令人耳目一新。每间客房均配有景观阳台，置身于此，便可一览壮丽的曲江盛景。房内配有特色睡床，及备受喜爱的Bliss洗浴用品、先进的娱乐设施等，为您打造潮奢的入住体验。', 1, '2019-06-04 19:37:47');
 INSERT INTO `hotel` VALUES ('3', NULL, '白玫瑰大酒店酒店', '武汉市江夏区', '酒店功能完善，设有包括总统套房、豪华商务套房等各色客房297间，酒店拥有中餐厅、西餐厅、韩国餐厅、火锅餐厅四个不同风味的餐饮场所', 0, '2019-06-04 19:32:56');
 INSERT INTO `hotel` VALUES ('30', NULL, '国际饭店', '北京市清华大学旁', '酒店按欧式风格设计装修，环境优美，格调高雅。客房舒适、豪华，餐饮风味独特，各类康乐休闲设施一应俱全，设施先进的商务中心随时为您提供周到、快捷的服务。', 0, '2019-06-04 19:32:54');
 INSERT INTO `hotel` VALUES ('4', NULL, '一百假日酒店', '上海市黄浦区', '酒店店拥有三百余间客房和套房，步入其中令人耳目一新。每间客房均配有景观阳台，置身于此，便可一览壮丽的曲江盛景。房内配有特色睡床，及备受喜爱的Bliss洗浴用品、先进的娱乐设施等，为您打造潮奢的入住体验。', 0, '2019-06-04 19:32:51');
@@ -119,6 +119,8 @@ INSERT INTO `hotel` VALUES ('84756b62364c4ac79bd42df482ffcdbe', '', '12312', '31
 INSERT INTO `hotel` VALUES ('8477c26de2bd493394849358ef0b1107', '', '123123', '3123123123', '1231232131231', 0, '2019-06-04 19:32:35');
 INSERT INTO `hotel` VALUES ('9', NULL, 'test9', NULL, 'test9', 0, '2019-06-04 19:32:31');
 INSERT INTO `hotel` VALUES ('a681c8c228724482a5635b5706665f4d', '', '111111111111', '11111111111111', '111111111111111111', 1, '2019-06-04 11:51:32');
+INSERT INTO `hotel` VALUES ('ba1e6b9f82714fa3b3ac204a340b7850', '', '12312312', '1321321312', '321312312231', 1, '2019-06-05 11:57:40');
+INSERT INTO `hotel` VALUES ('fb548675a46646d3915ecfb10b677af5', '', '11111111111', '111111111111', '1111111111111111111', 1, '2019-06-05 11:57:51');
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -161,7 +163,8 @@ CREATE TABLE `user_attractions`  (
   `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `user_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `attractions_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `user_attraction_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `create_date` datetime(0) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `attractions_id`(`attractions_id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
@@ -175,48 +178,20 @@ CREATE TABLE `user_attractions`  (
 DROP TABLE IF EXISTS `user_hotel`;
 CREATE TABLE `user_hotel`  (
   `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `user_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `hotel_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `user_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `hotel_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_hotel_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `create_date` datetime(0) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `user_id`(`user_id`) USING BTREE,
-  INDEX `hotel_id`(`hotel_id`) USING BTREE,
-  CONSTRAINT `user_hotel_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE RESTRICT,
-  CONSTRAINT `user_hotel_ibfk_2` FOREIGN KEY (`hotel_id`) REFERENCES `hotel` (`id`) ON DELETE NO ACTION ON UPDATE RESTRICT
+  INDEX `user_hotel_ibfk_1`(`user_id`) USING BTREE,
+  INDEX `user_hotel_ibfk_2`(`hotel_id`) USING BTREE,
+  CONSTRAINT `user_hotel_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `user_hotel_ibfk_2` FOREIGN KEY (`hotel_id`) REFERENCES `hotel` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user_hotel
 -- ----------------------------
-INSERT INTO `user_hotel` VALUES ('1', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('10', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('11', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('12', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('13', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('14', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('15', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('16', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('17', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('18', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('19', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('2', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('20', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('21', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('22', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('23', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('24', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('25', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('26', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('27', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('28', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('29', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('3', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('30', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('4', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('5', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('6', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('7', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('8', NULL, NULL, NULL);
-INSERT INTO `user_hotel` VALUES ('9', NULL, NULL, NULL);
+INSERT INTO `user_hotel` VALUES ('fb5a06e2b260426db9c0db7859916674', '123123123', '25', NULL, '2019-06-08 04:59:12');
 
 SET FOREIGN_KEY_CHECKS = 1;
