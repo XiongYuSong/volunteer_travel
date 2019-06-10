@@ -49,6 +49,25 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h1>景点预订管理</h1>
+                    <div class="cy-news-grid-item" th:each="userAttractions:${userAttractionsList}">
+                        <div class="cy-ib-thumbnail pull-left">
+                            <a th:href="@{/reserve/attractionsDetailsUI(id=${userAttractions.attractions.id})}">
+                                <img th:src="@{/images/pic-ib01.jpg}" class="image_fade" alt="">
+                            </a>
+                        </div>
+                        <div class="booklet-cont">
+                            <h5><a th:href="@{/reserve/attractionsDetailsUI(id=${userAttractions.attractions.id})}"
+                                   th:text="'景点预约: ' + ${userAttractions.attractions.name}"></a></h5>
+                            <div class="cy-summary-intro">
+                                <p th:text="${userAttractions.attractions.describe}">
+                                </p>
+                                <a href="javascript:void(0);">更多</a>
+                            </div>
+                            <div class="text-right"><a th:onclick="cancelAttractionsReserve([[${userAttractions.attractions.id}]])"
+                                                       class="btn btn-info btn-sm">取消预约</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,6 +87,25 @@
         function cancelReserve(id) {
             $.ajax({
                 url: '/travel/reserve/cancelReserve',
+                data: {"id": id},
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code === 200) {
+                        window.location.reload();
+                    } else {
+                        layer.open({
+                            title: '错误提示',
+                            content: result.message
+                        });
+                    }
+                }
+            })
+        }
+
+        function cancelAttractionsReserve(id) {
+            $.ajax({
+                url: '/travel/reserve/cancelAttractionsReserve',
                 data: {"id": id},
                 type: 'post',
                 dataType: 'json',

@@ -3,6 +3,7 @@ package hue.edu.xiong.volunteer_travel.controller;
 import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.model.Attractions;
 import hue.edu.xiong.volunteer_travel.model.Hotel;
+import hue.edu.xiong.volunteer_travel.model.UserAttractions;
 import hue.edu.xiong.volunteer_travel.model.UserHotel;
 import hue.edu.xiong.volunteer_travel.service.ReserveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +51,9 @@ public class ReserveController {
     @RequestMapping("/reserveManageUI")
     public String reserveManageUI(Model model, HttpServletRequest request) {
         List<UserHotel> userHotelList = reserveService.getReserveHotelByUser(request);
+        List<UserAttractions> userAttractionsList = reserveService.getReserveAttractionsByUser(request);
         model.addAttribute("userHotelList", userHotelList);
+        model.addAttribute("userAttractionsList",userAttractionsList);
         return "reserve/reserve-user-manage";
     }
 
@@ -68,9 +71,20 @@ public class ReserveController {
     }
 
     @RequestMapping("/attractionsDetailsUI")
-    public String attractionsDetailsUI(Model model, @RequestParam(name = "id") String id) {
+    public String attractionsDetailsUI(Model model, HttpServletRequest request, @RequestParam(name = "id") String id) {
         Attractions attractions = reserveService.findAttractionsById(id);
+        //如果用户显示已经预约,就是查看预约列表
+        Boolean flag = reserveService.isReserveAttractions(request, id);
         model.addAttribute("attractions", attractions);
+        model.addAttribute("flag", flag);
         return "reserve/reserve-attractions-details";
     }
+
+
+    @RequestMapping("/cancelAttractionsReserve")
+    @ResponseBody
+    public Result cancelAttractionsReserve(HttpServletRequest request,String id) {
+        return reserveService.cancelAttractionsReserve(request,id);
+    }
+
 }

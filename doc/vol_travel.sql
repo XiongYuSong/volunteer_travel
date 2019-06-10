@@ -3,15 +3,15 @@
 
  Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 50726
+ Source Server Version : 50725
  Source Host           : localhost:3306
  Source Schema         : vol_travel
 
  Target Server Type    : MySQL
- Target Server Version : 50726
+ Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 09/06/2019 21:25:02
+ Date: 10/06/2019 21:40:22
 */
 
 SET NAMES utf8mb4;
@@ -165,6 +165,7 @@ CREATE TABLE `travel_route`  (
   `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `route_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `route_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `route_status` int(2) DEFAULT NULL,
   `route_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `collect_number` int(32) NOT NULL DEFAULT 0,
   `create_date` datetime(0) DEFAULT NULL,
@@ -175,7 +176,7 @@ CREATE TABLE `travel_route`  (
 -- ----------------------------
 -- Records of travel_route
 -- ----------------------------
-INSERT INTO `travel_route` VALUES ('1', '线路一', '这是线路一', '湖北', 0, '2019-06-09 16:52:12', '2019-06-09 16:52:15');
+INSERT INTO `travel_route` VALUES ('1', '线路一', '这是线路一', NULL, '湖北', 0, '2019-06-09 16:52:12', '2019-06-09 16:52:15');
 
 -- ----------------------------
 -- Table structure for travel_strategy
