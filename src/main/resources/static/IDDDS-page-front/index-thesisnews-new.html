@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--[endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>创药网 </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="创药网是服务于新药研发的网络技术平台，面向全国医药中小企业开展对外技术服务和情报服务，提供仪器设施、专业技术服务、寻求项目合作及转让信息，共享药物研发最新科学数据、文献、情报，评估临床前新药研发项目。" />
+    <meta name="keywords" content="创药网,药学,生物,数据库,疾病,STS,药物,情报,医药数据,药物研发,新药研发,技术平台,临床批件转让,新药技术转让,全球药物创新快讯,生物医药决策参考,疾病报告,专利,临床前研究,新药临床前评价,生物医药,热点化合物" />
+    <meta name="author" content="iddds" />
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="images/Iconpic.png" />
+</head>
+
+<body>
+    <!-- preloader Start -->
+    <div id="preloader">
+        <!-- <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader"> -->
+        <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader">
+        </div>
+    </div>
+    <!--top header start-->
+    <div class="top_header_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="top_header_add">
+                        <ul>
+                            <li><i class="fa fa-home" aria-hidden="true"></i> 中国科学院上海药物研究所</li>
+
+                        </ul>
+                    </div>
+                    <div class="top_login">
+                        <ul>
+                            <li><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请<a href="index-login.html">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+                                    href="index-register.html">注册</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header menu wrapper-->
+    <div class="menu_wrapper header-area hidden-menu-bar stick">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+                    <div class="header_logo">
+                        <a href="index.html" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-12">
+                    <nav class="navbar hidden-xs">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse respose_nav" id="bs-example-navbar-collapse-1">
+                            <div class="et_navbar_search_wrapper hidden-xs">
+                                <div class="et_search_bar" id="search_button">
+                                    <a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </div>
+                                <div id="search_open" class="et_search_box">
+                                    <input type="text" placeholder="请输入关键词">
+                                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <ul class="nav navbar-nav" id="nav_filter">
+                                <li><a href="index.html">首页</a></li>
+                                <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">每日药闻 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-mednews-new.html">最新</a></li>
+                                        <li><a href="javascript:void(0);">独家报道</a></li>
+                                        <li><a href="javascript:void(0);">科研动态</a></li>
+                                        <li><a href="javascript:void(0);">行业观察</a></li>
+                                        <li><a href="javascript:void(0);">政策动向</a></li>
+                                        <li><a href="javascript:void(0);">知识产权</a></li>
+                                        <li><a href="javascript:void(0);">专题报道</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">文献荟萃 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-thesisnews-new.html">最新</a></li>
+                                        <li><a href="javascript:void(0);">科研动态</a></li>
+                                        <li><a href="javascript:void(0);">行业观察</a></li>
+                                        <li><a href="javascript:void(0);">政策动向</a></li>
+                                        <li><a href="javascript:void(0);">知识产权</a></li>
+                                        <li><a href="javascript:void(0);">专题报道</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">产品服务 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-intelligence-journal.html">快讯</a></li>
+                                        <li><a href="index-intelligence-booklet.html">报告</a></li>
+                                        <li><a href="javascript:void(0);">决策资讯库</a></li>
+                                        <li><a href="index-newdrug.html">中科院新药数据库</a></li>
+                                        <li><a href="javascript:void(0);">热点化合物</a></li>
+                                        <li><a href="javascript:void(0);">情报服务</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">专家技术 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-expert.html">专家</a></li>
+                                        <li><a href="index-technology.html">仪器技术服务</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                        <!-- /.navbar-collapse -->
+
+                        <!-- /.container-fluid -->
+                    </nav>
+                    <div class="rp_mobail_menu_main_wrapper visible-xs">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="gc_logo logo_hidn">
+                                    <h1><a href="#"><span>创药网</span> IDDDS</a></h1>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div id="toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.177 31.177" style="enable-background:new 0 0 31.177 31.177;"
+                                        xml:space="preserve" width="25px" height="25px">
+                                        <g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sidebar">
+                            <h1>创药网 IDDDS</h1>
+                            <div id="toggle_close">&times;</div>
+                            <div id='cssmenu' class="wd_single_index_menu">
+                                <ul>
+                                    <li><a href='index.html'>首页</a></li>
+                                    <li class='has-sub'><a href="javascript:void(0);">每日药闻</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">最新</a></li>
+                                            <li><a href="javascript:void(0);">独家报道</a></li>
+                                            <li><a href="javascript:void(0);">科研动态</a></li>
+                                            <li><a href="javascript:void(0);">行业观察</a></li>
+                                            <li><a href="javascript:void(0);">政策动向</a></li>
+                                            <li><a href="javascript:void(0);">知识产权</a></li>
+                                            <li><a href="javascript:void(0);">专题报道</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>文献荟萃</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">最新</a></li>
+                                            <li><a href="javascript:void(0);">科研动态</a></li>
+                                            <li><a href="javascript:void(0);">行业观察</a></li>
+                                            <li><a href="javascript:void(0);">政策动向</a></li>
+                                            <li><a href="javascript:void(0);">知识产权</a></li>
+                                            <li><a href="javascript:void(0);">专题报道</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>产品服务</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">快讯</a></li>
+                                            <li><a href="javascript:void(0);">报告</a></li>
+                                            <li><a href="javascript:void(0);">决策资讯库</a></li>
+                                            <li><a href="javascript:void(0);">中科院新药数据库</a></li>
+                                            <li><a href="javascript:void(0);">热点化合物</a></li>
+                                            <li><a href="javascript:void(0);">情报服务</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>专家技术</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">专家</a></li>
+                                            <li><a href="javascript:void(0);">仪器技术服务</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><a href="#">登录 / 注册</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header wrapper end-->
+    <!--med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">首页</a></li>
+                                <li>文献荟萃</li>
+                                <li>最新</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- med_tittle_section End -->
+    <!--service section start-->
+    <div class="page-container">
+        <div class="container">
+            <div class="row med_toppadder50 med_bottompadder50">
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                    <div class="filter-type-box">
+                       
+                        <dl>
+                            <dt>热门疾病：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>   
+                                <span> <a href="javascript:void(0);" >糖尿病</a></span>  
+                                <span> <a href="javascript:void(0);" >高血压</a></span>  
+                                <span> <a href="javascript:void(0);" >心力衰竭</a></span>  
+                                <span> <a href="javascript:void(0);" >抑郁症</a></span>  
+                                <span> <a href="javascript:void(0);" >精神分裂症</a></span>  
+                                <span> <a href="javascript:void(0);" >阿尔兹海默症</a></span>  
+                                <span> <a href="javascript:void(0);" >类风湿关节炎</a></span>  
+                                <span> <a href="javascript:void(0);" >艾滋病</a></span>  
+                                <span> <a href="javascript:void(0);" >流感</a></span>  
+                                <span> <a href="javascript:void(0);" >其他</a></span>  
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>疾病领域：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>   
+                                <span> <a href="javascript:void(0);" >癌症</a></span>  
+                                <span> <a href="javascript:void(0);" >心血管疾病</a></span>  
+                                <span> <a href="javascript:void(0);" >神经/精神疾病</a></span>  
+                                <span> <a href="javascript:void(0);" >自身免疫性疾病</a></span>  
+                                <span> <a href="javascript:void(0);" >炎症及感染性疾病</a></span>  
+                                <span> <a href="javascript:void(0);" >代谢性疾病</a></span>  
+                                <span> <a href="javascript:void(0);" >呼吸系统疾病</a></span>  
+                                <span> <a href="javascript:void(0);" >糖尿病</a></span>  
+                                <span> <a href="javascript:void(0);" >其他</a></span>  
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>药物类别：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>   
+                                <span> <a href="javascript:void(0);" >化药</a></span>  
+                                <span> <a href="javascript:void(0);" >中药</a></span>  
+                                <span> <a href="javascript:void(0);" >生物药</a></span>  
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5>临床宏基因组学</h5>
+                                <p>来源: Nature Reviews Genetic. Published: 27 March 2019,</p>
+                                <p class="cy-thesis-tags">关键词： <a href="javascript:void(0);">metagenomic next-generation sequencing</a> <a href="javascript:void(0);">DNA</a> <a href="javascript:void(0);">RNA</a> <a href="javascript:void(0);">transcriptomics</a></p>
+                                <div class="cy-summary-intro">
+                                    <p>Clinical metagenomic next-generation sequencing (mNGS), the comprehensive analysis of microbial and host genetic material (DNA and RNA) in samples from patients, is rapidly moving from research to clinical laboratories. This emerging approach is changing how physicians diagnose and treat infectious disease, with applications spanning a wide range of areas, including antimicrobial resistance, the microbiome, human host gene expression (transcriptomics) and oncology. Here, we focus on the challenges of implementing mNGS in the clinical laboratory and address potential solutions for maximizing its impact on patient care and public health.</p>
+                                    <a href="javascript:void(0);">更多</a>
+                                </div>
+                                <div class="text-right"><a href="javascript:void(0);" class="btn btn-info btn-sm"><i class="fa fa-download"></i> 下载</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5>内脏脂肪过多会导致“病态肥胖”</h5>
+                                <p>来源: PNAS, 2019, 116: 723-731,</p>
+                                <p class="cy-thesis-tags">关键词： <a href="javascript:void(0);">Inflammation</a> <a href="javascript:void(0);">type-2 diabetes</a> <a href="javascript:void(0);">metabolic syndrome</a> <a href="javascript:void(0);">developmental plasticity</a></p>
+                                <div class="cy-summary-intro">
+                                    <p>AbstractThe global obesity epidemic is the subject of an immense, diversely specialized research effort. An evolutionary analysis reveals connections among disparate findings, starting with two well-documented facts: Obesity-associated illnesses (e.g., type-2 diabetes and cardiovascular disease), are especially common in: (i) adults with abdominal obesity, especially enlargement of visceral adipose tissue (VAT), a tissue with important immune functions; and (ii) individuals with poor fetal nutrition whose nutritional input increases later in life. I hypothesize that selection favored the evolution of increased lifelong investment in VAT in individuals likely to suffer lifelong malnutrition because of its importance in fighting intraabdominal infections. Then, when increased nutrition violates the adaptive fetal prediction of lifelong nutritional deficit, preferential VAT investment could contribute to abdominal obesity and chronic inflammatory disease. VAT prioritization may help explain several patterns of nutrition-related disease: the paradoxical increase of chronic disease with increased food availability in recently urbanized and migrant populations; correlations between poor fetal nutrition, improved childhood (catch-up) growth, and adult metabolic syndrome; and survival differences between children with marasmus and kwashiorkor malnutrition. Fats and sugars can aggravate chronic inflammation via effects on intestinal bacteria regulating gut permeability to visceral pathogens. The extremes in a nutrition-sensitive trade-off between visceral (immune-function) vs. subcutaneous (body shape) adiposity may have been favored by selection in highly stratified premedicine societies. Altered adipose allocation in populations with long histories of social stratification and malnutrition may be the result of genetic accommodation of developmental responses to poor maternal/fetal conditions, increasing their vulnerability to inflammatory disease.</p>
+                                    <a href="javascript:void(0);">更多</a>
+                                </div>
+                                <div class="text-right"><a href="javascript:void(0);" class="btn btn-info btn-sm"><i class="fa fa-download"></i> 下载</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5>细菌免疫与传染性疾病</h5>
+                                <p>来源: mSystems, 2018, 3: 00075-18,</p>
+                                <p class="cy-thesis-tags">关键词： <a href="javascript:void(0);">Pseudomonas aeruginosa</a> <a href="javascript:void(0);">Immunity</a> <a href="javascript:void(0);">cystic fibrosis</a></p>
+                                <div class="cy-summary-intro">
+                                    <p>ABSTRACTViruses that infect the widespread opportunistic pathogen Pseudomonas aeruginosa have been shown to influence physiology and critical clinical outcomes in cystic fibrosis (CF) patients. To understand how CRISPR-Cas immune interactions may contribute to the distribution and coevolution of P. aeruginosa and its viruses, we reconstructed CRISPR arrays from a highly sampled longitudinal data set from CF patients attending the Copenhagen Cystic Fibrosis Clinic in Copenhagen, Denmark (R. L. Marvig, L. M. Sommer, S. Molin, and H. K. Johansen, Nat Genet 47:57–64, 2015, https://doi.org/10.1038/ng.3148). We show that new spacers are not added to or deleted from CRISPR arrays over time within a single patient but do vary among patients in this data set. We compared assembled CRISPR arrays from this data set to CRISPR arrays extracted from 726 additional publicly available P. aeruginosa sequences to show that local diversity in this population encompasses global diversity and that there is no evidence for population structure associated with location or environment sampled. We compare over 3,000 spacers from our global data set to 98 lytic and temperate viruses and proviruses and find a subset of related temperate virus clusters frequently targeted by CRISPR spacers. Highly targeted viruses are matched by different spacers in different arrays, resulting in a pattern of distributed immunity within the global population. Understanding the multiple immune contexts that P. aeruginosa viruses face can be applied to study of P. aeruginosa gene transfer, the spread of epidemic strains in cystic fibrosis patients, and viral control of P. aeruginosa infection.</p>
+                                    <a href="javascript:void(0);">更多</a>
+                                </div>
+                                <div class="text-right"><a href="javascript:void(0);" class="btn btn-info btn-sm"><i class="fa fa-download"></i> 下载</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5>Gene expression imputation across multiple brain regions provides insights into schizophrenia risk</h5>
+                                <p>来源: Nature Genetics. Published: 25 March 2019,</p>
+                                <p class="cy-thesis-tags">关键词： <a href="javascript:void(0);">Gene expression</a> <a href="javascript:void(0);">brain regions</a> <a href="javascript:void(0);">schizophrenia</a></p>
+                                <div class="cy-summary-intro">
+                                    <p>Transcriptomic imputation approaches combine eQTL reference panels with large-scale genotype data in order to test associations between disease and gene expression. These genic associations could elucidate signals in complex genome-wide association study (GWAS) loci and may disentangle the role of different tissues in disease development. We used the largest eQTL reference panel for the dorso-lateral prefrontal cortex (DLPFC) to create a set of gene expression predictors and demonstrate their utility. We applied DLPFC and 12 GTEx-brain predictors to 40,299 schizophrenia cases and 65,264 matched controls for a large transcriptomic imputation study of schizophrenia. We identified 413 genic associations across 13 brain regions. Stepwise conditioning identified 67 non-MHC genes, of which 14 did not fall within previous GWAS loci. We identified 36 significantly enriched pathways, including hexosaminidase-A deficiency, and multiple porphyric disorder pathways. We investigated developmental expression patterns among the 67 non-MHC genes and identified specific groups of pre- and postnatal expression.</p>
+                                    <a href="javascript:void(0);">更多</a>
+                                </div>
+                                <div class="text-right"><a href="javascript:void(0);" class="btn btn-info btn-sm"><i class="fa fa-download"></i> 下载</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5>重编程巨噬细胞变“线人”，或助力癌症早期筛查</h5>
+                                <p>来源: Nature Biotechnology, Published online 18 March 2019,</p>
+                                <p class="cy-thesis-tags">关键词： <a href="javascript:void(0);">Endogenous biomarkers</a> <a href="javascript:void(0);">macrophages</a> <a href="javascript:void(0);">ancer diagnostics</a></p>
+                                <div class="cy-summary-intro">
+                                    <p>AbstractEndogenous biomarkers remain at the forefront of early disease detection efforts, but many lack the sensitivities and specificities necessary to influence disease management. Here, we describe a cell-based in vivo sensor for highly sensitive early cancer detection. We engineer macrophages to produce a synthetic reporter on adopting an M2 tumor-associated metabolic profile by coupling luciferase expression to activation of the arginase-1 promoter. After adoptive transfer in colorectal and breast mouse tumor models, the engineered macrophages migrated to the tumors and activated arginase-1 so that they could be detected by bioluminescence imaging and luciferase measured in the blood. The macrophage sensor detected tumors as small as 25–50 mm3 by blood luciferase measurements, even in the presence of concomitant inflammation, and was more sensitive than clinically used protein and nucleic acid cancer biomarkers. Macrophage sensors also effectively tracked the immunological response in muscle and lung models of inflammation, suggesting the potential utility of this approach in disease states other than cancer.</p>
+                                    <a href="javascript:void(0);">更多</a>
+                                </div>
+                                <div class="text-right"><a href="javascript:void(0);" class="btn btn-info btn-sm"><i class="fa fa-download"></i> 下载</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5>太狡猾！抗癌卫士竟会被恶性肿瘤欺骗，促进癌症发展！</h5>
+                                <p>来源: Nature, Published online 20 March 2019,</p>
+                                <p class="cy-thesis-tags">关键词： <a href="javascript:void(0);">BRCA1</a> <a href="javascript:void(0);">MYCN</a> <a href="javascript:void(0);">RNA polymerase</a> <a href="javascript:void(0);">USP11</a></p>
+                                <div class="cy-summary-intro">
+                                    <p>AbstractMYC is an oncogenic transcription factor that binds globally to active promoters and promotes transcriptional elongation by RNA polymerase II (RNAPII)1,2. Deregulated expression of the paralogous protein MYCN drives the development of neuronal and neuroendocrine tumours and is often associated with a particularly poor prognosis3. Here we show that, similar to MYC, activation of MYCN in human neuroblastoma cells induces escape of RNAPII from promoters. If the release of RNAPII from transcriptional pause sites (pause release) fails, MYCN recruits BRCA1 to promoter-proximal regions. Recruitment of BRCA1 prevents MYCN-dependent accumulation of stalled RNAPII and enhances transcriptional activation by MYCN. Mechanistically, BRCA1 stabilizes mRNA decapping complexes and enables MYCN to suppress R-loop formation in promoter-proximal regions. Recruitment of BRCA1 requires the ubiquitin-specific protease USP11, which binds specifically to MYCN when MYCN is dephosphorylated at Thr58. USP11, BRCA1 and MYCN stabilize each other on chromatin, preventing proteasomal turnover of MYCN. Because BRCA1 is highly expressed in neuronal progenitor cells during early development4 and MYC is less efficient than MYCN in recruiting BRCA1, our findings indicate that a cell-lineage-specific stress response enables MYCN-driven tumours to cope with deregulated RNAPII function.</p>
+                                    <a href="javascript:void(0);">更多</a>
+                                </div>
+                                <div class="text-right"><a href="javascript:void(0);" class="btn btn-info btn-sm"><i class="fa fa-download"></i> 下载</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5>从mglu受体的变构调控看神经药理学</h5>
+                                <p>来源: Trends in Pharmacological Sciences， 2019，40（4）：240-252,</p>
+                                <p class="cy-thesis-tags">关键词： <a href="javascript:void(0);">mGlu Receptors</a> <a href="javascript:void(0);">Neuropharmacological</a></p>
+                                <div class="cy-summary-intro">
+                                    <p>The metabotropic glutamate (mGlu) receptors are a family of G-protein-coupled receptors (GPCRs) that regulate cell physiology throughout the nervous system. The potential of mGlu receptors as therapeutic targets has been bolstered by current research that has provided insight into the diverse modes of mGlu activation and signaling. In particular, the allosteric modulation of mGlu receptors represents a major area of focus in studies of basic pharmacology as well as drug development, largely due to the high subtype specificity achievable by targeting allosteric sites on mGlu receptors. These provide sophisticated regulation of neuronal excitability and synaptic transmission to influence behavioral output. Here, we review how these allosteric mechanisms have been leveraged preclinically to demonstrate the therapeutic potential of allosteric modulators for neurological and neuropsychiatric disorders, such as autism, cognitive impairment, Parkinson’s disease (PD), stress, and schizophrenia.</p>
+                                    <a href="javascript:void(0);">更多</a>
+                                </div>
+                                <div class="text-right"><a href="javascript:void(0);" class="btn btn-info btn-sm"><i class="fa fa-download"></i> 下载</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cy-news-grid-item">
+                        <div class="cy-media-body">
+                            <div class="cy-grid-body">
+                                <h5>粘附G蛋白偶联受体作为神经疾病的药物靶点</h5>
+                                <p>来源: Trends in Pharmacological Sciences，2019，,40（4）：278-293,</p>
+                                <p class="cy-thesis-tags">关键词： <a href="javascript:void(0);">G Protein-Coupled Receptors</a> <a href="javascript:void(0);">Neurological Diseases</a></p>
+                                <div class="cy-summary-intro">
+                                    <p>he family of adhesion G protein-coupled receptors (aGPCRs) consists of 33 members in humans. Although the majority are orphan receptors with unknown functions, many reports have demonstrated critical functions for some members of this family in organogenesis, neurodevelopment, myelination, angiogenesis, and cancer progression. Importantly, mutations in several aGPCRs have been linked to human diseases. The crystal structure of a shared protein domain, the GPCR Autoproteolysis INducing (GAIN) domain, has enabled the discovery of a common signaling mechanism – a tethered agonist – for this class of receptors. A series of recent reports has shed new light on their biological functions and disease relevance. This review focuses on these recent advances in our understanding of aGPCR biology in the nervous system and the untapped potential of aGPCRs as novel therapeutic targets for neurological disease.</p>
+                                    <a href="javascript:void(0);">更多</a>
+                                </div>
+                                <div class="text-right"><a href="javascript:void(0);" class="btn btn-info btn-sm"><i class="fa fa-download"></i> 下载</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-pagination clearfix">
+                        <div class="pull-left form-control-static">共<b class="text-info">110</b>条记录，每页</div>
+                        <select class="form-control pull-left width-70 input-sm text-center">
+                            <option value="10" selected="">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <div class="pull-left form-control-static">条，跳转到第</div>
+                        <input type="text" class="form-control pull-left width-60 input-sm text-center" placeholder="共6页">
+                        <div class="pull-left form-control-static">页</div>
+                        <ul class="pagination pagination-sm pull-right">
+                            <li class="disabled page-item"><a class="page-link" href="javascript:void(0);">
+                                    上一页</a></li>
+                            <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">下一页</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="sider-card">
+                        <div class="sider-card-header">
+                            <h3>热门新闻</h3>
+                        </div>
+                        <ul class="sider-list-model-a">
+                            <li><a href="javascript:void(0);">解决癌症的遗传异质性</a></li>
+                            <li><a href="javascript:void(0);">临床宏基因组学</a></li>
+                            <li><a href="javascript:void(0);">Wilms的肿瘤抑制基因调控胰腺的稳态和修复</a></li>
+                            <li><a href="javascript:void(0);">功能膜蛋白复合物的一种隐藏状态</a></li>
+                            <li><a href="javascript:void(0);">内脏脂肪过多会导致“病态肥胖”</a></li>
+                            <li><a href="javascript:void(0);">细菌免疫与传染性疾病</a></li>
+                            <li><a href="javascript:void(0);">Camporidines A and B: Antimetastatic and Anti-inflammatory Polyketide Alkaloids from a Gut Bacterium of Camponotus kiusiuensis</a></li>
+                            <li><a href="javascript:void(0);">F型ATP合成酶的结构和机制</a></li>
+                            <li><a href="javascript:void(0);">钙蛋白酶通过调节GRK2介导异丙肾上腺素诱导的肥大</a></li>
+                            <li><a href="javascript:void(0);">Gene expression imputation across multiple brain regions provides insights into schizophrenia risk</a></li>
+                        </ul>
+                    </div>
+                    <div class="sider-card">
+                        <div class="sider-card-header">
+                            <h3>热词</h3>
+                        </div>
+                        <ul class="sider-list-model-b">
+                            <li><a href="javascript:void(0);">药物开发</a></li>
+                            <li><a href="javascript:void(0);">二肽基肽酶4抑制剂</a></li>
+                            <li><a href="javascript:void(0);">制药公司</a></li>
+                            <li><a href="javascript:void(0);">医药产业</a></li>
+                            <li><a href="javascript:void(0);">跨国公司</a></li>
+                            <li><a href="javascript:void(0);">药物遗传学</a></li>
+                            <li><a href="javascript:void(0);">药物基因组学</a></li>
+                            <li><a href="javascript:void(0);">糖化血红蛋白</a></li>
+                            <li><a href="javascript:void(0);">CAR-T</a></li>
+                            <li><a href="javascript:void(0);">最优化治疗</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--service section end-->
+
+
+
+    <!-- ser_footer section start-->
+    <div class="footer_wrapper">
+        <div class="container">
+            <div class="text-center">
+                <p><a href="javascript:void(0);">网站地图</a> | <a href="javascript:void(0);">帮助中心</a> | <a href="javascript:void(0);">联系我们</a>
+                    | <a href="javascript:void(0);">关于平台</a> | <a href="javascript:void(0);">网站维护</a></p>
+                <p>版权所有 ©中国科学院上海药物研究所</p>
+                <p>沪ICP备05005386号-3</p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="up_wrapper">
+                <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--main js files-->
+    <script src="js/jquery_min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!--js code-->
+    <script>
+     $('.filter-type-box span a').click(function () {
+        if ($(this).hasClass('active'))
+            $(this).removeClass('active')
+        else
+            $(this).addClass('active')
+    });
+    $('.cy-summary-intro p').each(function () {
+        var maxwidth = 260;
+        var backup = $(this).html();
+        var height_lg = $(this).parent().height();
+        if ($(this).text().length > maxwidth) {
+            $(this).text($(this).text().substring(0, maxwidth));
+            $(this).html($(this).html() + '...');
+            var backup_1 = $(this).html();
+            var height_sm = $(this).parent().height();
+            $(this).parent().css('height', height_sm);
+        }
+        var d_value = height_lg - height_sm;
+        $(this).next().click(function () {
+            if ($(this).html() == '更多') {
+                $(this).html('收起');
+                $(this).prev().html(backup);
+                $(this).parent().animate({height: '+=' + d_value + 'px'});
+            } else {
+                $(this).html('更多');
+                $(this).prev().html(backup_1);
+                $(this).parent().animate({height: '-=' + d_value + 'px'});
+            }
+        })
+    });
+
+    </script>
+</body>
+
+</html>

@@ -103,13 +103,19 @@
                                 </div>
                                 <ul class="nav navbar-nav" id="nav_filter">
                                     <li><a th:href="@{/}">首页</a></li>
-                                    <li class="dropdown">
-                                        <a th:href="@{/innIndexUI}">客栈列表</a>
+                                    <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                            aria-haspopup="true" aria-expanded="false">旅游路线 <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu hovr_nav_tab">
+                                            <li><a href="#">旅游路线</a></li>
+                                            <li><a href="#">我关注的路线</a></li>
+                                        </ul>
                                     </li>
                                     <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                                             aria-haspopup="true" aria-expanded="false">旅行攻略 <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu hovr_nav_tab">
                                             <li><a href="#">旅行攻略</a></li>
+                                            <li><a href="#">我发布的攻略</a></li>
+                                            <li><a href="#">我关注的攻略</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -119,9 +125,6 @@
                                             <li><a th:href="@{/reserve/reserveAttractionsListUI}">景点预订</a></li>
                                             <li><a th:href="@{/reserve/reserveManageUI}">我的预订</a></li>
                                         </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a th:href="@{/innIndexUI}">旅游路线管理 </a>
                                     </li>
                                 </ul>
                             </div>

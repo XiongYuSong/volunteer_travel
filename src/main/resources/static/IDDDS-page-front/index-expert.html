@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--[endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>创药网 </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="创药网是服务于新药研发的网络技术平台，面向全国医药中小企业开展对外技术服务和情报服务，提供仪器设施、专业技术服务、寻求项目合作及转让信息，共享药物研发最新科学数据、文献、情报，评估临床前新药研发项目。" />
+    <meta name="keywords" content="创药网,药学,生物,数据库,疾病,STS,药物,情报,医药数据,药物研发,新药研发,技术平台,临床批件转让,新药技术转让,全球药物创新快讯,生物医药决策参考,疾病报告,专利,临床前研究,新药临床前评价,生物医药,热点化合物" />
+    <meta name="author" content="iddds" />
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="images/Iconpic.png" />
+</head>
+
+<body>
+    <!-- preloader Start -->
+    <div id="preloader">
+        <!-- <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader"> -->
+        <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader">
+        </div>
+    </div>
+    <!--top header start-->
+    <div class="top_header_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="top_header_add">
+                        <ul>
+                            <li><i class="fa fa-home" aria-hidden="true"></i> 中国科学院上海药物研究所</li>
+
+                        </ul>
+                    </div>
+                    <div class="top_login">
+                        <ul>
+                            <li><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请<a href="index-login.html">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+                                    href="index-register.html">注册</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header menu wrapper-->
+    <div class="menu_wrapper header-area hidden-menu-bar stick">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+                    <div class="header_logo">
+                        <a href="index.html" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-12">
+                    <nav class="navbar hidden-xs">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse respose_nav" id="bs-example-navbar-collapse-1">
+                            <div class="et_navbar_search_wrapper hidden-xs">
+                                <div class="et_search_bar" id="search_button">
+                                    <a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </div>
+                                <div id="search_open" class="et_search_box">
+                                    <input type="text" placeholder="请输入关键词">
+                                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <ul class="nav navbar-nav" id="nav_filter">
+                                <li><a href="index.html">首页</a></li>
+                                <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">每日药闻 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-mednews-new.html">最新</a></li>
+                                        <li><a href="javascript:void(0);">独家报道</a></li>
+                                        <li><a href="javascript:void(0);">科研动态</a></li>
+                                        <li><a href="javascript:void(0);">行业观察</a></li>
+                                        <li><a href="javascript:void(0);">政策动向</a></li>
+                                        <li><a href="javascript:void(0);">知识产权</a></li>
+                                        <li><a href="javascript:void(0);">专题报道</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">文献荟萃 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-thesisnews-new.html">最新</a></li>
+                                        <li><a href="javascript:void(0);">科研动态</a></li>
+                                        <li><a href="javascript:void(0);">行业观察</a></li>
+                                        <li><a href="javascript:void(0);">政策动向</a></li>
+                                        <li><a href="javascript:void(0);">知识产权</a></li>
+                                        <li><a href="javascript:void(0);">专题报道</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">产品服务 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-intelligence-journal.html">快讯</a></li>
+                                        <li><a href="index-intelligence-booklet.html">报告</a></li>
+                                        <li><a href="javascript:void(0);">决策资讯库</a></li>
+                                        <li><a href="index-newdrug.html">中科院新药数据库</a></li>
+                                        <li><a href="javascript:void(0);">热点化合物</a></li>
+                                        <li><a href="javascript:void(0);">情报服务</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">专家技术 <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu hovr_nav_tab">
+                                        <li><a href="index-expert.html">专家</a></li>
+                                        <li><a href="index-technology.html">仪器技术服务</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                        <!-- /.navbar-collapse -->
+
+                        <!-- /.container-fluid -->
+                    </nav>
+                    <div class="rp_mobail_menu_main_wrapper visible-xs">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="gc_logo logo_hidn">
+                                    <h1><a href="#"><span>创药网</span> IDDDS</a></h1>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div id="toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.177 31.177" style="enable-background:new 0 0 31.177 31.177;"
+                                        xml:space="preserve" width="25px" height="25px">
+                                        <g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                            <g>
+                                                <path class="menubar" d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z"
+                                                    fill="#2ec8a6" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sidebar">
+                            <h1>创药网 IDDDS</h1>
+                            <div id="toggle_close">&times;</div>
+                            <div id='cssmenu' class="wd_single_index_menu">
+                                <ul>
+                                    <li><a href='index.html'>首页</a></li>
+                                    <li class='has-sub'><a href="javascript:void(0);">每日药闻</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">最新</a></li>
+                                            <li><a href="javascript:void(0);">独家报道</a></li>
+                                            <li><a href="javascript:void(0);">科研动态</a></li>
+                                            <li><a href="javascript:void(0);">行业观察</a></li>
+                                            <li><a href="javascript:void(0);">政策动向</a></li>
+                                            <li><a href="javascript:void(0);">知识产权</a></li>
+                                            <li><a href="javascript:void(0);">专题报道</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>文献荟萃</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">最新</a></li>
+                                            <li><a href="javascript:void(0);">科研动态</a></li>
+                                            <li><a href="javascript:void(0);">行业观察</a></li>
+                                            <li><a href="javascript:void(0);">政策动向</a></li>
+                                            <li><a href="javascript:void(0);">知识产权</a></li>
+                                            <li><a href="javascript:void(0);">专题报道</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>产品服务</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">快讯</a></li>
+                                            <li><a href="javascript:void(0);">报告</a></li>
+                                            <li><a href="javascript:void(0);">决策资讯库</a></li>
+                                            <li><a href="javascript:void(0);">中科院新药数据库</a></li>
+                                            <li><a href="javascript:void(0);">热点化合物</a></li>
+                                            <li><a href="javascript:void(0);">情报服务</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='has-sub'><a href='javascript:void(0);'>专家技术</a>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">专家</a></li>
+                                            <li><a href="javascript:void(0);">仪器技术服务</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><a href="#">登录 / 注册</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header wrapper end-->
+    <!--med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">首页</a></li>
+                                <li>专家技术</li>
+                                <li>专家</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- med_tittle_section End -->
+    <!--service section start-->
+    <div class="page-container">
+        <div class="container">
+            <div class="row med_toppadder50 med_bottompadder50">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="filter-type-box">
+                       
+                        <dl>
+                            <dt>所属单位：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>   
+                                <span> <a href="javascript:void(0);" >上海药物所</a></span>  
+                                <span> <a href="javascript:void(0);" >昆明动物所</a></span>  
+                                <span> <a href="javascript:void(0);" >成都生物所</a></span>  
+                                <span> <a href="javascript:void(0);" >新疆理化所</a></span>  
+                                <span> <a href="javascript:void(0);" >复旦大学药学院</a></span>  
+                                <span> <a href="javascript:void(0);" >其他单位</a></span>  
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>研究方向：</dt>
+                            <dd>
+                                <span> <a href="javascript:void(0);" class="active">不限</a></span>   
+                                <span> <a href="javascript:void(0);" >药理</a></span>  
+                                <span> <a href="javascript:void(0);" >药化</a></span>  
+                                <span> <a href="javascript:void(0);" >植物化学</a></span>  
+                                <span> <a href="javascript:void(0);" >中药学</a></span>  
+                                <span> <a href="javascript:void(0);" >药物设计</a></span>  
+                                <span> <a href="javascript:void(0);" >海洋药物</a></span>  
+                                <span> <a href="javascript:void(0);" >制剂/剂型</a></span>  
+                                <span> <a href="javascript:void(0);" >装置/设备</a></span>  
+                                <span> <a href="javascript:void(0);" >工艺/合成技术</a></span>  
+                                <span> <a href="javascript:void(0);" >药物经济学</a></span>  
+                                <span> <a href="javascript:void(0);" >药代</a></span>  
+                                <span> <a href="javascript:void(0);" >动物</a></span>  
+                                <span> <a href="javascript:void(0);" >医学</a></span>  
+                            </dd>
+                        </dl>
+                        <div class="search-tags text-right">
+                            <form action="" class="form-inline">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" type="button"><i class="fa fa-search"></i> 搜索</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp01.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">任进</h5>
+                                        <p class="exp-info">药理  </p>
+                                        <p class="exp-info">上海药物所</p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 上海药物所">单位: 上海药物所</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp1-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp1-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp1-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>药物安全评价中心通过了国家食品药品监督管理局组织的 GLP 认证以及挪威认证公司进行的 ISO 9001 ∶ 2000 质量管理体系认证，建立了符合国际标准的药物安全评价研究体系， 为判断新药能否进入人体的临床试验和最终能否上市提供可靠的安全性实验依据。中心的主要功能为：提供药物安全评价服务、提供药物安全评价技术平台和咨询服务、建立各种药物安全评价模型、研究药物安全评价技术和方法、开展毒性机理研究。 　　中心可承担的安全性试验包括：单次给药毒性试验、多次给药毒性试验、生殖毒性试验、遗传毒性试验、致癌毒性试验、局部毒性试验、免疫原毒性试验、安全性药理试验和毒代动力学试验。其研究技术包括毒理学、病理组织学诊断、免疫组织化学、生物化学、分子生物学、细胞生物学、图像定量分析、心血管系统遥测、激光捕获显微切割以及激光扫描共聚焦等技术。中心还重点加强了安全评价工作中的关键技术—毒性病理学检测技术，并已成功建立系统的、符合国际规范的毒性病理学检测体系，在该项技术方面形成优势。中心还与瑞士 Actelion （爱泰隆）公司合作，成立了我国第一个 Telemetry 实验室，建立了能在动物清醒状态下测量药物对动物呼吸、心血管等系统影响的安全药理遥测实验体系（ Telemetry ）。迄今为止，中心已与多家跨国制药公司建立了良好的合作关系。中心在承担安全性评价工作的同时，还瞄准毒理学领域的前沿课题开展研究工作，研究内容涉及快速毒性评价体系的建立，具有潜在毒性化合物的探测以及毒物作用机理的分析等。中心组成了一支老、中、青结合的、技术力量强的团队。</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp1-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>电话: 021-20231972 <br> 邮箱: jren@mail.shcnc.ac.cn</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp02.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">李亚平</h5>
+                                        <p class="exp-info">制剂/剂型  </p>
+                                        <p class="exp-info">上海药物所 </p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 中国科学院上海药物研究所">单位: 中国科学院上海药物研究所</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp2-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp2-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp2-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>研究员,973首席科学家,杰青,中科院百人计划 研究方向： 1. 基于纳米技术的药物靶向递释系统 2. 核酸药物非病毒载体及其导入系统 3. 药物新剂型与新制剂的研究开发</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp2-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>电话: +86-21-20231000-1515</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp03.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">耿美玉</h5>
+                                        <p class="exp-info">药理</p>
+                                        <p class="exp-info">上海药物所 </p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 中国科学院上海药物研究所">单位: 中国科学院上海药物研究所</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp3-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp3-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp3-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>中国科学院上海药物研究所党委书记、副所长、研究员、课题组长；国家“973”计划“糖化学糖生物学研究”项目首席科学家、“国家杰出青年科学基金”和中科院“百人计划”入选者。主要从事抗阿尔茨海默病和抗肿瘤分子靶向药物研发和生物标志物研究，领衔研发的抗阿尔茨海默病药物正在临床III期研究，3个分子靶向抗肿瘤药物正在进行系统的临床前评价。系统阐明了数十个自主研发的分子靶向药物的新作用机制，发现了数个疗效预测与疗效监控生物标志物。在TiPS、J Nat Cancer Inst、Cancer Res、Intl J Cancer、Oncotarget、Mol Pharmacol、J Biol Chem、J Med Chem等SCI学术杂志上发表了100余篇论文。研究成果获国家技术发明奖一等奖一项（第五名）、“上海市优秀学科带头人”、“上海市领军人才”、“上海市五一巾帼创新奖”等多项奖励。2009年入选上海领军人才，2010年入选“上海市优秀学科带头人”，2013年入选中国科学院百千万人才工程，被授予“有突出贡献中青年专家”称号。 研究方向： 1.靶向Aβ抗阿尔茨海默病药物研发 2.激酶c-Met、ALK、FGFR抑制剂及其生物标志物 3.Hsp90抑制剂及其生物标志物 4.肿瘤代谢及其治疗策略 5.肿瘤微环境及其治疗策略</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp3-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>电话: 021-50806600-2426</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp04.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">蒋华良</h5>
+                                        <p class="exp-info">药物设计</p>
+                                        <p class="exp-info">上海药物所 </p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 中国科学院上海药物研究所">单位: 中国科学院上海药物研究所</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp4-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp4-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp4-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>蒋华良长期致力药学基础研究和新药研发，他通过生物学、化学和计算科学等多学科的交叉，开展原创药物研究新策略与新方法、先导化合物发现和优化、药物靶标调控机制等研究。他发展了一系列靶标发现和药物设计新方法，被国际同行高度重视和应用，推动我国该领域研究水平进入国际前沿。他发展了能预测化合物药效的理论计算方法，解决了药物设计领域的重大难题。他针对多种重要靶标发现了数十个新结构类型的先导化合物，其中1个抗勃起功能障碍候选药物已进入临床试验，5个抗2型糖尿病等疾病的候选新药正处于临床前研究。迄今他在国际学刊上发表了通讯作者论文200余篇、综述10篇；合编专著16本，译著2本；被他引6000余次。申请专利115项，已授权35项，实现成果转让3项（合同金额达1.8亿）。获国家自然科学二等奖、何梁何利科技进步奖等多种奖项。目前担任J. Med. Chem.副主编和其他5种国际学刊的编委。 蒋华良长期担任863计划、973计划和国家基金委重大研究计划专家组成员，具有较强的组织协调和团队管理能力。此外，蒋华良还是一位优秀的战略科学家，曾承担科技部、基金委和中科院多项战略研究任务，相关成果被纳入《国家中长期发展规划》、基金委重大研究计划和中科院创新2020计划，主编专著1本。 研究方向： 主要研究方向为药物分子设计。近年主要开展离子通道、酪氨酸激酶、脂质代谢相关通路、新型抗菌(病毒)靶标及表观遗传学相关重要蛋白质的靶标发现、分子动力学模拟、计算机辅助药物设计，药物设计方法、ADME/T预测方法和生物信息学研究。</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp4-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>电话: 021-50806600 <br>邮箱: hljiang@simm.ac.cn</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp05.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">丁健</h5>
+                                        <p class="exp-info">药理</p>
+                                        <p class="exp-info">上海药物所 </p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 中国科学院上海药物研究所">单位: 中国科学院上海药物研究所</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp5-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp5-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp5-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>研究方向： 1.分子靶向抗肿瘤药物的研发，主要关注靶点涉及多个领域：1）受体酪氨酸激酶；2）PI3K/mTOR信号通路；3）肿瘤表观遗传修饰调控酶；4）肿瘤新生血管生成调控因子。 2.抗肿瘤药物作用机制研究：1）肿瘤细胞信号转导通路；2）肿瘤分子生物标志物；3）抗肿瘤转移。 1986.10-1992.1 日本国立九州大学 博士生、访问学者 1992.2-1994.2 中国科学院上海药物研究所 博士后 1994.2-现在 中国科学院上海药物研究所 课题组组长/研究员 1996.8-2004.11 中国科学院上海药物研究所 副所长/研究员 2001.1-2003.1 国家新药筛选中心 主任/研究员 2005.1-2012.1 新药研究国家重点实验室 主任/研究员 2005.12-2013.12 中国科学院上海药物研究所 所长</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp5-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>电话: 021-50806600 <br>传真: 021-50806072 </p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp06.jpg" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">王飞</h5>
+                                        <p class="exp-info">药理</p>
+                                        <p class="exp-info">成都生物所  </p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 中科院成都生物研究所">单位: 中科院成都生物研究所</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp6-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp6-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp6-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>研究方向： 1.分子靶向抗肿瘤药物的研发，主要关注靶点涉及多个领域：1）受体酪氨酸激酶；2）PI3K/mTOR信号通路；3）肿瘤表观遗传修饰调控酶；4）肿瘤新生血管生成调控因子。 2.抗肿瘤药物作用机制研究：1）肿瘤细胞信号转导通路；2）肿瘤分子生物标志物；3）抗肿瘤转移。 1986.10-1992.1 日本国立九州大学 博士生、访问学者 1992.2-1994.2 中国科学院上海药物研究所 博士后 1994.2-现在 中国科学院上海药物研究所 课题组组长/研究员 1996.8-2004.11 中国科学院上海药物研究所 副所长/研究员 2001.1-2003.1 国家新药筛选中心 主任/研究员 2005.1-2012.1 新药研究国家重点实验室 主任/研究员 2005.12-2013.12 中国科学院上海药物研究所 所长</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp6-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>电话: 021-50806600 <br>传真: 021-50806072 </p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp07.png" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">钱隽</h5>
+                                        <p class="exp-info">复旦大学药学院    </p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 复旦大学药学院">单位: 复旦大学药学院  </p>
+                                        <p class="exp-info" >主页: <a href="javascript:void(0);" target="_blank"><i class="fa fa-external-link"></i> 访问</a></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp7-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp7-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp7-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>1990.09 – 1995.07 上海医科大学药学院，药理学专业，学士 2001.09 – 2005.01 复旦大学药学院，药剂学专业，硕士 2009.09 – 2014.07 复旦大学药学院，药剂学专业，博士 曾主持国家自然科学基金面上项目1项、新药研发项目2项；以第二负责人参与国家自然科学基金面上项目2项；此外参与上海市科委基础研究领域项目纳米专项以及上海市科委基础研究重点项目各1项。主要研究方向，在国内外学术刊物上发表科研论文20余篇，其中第一作者/共同第一作者/共同通讯作者SCI收录论文10篇，总影响因子44.86。 研究方向 1. 新型纳米探针在脑肿瘤诊断中的应用 2. 放射性核素示踪技术在医药学研究中的应用</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp7-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>电话: 021-51980099 <br> 邮箱: qianjun@fudan.edu.cn </p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp08.png" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">杨国勋</h5>
+                                        <p class="exp-info">复旦大学药学院    </p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 复旦大学药学院">单位: 复旦大学药学院  </p>
+                                        <p class="exp-info" >主页: <a href="javascript:void(0);" target="_blank"><i class="fa fa-external-link"></i> 访问</a></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp8-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp8-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp8-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>1998.09 – 2004.06 复旦大学药学院，博士 1993.09 – 1997.06 上海医科大学药学院，本科 2009.12 – 2010.12 哈佛大学医学院，访问学者 研究方向 1.中草药药效活性成分的发现（抗病毒、抗炎等） 2. 天然产物成药性研究</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp8-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>电话: 021-51980106 <br> 邮箱: gxyang@fudan.edu.cn</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="cy-news-grid-item exp-grid">
+                                <div class="cy-expert-thumbnail pull-left">
+                                    <img src="images/pic-exp09.png" class="image_fade" alt="">
+                                </div>
+                                <div class="cy-media-body">
+                                    <div class="cy-grid-body">
+                                        <h5 class="exp-name">程能能</h5>
+                                        <p class="exp-info">复旦大学药学院    </p>
+                                        <p class="exp-info" data-toggle="tooltip" title="单位: 复旦大学药学院">单位: 复旦大学药学院  </p>
+                                        <p class="exp-info" >主页: <a href="javascript:void(0);" target="_blank"><i class="fa fa-external-link"></i> 访问</a></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="exp-intro">
+                                    <ul class="exp-tabs">
+                                        <li class="active">
+                                            <a href="#exp9-1"  data-toggle="tab">详细介绍</a>
+                                        </li>
+                                        <li >
+                                            <a href="#exp9-2" data-toggle="tab">联系方式</a>
+                                        </li>
+                                    </ul>
+                                    <div class="exp-container">
+                                        <div  class="exp-tabbox active" id="exp9-1">
+                                                <div data-scroll class="exp-content">
+                                                    <p>教授，博士生导师。2000年上海医科大学临床药理学专业博士研究生毕业，获医学博士学位。1995-1996年国家教育部选派日本京都大学药学部高级访问学者。现为复旦大学药学院药理学教研室主任，复旦大学教学名师。中国药理学会理事兼中国数学药理专业委员会副主任委员，上海市药理学会常务理事，上海市药学会理事。国家食品药品监督管理局新药评审专家，中华医学会与上海市医学会医疗事故技术鉴定专家。《中国临床药学杂志》副主编,《中国药物警戒》、《中国临床药理学与治疗学杂志》编委。主讲课程：国家级精品课程《药理学》、上海市重点建设课程《药物.生命.社会》。 研究方向： 1.药物安全性研究 2.定量药理学</p>
+                                                </div>
+                                        </div>
+                                        <div  class="exp-tabbox" id="exp9-2">
+                                                <div data-scroll class="exp-content">
+                                                    <p>暂无</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                   
+                   
+
+                    <div class="page-pagination clearfix">
+                        <div class="pull-left form-control-static">共<b class="text-info">110</b>条记录，每页</div>
+                        <select class="form-control pull-left width-70 input-sm text-center">
+                            <option value="9" selected="">10</option>
+                            <option value="27">20</option>
+                            <option value="36">50</option>
+                            <option value="45">100</option>
+                        </select>
+                        <div class="pull-left form-control-static">条，跳转到第</div>
+                        <input type="text" class="form-control pull-left width-60 input-sm text-center" placeholder="共6页">
+                        <div class="pull-left form-control-static">页</div>
+                        <ul class="pagination pagination-sm pull-right">
+                            <li class="disabled page-item"><a class="page-link" href="javascript:void(0);">
+                                    上一页</a></li>
+                            <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">下一页</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+    <!--service section end-->
+
+
+
+    <!-- ser_footer section start-->
+    <div class="footer_wrapper">
+        <div class="container">
+            <div class="text-center">
+                <p><a href="javascript:void(0);">网站地图</a> | <a href="javascript:void(0);">帮助中心</a> | <a href="javascript:void(0);">联系我们</a>
+                    | <a href="javascript:void(0);">关于平台</a> | <a href="javascript:void(0);">网站维护</a></p>
+                <p>版权所有 ©中国科学院上海药物研究所</p>
+                <p>沪ICP备05005386号-3</p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="up_wrapper">
+                <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--main js files-->
+    <script src="js/jquery_min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="plugins/perfect-scrollbar/perfect-scrollbar.jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!--js code-->
+    <script>
+     $('.filter-type-box span a').click(function () {
+        if ($(this).hasClass('active'))
+            $(this).removeClass('active')
+        else
+            $(this).addClass('active')
+    });
+    (function(document) {
+        var baseScrollConfig = {
+                wheelSpeed: 1,
+                wheelPropagation: true,
+                minScrollbarLength: 12
+        };
+        $('[data-scroll]').perfectScrollbar(baseScrollConfig);
+    })(window.document);
+    </script>
+</body>
+
+</html>

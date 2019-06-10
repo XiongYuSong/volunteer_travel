@@ -27,7 +27,7 @@
                     导航栏
                 </a>
             </li>
-            <li class="dropdown open">
+            <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
                         class="fa fa-fw fa-plus"></i> 用户模块 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -35,31 +35,36 @@
                     <li><a th:href="@{/system/userListUI}">用户管理</a></li>
                 </ul>
             </li>
-            <li class="dropdown open">
+            <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
                         class="fa fa-fw fa-plus"></i> 酒店模块 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">操作</li>
                     <li><a th:href="@{/system/hotelListUI}">酒店管理</a></li>
-                    <li><a href="/sell/seller/product/index">xx</a></li>
                 </ul>
             </li>
-            <li class="dropdown open">
+            <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
                         class="fa fa-fw fa-plus"></i> 景点模块 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">操作</li>
-                    <li><a th:href="@{/system/attractionsListUI}">旅游景点管理</a></li>
-                    <li><a href="/sell/seller/product/index">xx</a></li>
+                    <li><a th:href="@{/system/attractionsListUI}">景点管理</a></li>
                 </ul>
             </li>
-            <li class="dropdown open">
+            <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
-                        class="fa fa-fw fa-plus"></i> 类目 <span class="caret"></span></a>
+                        class="fa fa-fw fa-plus"></i> 攻略模块 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">操作</li>
-                    <li><a href="/sell/seller/category/list">xx</a></li>
-                    <li><a href="/sell/seller/category/index">xx</a></li>
+                    <li><a th:href="@{/system/attractionsListUI}">审核攻略</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
+                        class="fa fa-fw fa-plus"></i> 路线模块 <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">操作</li>
+                    <li><a href="#">路线管理</a></li>
                 </ul>
             </li>
             <li>

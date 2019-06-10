@@ -3,15 +3,15 @@
 
  Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 50725
+ Source Server Version : 50726
  Source Host           : localhost:3306
  Source Schema         : vol_travel
 
  Target Server Type    : MySQL
- Target Server Version : 50725
+ Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 10/06/2019 21:40:22
+ Date: 10/06/2019 21:56:12
 */
 
 SET NAMES utf8mb4;
@@ -137,25 +137,6 @@ CREATE TABLE `sys_user`  (
 -- Records of sys_user
 -- ----------------------------
 INSERT INTO `sys_user` VALUES (1, 'admin', 'admin');
-
--- ----------------------------
--- Table structure for travel_diary
--- ----------------------------
-DROP TABLE IF EXISTS `travel_diary`;
-CREATE TABLE `travel_diary`  (
-  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '旅游攻略',
-  `user_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `diary_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `create_date` datetime(6) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `user_id`(`user_id`) USING BTREE,
-  CONSTRAINT `travel_diary_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of travel_diary
--- ----------------------------
-INSERT INTO `travel_diary` VALUES ('1', '123123123', '这是旅行游记测试1', '2019-06-09 16:51:50.000000');
 
 -- ----------------------------
 -- Table structure for travel_route
