@@ -4,14 +4,8 @@ import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
 import hue.edu.xiong.volunteer_travel.core.ServiceException;
 import hue.edu.xiong.volunteer_travel.enums.StatusEnum;
-import hue.edu.xiong.volunteer_travel.model.Attractions;
-import hue.edu.xiong.volunteer_travel.model.Hotel;
-import hue.edu.xiong.volunteer_travel.model.SysUser;
-import hue.edu.xiong.volunteer_travel.model.User;
-import hue.edu.xiong.volunteer_travel.repository.HotelRepository;
-import hue.edu.xiong.volunteer_travel.repository.SysUserRepository;
-import hue.edu.xiong.volunteer_travel.repository.UserRepository;
-import hue.edu.xiong.volunteer_travel.repository.AttractionsRepository;
+import hue.edu.xiong.volunteer_travel.model.*;
+import hue.edu.xiong.volunteer_travel.repository.*;
 import hue.edu.xiong.volunteer_travel.util.CookieUitl;
 import hue.edu.xiong.volunteer_travel.util.IdGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +41,12 @@ public class SystemService {
 
     @Autowired
     private AttractionsRepository attractionsRepository;
+
+    @Autowired
+    private TravelRouteRepository travelRouteRepository;
+
+    @Autowired
+    private TravelStrategyRepository travelStrategyRepository;
 
 
     public Result login(SysUser sysUser, HttpServletResponse response) {
@@ -199,6 +199,103 @@ public class SystemService {
             attractions.setCreateDate(oldAttractions.getCreateDate());
         }
         attractionsRepository.saveAndFlush(attractions);
+        return ResultGenerator.genSuccessResult();
+    }
+
+    public Page<TravelRoute> getTravelRoutePage(Pageable pageable) {
+        Page<TravelRoute> travelRoutePage = travelRouteRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("createDate")));
+            return null;
+        }, pageable);
+        return travelRoutePage;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public Result saveTravelRoute(TravelRoute travelRoute) {
+
+        if (StringUtils.isEmpty(travelRoute.getId())) {//没有id的情况
+            travelRoute.setId(IdGenerator.id());
+            if (travelRoute.getStatus() == null) {
+                //默认为停用
+                travelRoute.setStatus(StatusEnum.DOWM_STATUS.getCode());
+                travelRoute.setCollectNumber(0);
+                travelRoute.setCreateDate(new Date());
+            }
+        } else {
+            //有id的情况
+            TravelRoute oldTravelRoute = getTravelRouteById(travelRoute.getId());
+            travelRoute.setStatus(oldTravelRoute.getStatus());
+            travelRoute.setCollectNumber(oldTravelRoute.getCollectNumber());
+            travelRoute.setCreateDate(oldTravelRoute.getCreateDate());
+        }
+        travelRouteRepository.saveAndFlush(travelRoute);
+        return ResultGenerator.genSuccessResult();
+    }
+
+    public TravelRoute getTravelRouteById(String id) {
+        TravelRoute travelRoute = travelRouteRepository.findById(id).orElseThrow(() -> new ServiceException("路线ID错误!"));
+        return travelRoute;
+    }
+
+    public Result updateTravelRouteStatus(String id) {
+        TravelRoute travelRoute = getTravelRouteById(id);
+        if (travelRoute.getStatus().equals(StatusEnum.DOWM_STATUS.getCode())) {
+            //改变状态
+            travelRoute.setStatus(StatusEnum.UP_STATUS.getCode());
+        } else {
+            travelRoute.setStatus(StatusEnum.DOWM_STATUS.getCode());
+        }
+        travelRouteRepository.saveAndFlush(travelRoute);
+        return ResultGenerator.genSuccessResult();
+    }
+
+    public Page<TravelStrategy> getTravelStrategyPage(Pageable pageable) {
+        Page<TravelStrategy> travelStrategyPage = travelStrategyRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("createDate")));
+            return null;
+        }, pageable);
+        return travelStrategyPage;
+    }
+
+    public TravelStrategy getTravelStrategyById(String id) {
+        TravelStrategy travelStrategy = travelStrategyRepository.findById(id).orElseThrow(() -> new ServiceException("攻略ID错误!"));
+        return travelStrategy;
+    }
+
+    public Result updateTravelStrategyStatus(String id) {
+        TravelStrategy travelStrategy = getTravelStrategyById(id);
+        if (travelStrategy.getStatus().equals(StatusEnum.DOWM_STATUS.getCode())) {
+            //改变状态
+            travelStrategy.setStatus(StatusEnum.UP_STATUS.getCode());
+        } else {
+            travelStrategy.setStatus(StatusEnum.DOWM_STATUS.getCode());
+        }
+        travelStrategyRepository.saveAndFlush(travelStrategy);
+        return ResultGenerator.genSuccessResult();
+    }
+
+
+    @Transactional(rollbackFor = Exception.class)
+    public Result saveTravelStrategy(TravelStrategy travelStrategy) {
+
+        if (StringUtils.isEmpty(travelStrategy.getId())) {//没有id的情况
+            travelStrategy.setId(IdGenerator.id());
+            if (travelStrategy.getStatus() == null) {
+                //默认为停用
+                travelStrategy.setStatus(StatusEnum.DOWM_STATUS.getCode());
+                travelStrategy.setCreateDate(new Date());
+            }
+        } else {
+            //有id的情况
+            TravelRoute oldTravelRoute = getTravelRouteById(travelStrategy.getId());
+            travelStrategy.setStatus(oldTravelRoute.getStatus());
+            travelStrategy.setCreateDate(oldTravelRoute.getCreateDate());
+        }
+        travelStrategyRepository.saveAndFlush(travelStrategy);
         return ResultGenerator.genSuccessResult();
     }
 }

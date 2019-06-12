@@ -2,10 +2,7 @@ package hue.edu.xiong.volunteer_travel.controller;
 
 import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
-import hue.edu.xiong.volunteer_travel.model.Hotel;
-import hue.edu.xiong.volunteer_travel.model.Attractions;
-import hue.edu.xiong.volunteer_travel.model.SysUser;
-import hue.edu.xiong.volunteer_travel.model.User;
+import hue.edu.xiong.volunteer_travel.model.*;
 import hue.edu.xiong.volunteer_travel.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -116,5 +113,55 @@ public class SystemController {
     @ResponseBody
     public Result saveAttractions(Attractions attractions) {
         return systemService.saveAttractions(attractions);
+    }
+
+    @RequestMapping("/travelRouteListUI")
+    public String travelRouteListUI(Model model, @PageableDefault(size = 10) Pageable pageable) {
+        Page<TravelRoute> page = systemService.getTravelRoutePage(pageable);
+        model.addAttribute("page", page);
+        return "system/route/list";
+    }
+
+    @RequestMapping("/getTravelRouteById")
+    @ResponseBody
+    public Result getTravelRouteById(String id) {
+        return ResultGenerator.genSuccessResult(systemService.getTravelRouteById(id));
+    }
+
+    @RequestMapping("/updateTravelRouteStatus")
+    @ResponseBody
+    public Result updateTravelRouteStatus(String id) {
+        return systemService.updateTravelRouteStatus(id);
+    }
+
+    @RequestMapping("/saveTravelRoute")
+    @ResponseBody
+    public Result saveTravelRoute(TravelRoute travelRoute) {
+        return systemService.saveTravelRoute(travelRoute);
+    }
+
+    @RequestMapping("/travelStrategyListUI")
+    public String travelStrategyListUI(Model model, @PageableDefault(size = 10) Pageable pageable) {
+        Page<TravelStrategy> page = systemService.getTravelStrategyPage(pageable);
+        model.addAttribute("page", page);
+        return "system/strategy/list";
+    }
+
+    @RequestMapping("/getTravelStrategyById")
+    @ResponseBody
+    public Result getTravelStrategyById(String id) {
+        return ResultGenerator.genSuccessResult(systemService.getTravelStrategyById(id));
+    }
+
+    @RequestMapping("/updateTravelStrategyStatus")
+    @ResponseBody
+    public Result updateTravelStrategyStatus(String id) {
+        return systemService.updateTravelStrategyStatus(id);
+    }
+
+    @RequestMapping("/saveTravelStrategy")
+    @ResponseBody
+    public Result saveTravelStrategy(TravelStrategy travelStrategy) {
+        return systemService.saveTravelStrategy(travelStrategy);
     }
 }

@@ -46,7 +46,6 @@ public class ReserveService {
     @Autowired
     private UserAttractionsRepository userAttractionsRepository;
 
-
     public Page<Hotel> reserveHotelListUI(String searchName, Pageable pageable) {
         //查询启用的酒店列表
         Page<Hotel> hotelPage = hotelRepository.findAll((root, query, cb) -> {
