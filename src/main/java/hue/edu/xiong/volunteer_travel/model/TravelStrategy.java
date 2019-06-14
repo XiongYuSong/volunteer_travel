@@ -13,9 +13,8 @@ public class TravelStrategy {
     @Column(name = "id")
     private String id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @Column(name = "title")
+    private String title;
 
     @Column(name = "strategy_describe")
     private String describe;
@@ -25,6 +24,10 @@ public class TravelStrategy {
 
     @Column(name = "strategy_status")
     private Integer status;
+
+    public String getTitle() { return title; }
+
+    public void setTitle(String title) { this.title = title; }
 
     public Integer getStatus() {
         return status;
@@ -37,10 +40,6 @@ public class TravelStrategy {
     public String getId() { return id; }
 
     public void setId(String id) { this.id = id; }
-
-    public User getUser() { return user; }
-
-    public void setUser(User user) { this.user = user; }
 
     public String getDescribe() { return describe; }
 

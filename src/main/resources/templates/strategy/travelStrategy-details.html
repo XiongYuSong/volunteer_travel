@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+        layout:decorate="~{base/layout}">
+<div layout:fragment="content">
+    <!--header wrapper end-->
+    <!--med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">首页</a></li>
+                                <li>攻略列表</li>
+                                <li>预订</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- med_tittle_section End -->
+    <!--service section start-->
+    <div class="page-container">
+        <div class="container">
+            <div class="row med_toppadder50 med_bottompadder50">
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                    <div class="news-detail-box">
+                        <h3 th:text="${travelStrategy.title}"></h3>
+                        <div class="author-info">
+                            <span th:text="${#calendars.format(travelStrategy.createDate,'yyyy-MM-dd')}"></span>
+                            <!--<span>所在地：<span th:text="${travelRoute.address}"></span></span>-->
+                            <span>浏览次数：13</span>
+                        </div>
+                        <div class="news-detail-content">
+                            <p th:text="${travelStrategy.describe}">
+                            </p>
+                            <div align="right" style="float:right">
+                                <button th:if="${flag == false}" th:onclick="cancelTravelStrategyReserve([[${travelStrategy.id}]],'收藏')"
+                                        type="button" class="btn btn-default btn-info">收藏
+                                </button>
+                                <button th:if="${flag == true }" th:onclick="cancelTravelStrategyReserve([[${travelStrategy.id}]],'取消收藏')"
+                                        type="button" class="btn btn-default btn-info">
+                                    取消收藏
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="sider-card">
+                        <div class="sider-card-header">
+                            <h3>热门新闻</h3>
+                        </div>
+                        <ul class="sider-list-model-a">
+                            <li><a href="javascript:void(0);">现有药物可能在线粒体疾病中具有治疗潜力</a></li>
+                            <li><a href="javascript:void(0);">首次发现自闭症的常见风险基因</a></li>
+                            <li><a href="javascript:void(0);">肢带型肌营养不良症基因疗法显示早期疗效</a></li>
+                            <li><a href="javascript:void(0);">遗传性骨质疏松症的新形式</a></li>
+                            <li><a href="javascript:void(0);">两会“药点”！辅助用药、带量采购……15位医药大佬说出你心声了吗</a></li>
+                            <li><a href="javascript:void(0);">抗肿瘤1类新药盐酸希美替尼获准进入临床研究</a></li>
+                            <li><a href="javascript:void(0);">老药为先导开发新药经典案例探析</a></li>
+                            <li><a href="javascript:void(0);">失眠相关基因区域提示了潜在机制和治疗目标</a></li>
+                            <li><a href="javascript:void(0);">全新机制 炎性肠病或将迎来又一款新药</a></li>
+                            <li><a href="javascript:void(0);">为初级脑神经元开发的强大而特异的基因调控工具</a></li>
+                        </ul>
+                    </div>
+                    <div class="sider-card">
+                        <div class="sider-card-header">
+                            <h3>热词</h3>
+                        </div>
+                        <ul class="sider-list-model-b">
+                            <li><a href="javascript:void(0);">抗体偶联药物</a></li>
+                            <li><a href="javascript:void(0);">乳腺癌</a></li>
+                            <li><a href="javascript:void(0);">非小细胞肺癌</a></li>
+                            <li><a href="javascript:void(0);">CAR-T</a></li>
+                            <li><a href="javascript:void(0);">FDA</a></li>
+                            <li><a href="javascript:void(0);">HIV</a></li>
+                            <li><a href="javascript:void(0);">1型糖尿病</a></li>
+                            <li><a href="javascript:void(0);">结肠癌</a></li>
+                            <li><a href="javascript:void(0);">癌细胞</a></li>
+                            <li><a href="javascript:void(0);">CDE</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--service section end-->
+    <script th:inline="javascript">
+        function cancelTravelStrategyReserve(id, str) {
+            $.ajax({
+                url: '/travel/strategy/cancelTravelStrategyReserve',
+                data: {"id": id},
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code === 200) {
+                        if(str == '预订'){
+                            confirm(str + "成功!"); //在页面上弹出对话框
+                            window.location.href = "/travel/strategy/strategyManageUI";
+                        }else{
+                            confirm(str + "成功!"); //在页面上弹出对话框
+                            window.location.href = "/travel/strategy/travelStrategyListUI";
+                        }
+                    } else {
+                        layer.open({
+                            title: '错误提示',
+                            content: result.message
+                        });
+                    }
+                }
+            })
+        }
+    </script>
+</div>
+</html>
