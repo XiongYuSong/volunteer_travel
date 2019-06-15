@@ -28,7 +28,7 @@
                     <tbody>
                     <tr th:each="attractions:${page.content}">
                         <td th:text="${attractions.name}"></td>
-                        <td><img width="170px" th:src="@{/images/pic-ywnews03.jpg}"></td>
+                        <td><img width="170px" th:src="@{'/images/'+ ${attractions.image} +'.jpg'}"></td>
                         <td th:text="${attractions.address}"></td>
                         <td th:text="${attractions.describe}"></td>
                         <td>

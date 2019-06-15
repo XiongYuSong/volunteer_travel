@@ -30,7 +30,7 @@
                     <div class="cy-news-grid-item" th:each="userHotel:${userHotelList}">
                         <div class="cy-ib-thumbnail pull-left">
                             <a th:href="@{/reserve/hotelDetailsUI(id=${userHotel.hotel.id})}">
-                                <img th:src="@{/images/pic-ib01.jpg}" class="image_fade" alt="">
+                                <img th:src="@{'/images/'+ ${userHotel.hotel.image} +'.jpg'}" class="image_fade" alt="">
                             </a>
                         </div>
                         <div class="booklet-cont">
@@ -52,7 +52,7 @@
                     <div class="cy-news-grid-item" th:each="userAttractions:${userAttractionsList}">
                         <div class="cy-ib-thumbnail pull-left">
                             <a th:href="@{/reserve/attractionsDetailsUI(id=${userAttractions.attractions.id})}">
-                                <img th:src="@{/images/pic-ib01.jpg}" class="image_fade" alt="">
+                                <img th:src="@{'/images/'+ ${userAttractions.attractions.image} +'.jpg'}" class="image_fade" alt="">
                             </a>
                         </div>
                         <div class="booklet-cont">

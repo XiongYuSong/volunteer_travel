@@ -28,18 +28,24 @@
                     <tbody>
                     <tr th:each="hotel:${page.content}">
                         <td th:text="${hotel.name}"></td>
-                        <td><img width="170px" th:src="@{/images/pic-ywnews03.jpg}"></td>
+                        <td><img width="170px" th:src="@{'/images/'+ ${hotel.image} +'.jpg'}"></td>
                         <td th:text="${hotel.address}"></td>
                         <td th:text="${hotel.describe}"></td>
                         <td>
                             <div align="left" style="float:left">
-                                <button type="button" th:onclick="updateMember([[${hotel.id}]])" class="btn btn-default btn-info">修改</button>
+                                <button type="button" th:onclick="updateMember([[${hotel.id}]])"
+                                        class="btn btn-default btn-info">修改
+                                </button>
                             </div>
                             <div th:if="${hotel.status == 0}" align="left">
-                                <button type="button" th:onclick="updateStatus([[${hotel.id}]])" class="btn btn-default btn-danger">禁用</button>
+                                <button type="button" th:onclick="updateStatus([[${hotel.id}]])"
+                                        class="btn btn-default btn-danger">禁用
+                                </button>
                             </div>
                             <div th:if="${hotel.status == 1}" align="left">
-                                <button type="button" th:onclick="updateStatus([[${hotel.id}]])" class="btn btn-default btn-success">启用</button>
+                                <button type="button" th:onclick="updateStatus([[${hotel.id}]])"
+                                        class="btn btn-default btn-success">启用
+                                </button>
                             </div>
                         </td>
                     </tr>

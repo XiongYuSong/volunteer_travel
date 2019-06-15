@@ -34,6 +34,10 @@ public class ReserveController {
     @RequestMapping("/reserveHotelListUI")
     public String reserveHotelListUI(Model model, @ModelAttribute("searchName") String searchName, @PageableDefault(size = 10) Pageable pageable) {
         Page<Hotel> page = reserveService.reserveHotelListUI(searchName, pageable);
+        List<Hotel> top10Hotel = reserveService.getTop10Hotel();
+        List<Attractions> top10Attractions = reserveService.getTop10Attractions();
+        model.addAttribute("top10Hotel", top10Hotel);
+        model.addAttribute("top10Attractions", top10Attractions);
         model.addAttribute("page", page);
         return "reserve/reserve-hotel";
     }
@@ -43,6 +47,10 @@ public class ReserveController {
         Hotel hotel = reserveService.findHotelById(id);
         //如果用户显示已经预约,就是查看预约列表
         Boolean flag = reserveService.isReserveHotel(request, id);
+        List<Hotel> top10Hotel = reserveService.getTop10Hotel();
+        List<Attractions> top10Attractions = reserveService.getTop10Attractions();
+        model.addAttribute("top10Hotel", top10Hotel);
+        model.addAttribute("top10Attractions", top10Attractions);
         model.addAttribute("hotel", hotel);
         model.addAttribute("flag", flag);
         return "reserve/reserve-hotel-details";
@@ -66,6 +74,10 @@ public class ReserveController {
     @RequestMapping("/reserveAttractionsListUI")
     public String reserveAttractionsListUI(Model model, @ModelAttribute("searchName") String searchName, @PageableDefault(size = 10) Pageable pageable) {
         Page<Attractions> page = reserveService.reserveAttractionsListUI(searchName,pageable);
+        List<Hotel> top10Hotel = reserveService.getTop10Hotel();
+        List<Attractions> top10Attractions = reserveService.getTop10Attractions();
+        model.addAttribute("top10Hotel", top10Hotel);
+        model.addAttribute("top10Attractions", top10Attractions);
         model.addAttribute("page", page);
         return "reserve/reserve-attractions";
     }
@@ -75,6 +87,10 @@ public class ReserveController {
         Attractions attractions = reserveService.findAttractionsById(id);
         //如果用户显示已经预约,就是查看预约列表
         Boolean flag = reserveService.isReserveAttractions(request, id);
+        List<Hotel> top10Hotel = reserveService.getTop10Hotel();
+        List<Attractions> top10Attractions = reserveService.getTop10Attractions();
+        model.addAttribute("top10Hotel", top10Hotel);
+        model.addAttribute("top10Attractions", top10Attractions);
         model.addAttribute("attractions", attractions);
         model.addAttribute("flag", flag);
         return "reserve/reserve-attractions-details";

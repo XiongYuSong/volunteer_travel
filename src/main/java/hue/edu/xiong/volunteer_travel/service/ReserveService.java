@@ -13,6 +13,7 @@ import hue.edu.xiong.volunteer_travel.util.CookieUitl;
 import hue.edu.xiong.volunteer_travel.util.IdGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -180,6 +181,34 @@ public class ReserveService {
             }
         }
         return false;
+    }
+
+    public List<Hotel> getTop10Hotel() {
+        PageRequest pageable = PageRequest.of(0, 10);
+        //查询启用的酒店列表
+        Page<Hotel> hotelPage = hotelRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            //status状态,查询状态为0,启动的酒店
+            predicates.add((cb.equal(root.get("status"), 0)));
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("createDate")));
+            return null;
+        }, pageable);
+        return hotelPage.getContent();
+    }
+
+    public List<Attractions> getTop10Attractions() {
+        PageRequest pageable = PageRequest.of(0, 10);
+        Page<Attractions> attractionsPage = attractionsRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            //status状态,查询状态为0,启动的景点
+            predicates.add((cb.equal(root.get("status"), 0)));
+            //景点name模糊查询
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("createDate")));
+            return null;
+        }, pageable);
+        return attractionsPage.getContent();
     }
 }
 
