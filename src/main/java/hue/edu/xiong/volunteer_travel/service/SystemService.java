@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 /**
  * @Author Xiong YuSong
@@ -48,6 +49,7 @@ public class SystemService {
     @Autowired
     private TravelStrategyRepository travelStrategyRepository;
 
+    private Random random = new Random(100);
 
     public Result login(SysUser sysUser, HttpServletResponse response) {
 
@@ -120,19 +122,19 @@ public class SystemService {
 
     @Transactional(rollbackFor = Exception.class)
     public Result saveHotel(Hotel hotel) {
-        hotel.setImage("");
+
         if (StringUtils.isEmpty(hotel.getId())) {//没有id的情况
             hotel.setId(IdGenerator.id());
-            if (hotel.getStatus() == null) {
-                //默认为停用
-                hotel.setStatus(StatusEnum.DOWM_STATUS.getCode());
-                hotel.setCreateDate(new Date());
-            }
+            hotel.setStatus(StatusEnum.DOWM_STATUS.getCode());
+            hotel.setCreateDate(new Date());
+            int i = random.nextInt(100);
+            hotel.setImage("MY_kezhan_0" + (i % 8 + 1));
         } else {
             //有id的情况
             Hotel oldHotel = getHotelById(hotel.getId());
             hotel.setStatus(oldHotel.getStatus());
             hotel.setCreateDate(oldHotel.getCreateDate());
+            hotel.setImage(oldHotel.getImage());
         }
         hotelRepository.saveAndFlush(hotel);
         return ResultGenerator.genSuccessResult();
@@ -184,19 +186,18 @@ public class SystemService {
 
     @Transactional(rollbackFor = Exception.class)
     public Result saveAttractions(Attractions attractions) {
-        attractions.setImage("");
         if (StringUtils.isEmpty(attractions.getId())) {//没有id的情况
             attractions.setId(IdGenerator.id());
-            if (attractions.getStatus() == null) {
-                //默认为停用
-                attractions.setStatus(StatusEnum.DOWM_STATUS.getCode());
-                attractions.setCreateDate(new Date());
-            }
+            attractions.setStatus(StatusEnum.DOWM_STATUS.getCode());
+            attractions.setCreateDate(new Date());
+            int i = random.nextInt(100);
+            attractions.setImage("MY_jingdian_0" + (i % 8 + 1));
         } else {
             //有id的情况
             Attractions oldAttractions = getAttractionsById(attractions.getId());
             attractions.setStatus(oldAttractions.getStatus());
             attractions.setCreateDate(oldAttractions.getCreateDate());
+            attractions.setImage(oldAttractions.getImage());
         }
         attractionsRepository.saveAndFlush(attractions);
         return ResultGenerator.genSuccessResult();

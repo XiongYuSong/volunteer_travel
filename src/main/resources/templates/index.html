@@ -20,7 +20,8 @@
                     <h3 class="sp-layer sp-black sp-padding hide-small-screen" data-width="80%" data-position="topRight"
                         data-horizontal="8%" data-vertical="25%" data-show-transition="right" data-hide-transition="up"
                         data-show-delay="800" data-hide-delay="100">
-                        <span class="title-aaa">明阳旅行</span>——明阳旅行最新版是针对全国定制旅游的社区化APP,涵盖美食、攻略资讯、酒店预订和景点推荐等功能.还内具好友圈、说说、长贴、关注等社交性功能,你还可以在这里分享你的游玩日记与生活动态,即时分享你的快乐.找攻略、订酒店、查交通全都有,给你提供一站式的旅游社区化服务.
+                        <span class="title-aaa">明阳旅行</span>
+                        ——实训项目,请不要模仿
                         <span class="read-more"><a href="javascript:void(0);">查看更多</a></span>
                     </h3>
                 </div>
@@ -52,12 +53,14 @@
                                     <div th:each="hotel:${top10Hotel}" class="item">
                                         <div class="cy-news-post clearfix">
                                             <div class="entry-image">
-                                                <a th:href="@{/reserve/hotelDetailsUI(id=${hotel.id})}"><img class="image_fade"
-                                                                 th:src="@{'/images/'+ ${hotel.image} +'.jpg'}"
-                                                                 alt="Image"></a>
+                                                <a th:href="@{/reserve/hotelDetailsUI(id=${hotel.id})}"><img
+                                                        class="image_fade"
+                                                        th:src="@{'/images/'+ ${hotel.image} +'.jpg'}"
+                                                        alt="Image"></a>
                                             </div>
                                             <div class="entry-title">
-                                                <h4><a th:href="@{/reserve/hotelDetailsUI(id=${hotel.id})}" data-toggle="tooltip"
+                                                <h4><a th:href="@{/reserve/hotelDetailsUI(id=${hotel.id})}"
+                                                       data-toggle="tooltip"
                                                        data-container="body"
                                                        th:title="${hotel.name}" th:text="${hotel.name}"></a>
                                                 </h4>
@@ -181,8 +184,10 @@
                         </div>
                     </div>
                     <ul class="main-cy-thesis">
-                        <li th:each="route:${top10Route}"><a th:href="@{/route/travelRouteDetailsUI(id=${route.id})}" data-toggle="tooltip" data-container="body"
-                               th:title="${route.name}" th:text="${route.name}">xxxxxxxxxxxx</a></li>
+                        <li th:each="route:${top10Route}"><a th:href="@{/route/travelRouteDetailsUI(id=${route.id})}"
+                                                             data-toggle="tooltip" data-container="body"
+                                                             th:title="${route.name}" th:text="${route.name}">xxxxxxxxxxxx</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -272,6 +277,11 @@
                     992: {items: 4}
                 }
             });
+
+            setInterval(function () {
+                var buy = $('.sp-previous-arrow')[0];//给你的a标签加一个id :btnBuy
+                buy.click();
+            }, 5000)//后面的500是以毫秒为单位。
         });
     </script>
 </div>
