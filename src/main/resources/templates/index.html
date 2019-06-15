@@ -32,10 +32,15 @@
             <div class="row med_toppadder30">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="cy-title">
-                        <h2>热门客栈</h2>
+                        <h2>热门酒店</h2>
                         <div class="pull-right">
+
                             <div class="main-tabs">
                                 <ul class="nav nav-tabs">
+                                    <li>
+                                        <a th:href="@{/reserve/reserveHotelListUI}">更多 <i
+                                                class="fa fa-angle-right"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -44,192 +49,31 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="c01">
                                 <div id="oc-news" class="owl-carousel owl-theme">
-                                    <div class="item">
+                                    <div th:each="hotel:${top10Hotel}" class="item">
                                         <div class="cy-news-post clearfix">
                                             <div class="entry-image">
-                                                <a href="#"><img class="image_fade" th:src="@{/images/hotel_1.jpg}"
+                                                <a th:href="@{/reserve/hotelDetailsUI(id=${hotel.id})}"><img class="image_fade"
+                                                                 th:src="@{'/images/'+ ${hotel.image} +'.jpg'}"
                                                                  alt="Image"></a>
                                             </div>
                                             <div class="entry-title">
-                                                <h4><a href="javascript:void(0);" data-toggle="tooltip"
+                                                <h4><a th:href="@{/reserve/hotelDetailsUI(id=${hotel.id})}" data-toggle="tooltip"
                                                        data-container="body"
-                                                       title="xxxxxxxxxxxxxxxxxxxxxxxx">888888888888888888888888</a>
+                                                       th:title="${hotel.name}" th:text="${hotel.name}"></a>
                                                 </h4>
                                             </div>
                                             <div class="entry-content">
-                                                <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
+                                                <p th:text="${hotel.describe}">
+                                                </p>
                                             </div>
                                             <ul class="entry-meta clearfix">
-                                                <li><i class="fa fa-calendar"></i> 2019-03-13</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-news-post clearfix">
-                                            <div class="entry-image">
-                                                <a href="javascript:void(0);"><img class="image_fade"
-                                                                                   th:src="@{/images/pic-news02.jpg}"
-                                                                                   alt="Image"></a>
-                                            </div>
-                                            <div class="entry-title">
-                                                <h4><a href="javascript:void(0);" data-toggle="tooltip"
-                                                       data-container="body"
-                                                       title="xxxxxxxxxxxxxxxxxxxxxxxx">777777777777777777777777</a>
-                                                </h4>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="fa fa-calendar"></i> 2019-03-13</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-news-post clearfix">
-                                            <div class="entry-image">
-                                                <a href="javascript:void(0);"><img class="image_fade"
-                                                                                   src="images/pic-news03.jpg"
-                                                                                   alt="Image"></a>
-                                            </div>
-                                            <div class="entry-title">
-                                                <h4><a href="javascript:void(0);" data-toggle="tooltip"
-                                                       data-container="body"
-                                                       title="xxxxxxxxxxxxxxxxxxxxxxxx">666666666666666666666666</a>
-                                                </h4>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="fa fa-calendar"></i> 2019-03-13</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-news-post clearfix">
-                                            <div class="entry-image">
-                                                <a href="javascript:void(0);"><img class="image_fade"
-                                                                                   src="images/pic-news04.jpg"
-                                                                                   alt="Image"></a>
-                                            </div>
-                                            <div class="entry-title">
-                                                <h4><a href="javascript:void(0);" data-toggle="tooltip"
-                                                       data-container="body"
-                                                       title="xxxxxxxxxxxxxxxxxxxxxxxx">555555555555555555555555</a>
-                                                </h4>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="fa fa-calendar"></i> 2019-03-13</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-news-post clearfix">
-                                            <div class="entry-image">
-                                                <a href="javascript:void(0);"><img class="image_fade"
-                                                                                   src="images/pic-news01.jpg"
-                                                                                   alt="Image"></a>
-                                            </div>
-                                            <div class="entry-title">
-                                                <h4><a href="javascript:void(0);" data-toggle="tooltip"
-                                                       data-container="body"
-                                                       title="xxxxxxxxxxxxxxxxxxxxxxxx">444444444444444444444444</a>
-                                                </h4>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="fa fa-calendar"></i> 2019-03-13</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-news-post clearfix">
-                                            <div class="entry-image">
-                                                <a href="javascript:void(0);"><img class="image_fade"
-                                                                                   src="images/pic-news02.jpg"
-                                                                                   alt="Image"></a>
-                                            </div>
-                                            <div class="entry-title">
-                                                <h4><a href="javascript:void(0);" data-toggle="tooltip"
-                                                       data-container="body"
-                                                       title="xxxxxxxxxxxxxxxxxxxxxxxx">333333333333333333333333</a>
-                                                </h4>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="fa fa-calendar"></i> 2019-03-13</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-news-post clearfix">
-                                            <div class="entry-image">
-                                                <a href="javascript:void(0);"><img class="image_fade"
-                                                                                   src="images/pic-news03.jpg"
-                                                                                   alt="Image"></a>
-                                            </div>
-                                            <div class="entry-title">
-                                                <h4><a href="javascript:void(0);" data-toggle="tooltip"
-                                                       data-container="body"
-                                                       title="xxxxxxxxxxxxxxxxxxxxxxxx">222222222222222222222222</a>
-                                                </h4>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="fa fa-calendar"></i> 2019-03-13</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-news-post clearfix">
-                                            <div class="entry-image">
-                                                <a href="javascript:void(0);"><img class="image_fade"
-                                                                                   src="images/pic-news04.jpg"
-                                                                                   alt="Image"></a>
-                                            </div>
-                                            <div class="entry-title">
-                                                <h4><a href="javascript:void(0);" data-toggle="tooltip"
-                                                       data-container="body"
-                                                       title="xxxxxxxxxxxxxxxxxxxxxxxx">111111111111111111111111</a>
-                                                </h4>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
-                                                    呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵</p>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="fa fa-calendar"></i> 2019-03-13</li>
+                                                <li th:text="${#calendars.format(hotel.createDate,'yyyy-MM-dd')}"><i
+                                                        class="fa fa-calendar"></i></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="tab-pane" id="c02">...</div> -->
                         </div>
                     </div>
 
@@ -238,13 +82,13 @@
             <div class="row med_bottompadder30">
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="cy-title">
-                        <h2>旅行游记</h2>
+                        <h2>旅行攻略</h2>
                         <div class="pull-right">
 
                             <div class="main-tabs">
                                 <ul class="nav nav-tabs">
                                     <li>
-                                        <a href="javascript:void(0);" target="_blank">更多 <i
+                                        <a th:href="@{/strategy/travelStrategyListUI}">更多 <i
                                                 class="fa fa-angle-right"></i></a>
                                     </li>
                                 </ul>
@@ -282,20 +126,9 @@
                         <div class="pull-right">
 
                             <div class="main-tabs">
-                                <ul class="nav nav-tabs">
-                                    <!--<li class="active">-->
-                                    <!--<a href="#cp01" data-toggle="tab">快讯</a>-->
-                                    <!--</li>-->
-                                    <!--<li>-->
-                                    <!--<a href="#cp02" data-toggle="tab">报告</a>-->
-                                    <!--</li>-->
-                                    <!--<li>-->
-                                    <!--<a href="#cp03" data-toggle="tab">自建数据库</a>-->
-                                    <!--</li>-->
-                                    <!--<li>-->
-                                    <a href="javascript:void(0);" target="_blank">更多 <i
-                                            class="fa fa-angle-right"></i></a>
-                                    </li>
+                                <a th:href="@{/reserve/reserveAttractionsListUI}">更多 <i
+                                        class="fa fa-angle-right"></i></a>
+                                </li>
                                 </ul>
                             </div>
                         </div>
@@ -305,110 +138,31 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="cp01">
                                 <div id="oc-kx" class="owl-carousel owl-theme">
-                                    <div class="item">
+                                    <div th:each="attractions:${top10Attractions}" class="item">
                                         <div class="cy-kx-post clearfix">
-                                            <a href="javascript:void(0);">
+                                            <a th:href="@{/reserve/attractionsDetailsUI(id=${attractions.id})}">
                                                 <div class="entry-image">
-                                                    <img class="image_fade" src="images/pic-kx01.jpg" alt="Image">
+                                                    <img th:src="@{'/images/'+ ${attractions.image} +'.jpg'}"
+                                                         alt="Image">
                                                 </div>
-
                                                 <div class="entry-content">
-                                                    <p>xxxxxxxxxxxx</p>
+                                                    <p th:text="${attractions.name}"></p>
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="cy-kx-post clearfix">
-                                            <a href="javascript:void(0);">
-                                                <div class="entry-image">
-                                                    <img class="image_fade" src="images/pic-kx02.jpg" alt="Image">
-                                                </div>
-
-                                                <div class="entry-content">
-                                                    <p>xxxxxxxxxxxx</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-kx-post clearfix">
-                                            <a href="javascript:void(0);">
-                                                <div class="entry-image">
-                                                    <img class="image_fade" src="images/pic-kx03.jpg" alt="Image">
-                                                </div>
-
-                                                <div class="entry-content">
-                                                    <p>xxxxxxxxxxxx</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-kx-post clearfix">
-                                            <a href="javascript:void(0);">
-                                                <div class="entry-image">
-                                                    <img class="image_fade" src="images/pic-kx04.jpg" alt="Image">
-                                                </div>
-
-                                                <div class="entry-content">
-                                                    <p>xxxxxxxxxxxx</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-kx-post clearfix">
-                                            <a href="javascript:void(0);">
-                                                <div class="entry-image">
-                                                    <img class="image_fade" src="images/pic-kx01.jpg" alt="Image">
-                                                </div>
-
-                                                <div class="entry-content">
-                                                    <p>xxxxxxxxxxxx</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-kx-post clearfix">
-                                            <a href="javascript:void(0);">
-                                                <div class="entry-image">
-                                                    <img class="image_fade" src="images/pic-kx02.jpg" alt="Image">
-                                                </div>
-
-                                                <div class="entry-content">
-                                                    <p>xxxxxxxxxxxx</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-kx-post clearfix">
-                                            <a href="javascript:void(0);">
-                                                <div class="entry-image">
-                                                    <img class="image_fade" src="images/pic-kx03.jpg" alt="Image">
-                                                </div>
-
-                                                <div class="entry-content">
-                                                    <p>xxxxxxxxxxxx</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="cy-kx-post clearfix">
-                                            <a href="javascript:void(0);">
-                                                <div class="entry-image">
-                                                    <img class="image_fade" src="images/pic-kx04.jpg" alt="Image">
-                                                </div>
-
-                                                <div class="entry-content">
-                                                    <p>xxxxxxxxxxxx</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <!--<div class="item">-->
+                                    <!--<div class="cy-kx-post clearfix">-->
+                                    <!--<a href="javascript:void(0);">-->
+                                    <!--<div class="entry-image">-->
+                                    <!--<img class="image_fade" src="images/pic-kx04.jpg" alt="Image">-->
+                                    <!--</div>-->
+                                    <!--<div class="entry-content">-->
+                                    <!--<p>xxxxxxxxxxxx</p>-->
+                                    <!--</div>-->
+                                    <!--</a>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
 
                                 </div>
                             </div>
@@ -416,57 +170,25 @@
                         </div>
                     </div>
                     <div class="cy-title">
-                        <h2>安全中心</h2>
+                        <h2>热门路线</h2>
                     </div>
-                    <ul class="main-cy-service">
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div>
-                                    <i class="li_lab"></i>
-                                    <p>xxxxxxxxxxxx</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div>
-                                    <i class="li_search"></i>
-                                    <p>xxxxxxxxxxxx</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div>
-                                    <i class="li_display"></i>
-                                    <p>xxxxxxxxxxxx</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div>
-                                    <i class="li_news"></i>
-                                    <p>xxxxxxxxxxxx</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div>
-                                    <i class="li_note"></i>
-                                    <p>xxxxxxxxxxxx</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div>
-                                    <i class="li_pen"></i>
-                                    <p>xxxxxxxxxxxx</p>
-                                </div>
-                            </a>
-                        </li>
+                    <ul class="main-cy-thesis">
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -490,10 +212,10 @@
                         <h2>联系我们</h2>
                     </div>
                     <ul class="cy-contact">
-                        <li><i class="fa fa-map-marker"></i> 地址：xxxxxxxxxxxx</li>
-                        <li><i class="fa fa-compass"></i> 邮编：xxxxxxxxxxxx</li>
-                        <li><i class="fa fa-phone"></i> 电话：xxxxxxxxxxxx</li>
-                        <li><i class="fa fa-envelope"></i> 电子邮箱：xxxxxxxxxxxx</li>
+                        <li><i class="fa fa-map-marker"></i> 地址：湖北第二师范学院明阳小组</li>
+                        <li><i class="fa fa-compass"></i> 邮编：434000</li>
+                        <li><i class="fa fa-phone"></i> 电话：158XXXX8644</li>
+                        <li><i class="fa fa-envelope"></i> 电子邮箱：9377XXXXX@qq.com</li>
                     </ul>
                 </div>
             </div>
