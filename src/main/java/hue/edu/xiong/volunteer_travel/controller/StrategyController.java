@@ -49,7 +49,7 @@ public class StrategyController {
     @RequestMapping("/cancelTravelStrategyReserve")
     @ResponseBody
     public Result cancelTravelStrategyReserve(HttpServletRequest request, String id) {
-        return strategyService.cancelTravelStrategyReserve(request,id);
+        return strategyService.cancelTravelStrategyReserve(request, id);
     }
 
     @RequestMapping("/strategyManageUI")
@@ -61,13 +61,13 @@ public class StrategyController {
 
     @RequestMapping("/saveTravelStrategy")
     @ResponseBody
-    public Result saveTravelStrategy(HttpServletRequest request,TravelStrategy travelStrategy) {
-        return strategyService.saveTravelStrategy(request,travelStrategy);
+    public Result saveTravelStrategy(HttpServletRequest request, TravelStrategy travelStrategy) {
+        return strategyService.saveTravelStrategy(request, travelStrategy);
     }
 
     @RequestMapping("/pushStrategyListUI")
-    public String pushStrategyListUI(Model model, @ModelAttribute("searchName") String searchName, @PageableDefault(size = 10) Pageable pageable) {
-        Page<TravelStrategy> page = strategyService.PushStrategyListUI(searchName, pageable);
+    public String pushStrategyListUI(HttpServletRequest request, Model model, @ModelAttribute("searchName") String searchName, @PageableDefault(size = 10) Pageable pageable) {
+        Page<TravelStrategy> page = strategyService.PushStrategyListUI(request,searchName, pageable);
         model.addAttribute("page", page);
         return "strategy/pushStrategy";
     }

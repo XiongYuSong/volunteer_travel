@@ -25,7 +25,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class StrategyService{
+public class StrategyService {
 
     @Autowired
     private TravelStrategyRepository travelStrategyRepository;
@@ -53,13 +53,17 @@ public class StrategyService{
         return travelStrategyPage;
     }
 
-    public Page<TravelStrategy> PushStrategyListUI(String searchName, Pageable pageable) {
+    public Page<TravelStrategy> PushStrategyListUI(HttpServletRequest request, String searchName, Pageable pageable) {
+        Cookie cookie = CookieUitl.get(request, "username");
+        if (cookie == null) {
+            throw new ServiceException("用户未登录");
+        }
+        User user = userRepository.findUserByUsername(cookie.getValue());
         //查询通过后台审核的攻略列表
         Page<TravelStrategy> travelStrategyPage = travelStrategyRepository.findAll((root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
-            //status状态,查询状态为0,启动的攻略
-//            if()
-            predicates.add((cb.equal(root.get("status"), 0)));
+            //攻略name模糊查询
+            predicates.add((cb.equal(root.get("user"), user)));
             //攻略name模糊查询
             if (!StringUtils.isEmpty(searchName)) {
                 predicates.add((cb.like(root.get("name"), "%" + searchName + "%")));
@@ -114,7 +118,7 @@ public class StrategyService{
 
     public List<UserStrategy> getTravelStrategyByUser(HttpServletRequest request) {
         Cookie cookie = CookieUitl.get(request, "username");
-        if (cookie == null){
+        if (cookie == null) {
             throw new ServiceException("未能获得正确的用户名");
         }
         User user = userRepository.findUserByUsername(cookie.getValue());
@@ -127,13 +131,20 @@ public class StrategyService{
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public Result saveTravelStrategy(HttpServletRequest request,TravelStrategy travelStrategy) {
+    public Result saveTravelStrategy(HttpServletRequest request, TravelStrategy travelStrategy) {
+        Cookie cookie = CookieUitl.get(request, "username");
+        if (cookie == null) {
+            throw new ServiceException("未能获得正确的用户名");
+        }
+        User user = userRepository.findUserByUsername(cookie.getValue());
+
         if (StringUtils.isEmpty(travelStrategy.getId())) {//没有id的情况
             travelStrategy.setId(IdGenerator.id());
             if (travelStrategy.getStatus() == null) {
                 //默认为停用
                 travelStrategy.setStatus(StatusEnum.DOWM_STATUS.getCode());
                 travelStrategy.setCreateDate(new Date());
+                travelStrategy.setUser(user);
             }
         } else {
             //有id的情况

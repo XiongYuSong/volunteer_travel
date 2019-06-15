@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 10/06/2019 21:56:12
+ Date: 15/06/2019 14:59:29
 */
 
 SET NAMES utf8mb4;
@@ -146,7 +146,7 @@ CREATE TABLE `travel_route`  (
   `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `route_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `route_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `route_status` int(2) DEFAULT NULL,
+  `route_status` int(2) NOT NULL DEFAULT 0,
   `route_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `collect_number` int(32) NOT NULL DEFAULT 0,
   `create_date` datetime(0) DEFAULT NULL,
@@ -157,7 +157,9 @@ CREATE TABLE `travel_route`  (
 -- ----------------------------
 -- Records of travel_route
 -- ----------------------------
-INSERT INTO `travel_route` VALUES ('1', '线路一', '这是线路一', NULL, '湖北', 0, '2019-06-09 16:52:12', '2019-06-09 16:52:15');
+INSERT INTO `travel_route` VALUES ('1', '线路一', '这是线路', 1, '湖北', 0, '2019-06-09 16:52:12', NULL);
+INSERT INTO `travel_route` VALUES ('2b7de99c3d2444f69d8b08fdefc7f518', 'qqqqqqqqq', 'qqqqqqqqqqqqqq', 1, '1qqqqqqq', 0, '2019-06-15 06:37:21', NULL);
+INSERT INTO `travel_route` VALUES ('631f6b34fa074dc1a2076a5c52bbbaf2', '12312', '12312312312', 0, '213123213', 0, '2019-06-15 04:33:00', NULL);
 
 -- ----------------------------
 -- Table structure for travel_strategy
@@ -169,6 +171,7 @@ CREATE TABLE `travel_strategy`  (
   `strategy_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `strategy_status` int(255) DEFAULT NULL COMMENT '0是审核通过,1是未审核,2是审核未通过',
   `create_date` datetime(0) DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   CONSTRAINT `travel_strategy_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -177,7 +180,11 @@ CREATE TABLE `travel_strategy`  (
 -- ----------------------------
 -- Records of travel_strategy
 -- ----------------------------
-INSERT INTO `travel_strategy` VALUES ('1', '123123123', '这是第一篇攻略', 1, '2019-06-09 16:52:39');
+INSERT INTO `travel_strategy` VALUES ('01986ffeae9e432db5823fedbf556086', '123123123', '12311111111111111111', 0, '2019-06-15 04:40:26', '111111111111');
+INSERT INTO `travel_strategy` VALUES ('1', '123123123', '这是第一篇攻略', 0, '2019-06-09 16:52:39', NULL);
+INSERT INTO `travel_strategy` VALUES ('778fc56295064035b102ba279b80c5bf', '123123123', '123231231', 1, '2019-06-15 06:37:45', '3123123');
+INSERT INTO `travel_strategy` VALUES ('81a92fd94c5d415589c5856b516b49a3', '123123123', '21222222222222222222', 0, '2019-06-15 06:39:59', '122222222');
+INSERT INTO `travel_strategy` VALUES ('e52faf093b25423683d7eaa634201301', '123123123', '22222222222222222', 0, '2019-06-15 06:39:14', '222222222');
 
 -- ----------------------------
 -- Table structure for user
@@ -194,7 +201,7 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('123123123', 'root', '1234', 'admin');
+INSERT INTO `user` VALUES ('123123123', 'root', '1234', 'admin111');
 
 -- ----------------------------
 -- Table structure for user_attractions
@@ -204,7 +211,7 @@ CREATE TABLE `user_attractions`  (
   `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `user_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `attractions_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `user_attraction_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `user_attractions_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `create_date` datetime(0) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `attractions_id`(`attractions_id`) USING BTREE,
@@ -212,6 +219,11 @@ CREATE TABLE `user_attractions`  (
   CONSTRAINT `user_attractions_ibfk_1` FOREIGN KEY (`attractions_id`) REFERENCES `attractions` (`id`) ON DELETE NO ACTION ON UPDATE RESTRICT,
   CONSTRAINT `user_attractions_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of user_attractions
+-- ----------------------------
+INSERT INTO `user_attractions` VALUES ('03ab0b1ed51b4397ad6dbae8e7133e57', '123123123', '1', NULL, '2019-06-15 04:22:47');
 
 -- ----------------------------
 -- Table structure for user_hotel
@@ -231,12 +243,6 @@ CREATE TABLE `user_hotel`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of user_hotel
--- ----------------------------
-INSERT INTO `user_hotel` VALUES ('f5fb7a484b884b5e8eab1a24a3db4a81', '123123123', '1', NULL, '2019-06-09 02:26:50');
-INSERT INTO `user_hotel` VALUES ('fb5a06e2b260426db9c0db7859916674', '123123123', '25', NULL, '2019-06-08 04:59:12');
-
--- ----------------------------
 -- Table structure for user_route
 -- ----------------------------
 DROP TABLE IF EXISTS `user_route`;
@@ -244,6 +250,7 @@ CREATE TABLE `user_route`  (
   `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `user_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `route_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `create_date` datetime(6) NOT NULL ON UPDATE CURRENT_TIMESTAMP(6),
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   INDEX `route_id`(`route_id`) USING BTREE,
@@ -254,6 +261,29 @@ CREATE TABLE `user_route`  (
 -- ----------------------------
 -- Records of user_route
 -- ----------------------------
-INSERT INTO `user_route` VALUES ('1', '123123123', '1');
+INSERT INTO `user_route` VALUES ('9c298209cc284bbda7860a18e145483d', '123123123', '1', '2019-06-15 04:32:50.425000');
+INSERT INTO `user_route` VALUES ('a33e4984c72f420aae9fdf2b30152add', '123123123', '631f6b34fa074dc1a2076a5c52bbbaf2', '2019-06-15 04:33:21.874000');
+
+-- ----------------------------
+-- Table structure for user_strategy
+-- ----------------------------
+DROP TABLE IF EXISTS `user_strategy`;
+CREATE TABLE `user_strategy`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `user_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `strategy_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `create_date` datetime(0) DEFAULT NULL,
+  `update_date` datetime(0) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `user_hotel_ibfk_1`(`user_id`) USING BTREE,
+  INDEX `user_hotel_ibfk_2`(`strategy_id`) USING BTREE,
+  CONSTRAINT `user_strategy_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `user_strategy_ibfk_2` FOREIGN KEY (`strategy_id`) REFERENCES `travel_strategy` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of user_strategy
+-- ----------------------------
+INSERT INTO `user_strategy` VALUES ('a4084658c59646eba00d6ea2f98a5511', '123123123', '01986ffeae9e432db5823fedbf556086', '2019-06-15 04:43:05', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;
