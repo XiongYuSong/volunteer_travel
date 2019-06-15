@@ -79,48 +79,9 @@
 
                 </div>
             </div>
+
             <div class="row med_bottompadder30">
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                    <div class="cy-title">
-                        <h2>旅行攻略</h2>
-                        <div class="pull-right">
-
-                            <div class="main-tabs">
-                                <ul class="nav nav-tabs">
-                                    <li>
-                                        <a th:href="@{/strategy/travelStrategyListUI}">更多 <i
-                                                class="fa fa-angle-right"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="main-cy-thesis">
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                    </ul>
                     <div class="cy-title">
                         <h2>热门景点</h2>
                         <div class="pull-right">
@@ -170,7 +131,18 @@
                         </div>
                     </div>
                     <div class="cy-title">
-                        <h2>热门路线</h2>
+                        <h2>旅行攻略</h2>
+                        <div class="pull-right">
+
+                            <div class="main-tabs">
+                                <ul class="nav nav-tabs">
+                                    <li>
+                                        <a th:href="@{/strategy/travelStrategyListUI}">更多 <i
+                                                class="fa fa-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <ul class="main-cy-thesis">
                         <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
@@ -189,6 +161,28 @@
                                title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
                         <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
                                title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
+                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                    </ul>
+
+                    <div class="cy-title">
+                        <h2>热门路线</h2>
+                        <div class="pull-right">
+                            <div class="main-tabs">
+                                <ul class="nav nav-tabs">
+                                    <li>
+                                        <a th:href="@{/route/travelRouteListUI}">更多 <i
+                                                class="fa fa-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="main-cy-thesis">
+                        <li th:each="route:${top10Route}"><a th:href="@{/route/travelRouteDetailsUI(id=${route.id})}" data-toggle="tooltip" data-container="body"
+                               th:title="${route.name}" th:text="${route.name}">xxxxxxxxxxxx</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">

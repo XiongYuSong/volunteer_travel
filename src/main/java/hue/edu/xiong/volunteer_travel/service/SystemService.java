@@ -53,14 +53,14 @@ public class SystemService {
 
 
         SysUser sysUserByUsrname = sysUserRepository.findSysUserByUsername(sysUser.getUsername());
-        if (sysUserByUsrname == null){
-             return ResultGenerator.genFailResult("用户名错误！");
-        }else{
-            if (sysUser.getPassword().equals(sysUserByUsrname.getPassword())){
-                CookieUitl.set(response,"sysUsername",sysUser.getUsername(),3600);
+        if (sysUserByUsrname == null) {
+            return ResultGenerator.genFailResult("用户名错误！");
+        } else {
+            if (sysUser.getPassword().equals(sysUserByUsrname.getPassword())) {
+                CookieUitl.set(response, "sysUsername", sysUser.getUsername(), 3600);
                 return ResultGenerator.genSuccessResult();
-            }else{
-                return  ResultGenerator.genFailResult("密码错误");
+            } else {
+                return ResultGenerator.genFailResult("密码错误");
             }
         }
 
@@ -74,24 +74,24 @@ public class SystemService {
     }
 
     public Page<User> getUserPage(Pageable pageable) {
-        Page<User> userPage = userRepository.findAll((root,query,cb) ->{
+        Page<User> userPage = userRepository.findAll((root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
             query.where(predicates.toArray(new Predicate[]{}));
             query.orderBy(cb.desc(root.get("id")));
             return null;
-        },pageable);
+        }, pageable);
         return userPage;
     }
 
     @Transactional(rollbackFor = Exception.class)
     public Result saveUser(User user) {
 
-        System.out .println(user.getId());
+        System.out.println(user.getId());
 
 
         if (StringUtils.isEmpty(user.getId())) {//没有id的情况
             user.setId(IdGenerator.id());
-        }else{
+        } else {
             User oldUser = getUserById(user.getId());
             user.setUsername(oldUser.getUsername());
             user.setName(oldUser.getName());
@@ -291,9 +291,11 @@ public class SystemService {
             }
         } else {
             //有id的情况
-            TravelRoute oldTravelRoute = getTravelRouteById(travelStrategy.getId());
+            TravelStrategy oldTravelRoute = getTravelStrategyById(travelStrategy.getId());
             travelStrategy.setStatus(oldTravelRoute.getStatus());
             travelStrategy.setCreateDate(oldTravelRoute.getCreateDate());
+            travelStrategy.setUser(oldTravelRoute.getUser());
+            travelStrategy.setTitle(oldTravelRoute.getTitle());
         }
         travelStrategyRepository.saveAndFlush(travelStrategy);
         return ResultGenerator.genSuccessResult();

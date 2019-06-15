@@ -18,15 +18,16 @@
                 <table class="table table-hover table-condensed">
                     <thead>
                     <tr>
-                        <!--<th width="300px">name</th>-->
-                        <!--<th width="170px"></th>-->
-                        <!--<th width="150px">address</th>-->
-                        <th width="700px">describe</th>
+                        <th width="300px">发布人</th>
+                        <th width="150px">题目</th>
+                        <th width="700px">描述</th>
                         <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr th:each="travelStrategy:${page.content}">
+                        <td th:text="${travelStrategy.user.username}"></td>
+                        <td th:text="${travelStrategy.title}"></td>
                         <td th:text="${travelStrategy.describe}"></td>
                         <td>
                             <div align="left" style="float:left">
