@@ -32,6 +32,8 @@ public class RouteController {
     @RequestMapping("/travelRouteListUI")
     public String travelRouteListUI(Model model, @ModelAttribute("searchName") String searchName, @PageableDefault(size = 10) Pageable pageable) {
         Page<TravelRoute> page = routeService.TravelRouteListUI(searchName, pageable);
+        List<TravelRoute> top10Route = routeService.findTop10Route();
+        model.addAttribute("top10Route", top10Route);
         model.addAttribute("page", page);
         return "route/travelRoute";
     }
@@ -41,6 +43,8 @@ public class RouteController {
         TravelRoute travelRoute = routeService.findTravelRouteById(id);
         //如果用户显示已经关注,就是查看关注列表
         Boolean flag = routeService.isRoute(request, id);
+        List<TravelRoute> top10Route = routeService.findTop10Route();
+        model.addAttribute("top10Route", top10Route);
         model.addAttribute("travelRoute", travelRoute);
         model.addAttribute("flag", flag);
         return "route/travelRoute-details";
@@ -56,6 +60,6 @@ public class RouteController {
     @RequestMapping("/cancelTravelRouteReserve")
     @ResponseBody
     public Result cancelTravelRouteReserve(HttpServletRequest request, String id) {
-        return routeService.cancelTravelRouteReserve(request,id);
+        return routeService.cancelTravelRouteReserve(request, id);
     }
 }

@@ -35,11 +35,14 @@
                             </li>
                             <li class="pull-right">
                                 <div class="search-tags">
-                                    <form th:action="@{/route/travelRouteListUI}" methed="post" name="search-form"  id="search-form" class="form-inline">
+                                    <form th:action="@{/route/travelRouteListUI}" methed="post" name="search-form"
+                                          id="search-form" class="form-inline">
                                         <div class="input-group">
-                                            <input type="text" name="searchName" th:value="${searchName}" class="form-control">
+                                            <input type="text" name="searchName" th:value="${searchName}"
+                                                   class="form-control">
                                             <span class="input-group-btn">
-                                                <input class="btn btn-info" type="submit" value="名称搜索"><i class="fa fa-search"></i>  </input>
+                                                <input class="btn btn-info" type="submit" value="名称搜索"><i
+                                                    class="fa fa-search"></i>  </input>
                                             </span>
                                         </div>
                                     </form>
@@ -49,21 +52,18 @@
                     </div>
 
                     <div th:each="travelRoute:${page.content}" class="cy-news-grid-item">
-                        <div class="cy-news-thumbnail pull-left">
-                            <a th:href="@{/route/travelRouteDetailsUI(id=${travelRoute.id})}">
-                                <img th:src="@{/images/pic-ywnews01.jpg}" class="image_fade" alt="">
-                            </a>
-                        </div>
                         <div class="cy-media-body">
                             <div class="cy-grid-body">
-                                <h5><a th:href="@{/route/travelRouteDetailsUI(id=${travelRoute.id})}" th:text="${travelRoute.name}"></a></h5>
+                                <h5><a th:href="@{/route/travelRouteDetailsUI(id=${travelRoute.id})}"
+                                       th:text="'路线名称 : ' + ${travelRoute.name}"></a></h5>
                                 <small th:text="${travelRoute.describe}">
 
                                 </small>
                             </div>
                             <div class="cy-btm-info">
-                                <div class="cy-btm-date" th:text="${travelRoute.address}"></div>
-                                <div class="cy-btm-tags"><a href="javascript:void(0);">湖北</a></div>
+                                <div class="cy-btm-date"></div>
+                                <div class="cy-btm-tags"><a href="javascript:void(0);" th:text="${travelRoute.address}">湖北</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -74,36 +74,13 @@
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="sider-card">
                         <div class="sider-card-header">
-                            <h3>热门景点</h3>
+                            <h3>热门路线</h3>
                         </div>
                         <ul class="sider-list-model-a">
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                        </ul>
-                    </div>
-                    <div class="sider-card">
-                        <div class="sider-card-header">
-                            <h3>热门酒店</h3>
-                        </div>
-                        <ul class="sider-list-model-b">
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li th:each="travelRoute:${top10Route}">
+                                <a th:href="@{/route/travelRouteDetailsUI(id=${travelRoute.id})}"
+                                   th:text="${travelRoute.name}">XXXX</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

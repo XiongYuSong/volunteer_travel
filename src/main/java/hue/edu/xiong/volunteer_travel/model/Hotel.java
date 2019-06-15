@@ -17,7 +17,7 @@ public class Hotel {
     @Id
     @Column(name = "id")
     private String id;
-    @Column(name = "hotelImage")
+    @Column(name = "image")
     private String image;
     @Column(name = "hotelName")
     private String name;

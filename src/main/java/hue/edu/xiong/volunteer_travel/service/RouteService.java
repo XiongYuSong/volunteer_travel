@@ -11,6 +11,8 @@ import hue.edu.xiong.volunteer_travel.util.CookieUitl;
 import hue.edu.xiong.volunteer_travel.util.IdGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 import hue.edu.xiong.volunteer_travel.repository.TravelRouteRepository;
 
 
@@ -102,5 +105,19 @@ public class RouteService {
             userRouteRepository.saveAndFlush(newUserRoute);
         }
         return ResultGenerator.genSuccessResult();
+    }
+
+    public List<TravelRoute> findTop10Route() {
+        PageRequest pageable = PageRequest.of(0, 10);
+        //查询启用的旅游路线列表
+        Page<TravelRoute> travelRoutePage = travelRouteRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            //status状态,查询状态为0,启动的路线
+            predicates.add((cb.equal(root.get("status"), 0)));
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("createDate")));
+            return null;
+        }, pageable);
+        return travelRoutePage.getContent();
     }
 }
