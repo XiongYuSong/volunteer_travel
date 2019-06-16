@@ -27,15 +27,15 @@
     <link rel="stylesheet" type="text/css" th:href="@{/plugins/owlcarousel/css/owl.theme.default.min.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/css/responsive.css}"/>
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" th:href="@{/images/logo.png}" />
 </head>
 <body>
 
 <div id="wrapper">
     <div id="page-wrapper">
 
-        <!-- preloader Start 加载动画 -->
         <div id="preloader">
-            <!-- <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader"> -->
             <div id="status"><img th:src="@{/images/preloader.gif}" id="preloader_image" alt="loader">
             </div>
         </div>
@@ -71,10 +71,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
-                        <!--<div class="header_logo">-->
-                        <!--<a href="index.html" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网"-->
-                        <!--class="img-responsive"></a>-->
-                        <!--</div>-->
+                        <div class="header_logo">
+                            <a th:href="@{/}" class="hidden-xs"><img th:src="@{/images/logo.png}" width="100px" alt="logo" title="创药网"
+                                                                     class="img-responsive"></a>
+                        </div>
                     </div>
                     <div class="col-lg-9 col-md-9 col-sm-10 col-xs-12">
                         <nav class="navbar hidden-xs">
@@ -103,23 +103,29 @@
                                 </div>
                                 <ul class="nav navbar-nav" id="nav_filter">
                                     <li><a th:href="@{/}">首页</a></li>
-                                    <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                            aria-haspopup="true" aria-expanded="false">旅游路线 <i class="fa fa-angle-down"></i></a>
+                                    <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                            data-toggle="dropdown" role="button"
+                                                            aria-haspopup="true" aria-expanded="false">旅游路线 <i
+                                            class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu hovr_nav_tab">
                                             <li><a th:href="@{/route/travelRouteListUI}">旅游路线</a></li>
                                             <li><a th:href="@{/route/routeManageUI}">我关注的路线</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                            aria-haspopup="true" aria-raexpanded="false">旅行攻略 <i class="fa fa-angle-down"></i></a>
+                                    <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                            data-toggle="dropdown" role="button"
+                                                            aria-haspopup="true" aria-raexpanded="false">旅行攻略 <i
+                                            class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu hovr_nav_tab">
                                             <li><a th:href="@{/strategy/travelStrategyListUI}">旅行攻略</a></li>
                                             <li><a th:href="@{/strategy/pushStrategyListUI}">我发布的攻略</a></li>
                                             <li><a th:href="@{/strategy/strategyManageUI}">我关注的攻略</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                            aria-haspopup="true" aria-expanded="false">在线预订 <i class="fa fa-angle-down"></i></a>
+                                    <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                            data-toggle="dropdown" role="button"
+                                                            aria-haspopup="true" aria-expanded="false">在线预订 <i
+                                            class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu hovr_nav_tab">
                                             <li><a th:href="@{/reserve/reserveHotelListUI}">酒店预订</a></li>
                                             <li><a th:href="@{/reserve/reserveAttractionsListUI}">景点预订</a></li>
