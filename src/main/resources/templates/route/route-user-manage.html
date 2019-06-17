@@ -27,9 +27,8 @@
             <div class="row med_toppadder50 med_bottompadder50">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h1>路线管理</h1>
-                    <div class="cy-news-grid-item" th:each="userRoute:${userRouteList}">
+                    <div  style="min-height: 150px"  class="cy-news-grid-item" th:each="userRoute:${userRouteList}">
                         <div class="cy-ib-thumbnail pull-left">
-                            <img src="" width="100px" height="100px">
                         </div>
                         <div class="booklet-cont">
                             <h5><a th:href="@{/route/travelRouteDetailsUI(id=${userRoute.travelRoute.id})}"
