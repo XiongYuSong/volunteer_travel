@@ -14,8 +14,8 @@
                     <div class="med_tittle_cont_wrapper">
                         <div class="med_tittle_cont">
                             <ol class="breadcrumb">
-                                <li><a href="index.html">首页</a></li>
-                                <li>旅游攻略列表</li>
+                                <li><a th:href="@{/}">首页</a></li>
+                                <li><a th:href="@{/strategy/travelStrategyListUI}">旅游攻略列表</a></li>
                             </ol>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="filter-type-box cy-tabs">
                         <ul class="nav nav-tabs mb-10">
                             <li class="active">
-                                <a href="javascript:void(0);"><i class="fa"></i>攻略列表</a>
+                                <a th:href="@{/strategy/travelStrategyListUI}"><i class="fa"></i>攻略列表</a>
                             </li>
                             <li class="pull-right">
                                 <div class="search-tags">
@@ -50,17 +50,18 @@
                     </div>
 
                     <div th:each="travelStrategy:${page.content}" class="cy-news-grid-item">
-                        <div class="cy-news-thumbnail pull-left">
-                            <a th:href="@{/strategy/travelStrategyDetailsUI(id=${travelStrategy.id})}">
-                                <img th:src="@{/images/pic-ywnews01.jpg}" class="image_fade" alt="">
-                            </a>
-                        </div>
                         <div class="cy-media-body">
                             <div class="cy-grid-body">
-                                <h5><a th:href="@{/strategy/travelStrategyDetailsUI(id=${travelStrategy.id})}" th:text="${travelStrategy.title}"></a></h5>
+                                <h5><a th:href="@{/strategy/travelStrategyDetailsUI(id=${travelStrategy.id})}"
+                                       th:text="'攻略名称 : ' + ${travelStrategy.title}"></a></h5>
                                 <small th:text="${travelStrategy.describe}">
 
                                 </small>
+                            </div>
+                            <div class="cy-btm-info">
+                                <div class="cy-btm-date"></div>
+                                <div class="cy-btm-tags"><a >湖北</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -71,36 +72,13 @@
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="sider-card">
                         <div class="sider-card-header">
-                            <h3>热门景点</h3>
+                            <h3>热门攻略</h3>
                         </div>
                         <ul class="sider-list-model-a">
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                        </ul>
-                    </div>
-                    <div class="sider-card">
-                        <div class="sider-card-header">
-                            <h3>热门酒店</h3>
-                        </div>
-                        <ul class="sider-list-model-b">
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
-                            <li><a href="javascript:void(0);">XXXX</a></li>
+                            <li th:each="travelStrategy:${top10Strategy}">
+                                <a th:href="@{/strategy/travelStrategyDetailsUI(id=${travelStrategy.id})}"
+                                   th:text="${travelStrategy.title}">XXXX</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

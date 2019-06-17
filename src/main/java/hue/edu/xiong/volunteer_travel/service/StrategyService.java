@@ -12,6 +12,7 @@ import hue.edu.xiong.volunteer_travel.util.CookieUitl;
 import hue.edu.xiong.volunteer_travel.util.IdGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -154,5 +155,19 @@ public class StrategyService {
         }
         travelStrategyRepository.saveAndFlush(travelStrategy);
         return ResultGenerator.genSuccessResult();
+    }
+
+    public List<TravelStrategy> findTop10Strategy() {
+        PageRequest pageable = PageRequest.of(0, 10);
+        //查询启用的旅游路线列表
+        Page<TravelStrategy> travelStrategyPage = travelStrategyRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            //status状态,查询状态为0,启动的路线
+            predicates.add((cb.equal(root.get("status"), 0)));
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("createDate")));
+            return null;
+        }, pageable);
+        return travelStrategyPage.getContent();
     }
 }

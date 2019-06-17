@@ -13,8 +13,8 @@
                     <div class="med_tittle_cont_wrapper">
                         <div class="med_tittle_cont">
                             <ol class="breadcrumb">
-                                <li><a href="index.html">首页</a></li>
-                                <li>我发布的攻略</li>
+                                <li><a th:href="@{/}">首页</a></li>
+                                <li><a th:href="@{/strategy/pushStrategyListUI}">我发布的攻略</a></li>
                             </ol>
                         </div>
                     </div>
@@ -27,11 +27,9 @@
             <div class="row med_toppadder50 med_bottompadder50">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h1>我发布的攻略</h1>
-                    <div th:each="travelStrategy:${page.content}" class="cy-news-grid-item">
-                        <div class="cy-ib-thumbnail pull-left">
-                            <a th:href="@{/strategy/travelStrategyDetailsUI(id=${travelStrategy.id})}">
-                                <img th:src="@{/images/pic-ib01.jpg}" class="image_fade" alt="">
-                            </a>
+                    <div class="cy-news-grid-item" th:each="travelStrategy:${page.content}">
+                        <div class="cy-ib-thumbnail pull-left" >
+                            <img src="" width="100px" height="100px">
                         </div>
                         <div class="booklet-cont">
                             <h5><a th:href="@{/strategy/travelStrategyDetailsUI(id=${travelStrategy.id})}"
@@ -39,9 +37,7 @@
                             <div class="cy-summary-intro">
                                 <p th:text="${travelStrategy.describe}">
                                 </p>
-                                <a href="javascript:void(0);">更多</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -193,4 +189,6 @@
                 </script>
             </div>
         </div>
+    </div>
+</div>
 </html>

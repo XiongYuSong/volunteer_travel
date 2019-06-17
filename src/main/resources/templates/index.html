@@ -148,26 +148,10 @@
                         </div>
                     </div>
                     <ul class="main-cy-thesis">
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body"
-                               title="xxxxxxxxxxxx">xxxxxxxxxxxx</a></li>
+                        <li th:each="strategy:${top10Strategy}"><a th:href="@{/strategy/travelStrategyDetailsUI(id=${strategy.id})}"
+                                                             data-toggle="tooltip" data-container="body"
+                                                             th:title="${strategy.title}" th:text="${strategy.title}">xxxxxxxxxxxx</a>
+                        </li>
                     </ul>
 
                     <div class="cy-title">

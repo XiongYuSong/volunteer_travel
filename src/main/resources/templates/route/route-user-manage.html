@@ -29,7 +29,7 @@
                     <h1>路线管理</h1>
                     <div class="cy-news-grid-item" th:each="userRoute:${userRouteList}">
                         <div class="cy-ib-thumbnail pull-left">
-
+                            <img src="" width="100px" height="100px">
                         </div>
                         <div class="booklet-cont">
                             <h5><a th:href="@{/route/travelRouteDetailsUI(id=${userRoute.travelRoute.id})}"
@@ -37,7 +37,6 @@
                             <div class="cy-summary-intro">
                                 <p th:text="${userRoute.travelRoute.describe}">
                                 </p>
-                                <!--<a href="javascript:void(0);">更多</a>-->
                             </div>
                             <div class="text-right"><a th:onclick="cancelTravelRouteReserve([[${userRoute.travelRoute.id}]])"
                                                        class="btn btn-info btn-sm">取消关注</a>

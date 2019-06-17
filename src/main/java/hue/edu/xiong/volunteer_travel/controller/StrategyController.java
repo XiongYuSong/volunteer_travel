@@ -32,6 +32,8 @@ public class StrategyController {
     @RequestMapping("/travelStrategyListUI")
     public String travelStrategyListUI(Model model, @ModelAttribute("searchName") String searchName, @PageableDefault(size = 10) Pageable pageable) {
         Page<TravelStrategy> page = strategyService.TravelStrategyListUI(searchName, pageable);
+        List<TravelStrategy> top10Strategy = strategyService.findTop10Strategy();
+        model.addAttribute("top10Strategy", top10Strategy);
         model.addAttribute("page", page);
         return "strategy/travelStrategy";
     }
@@ -41,6 +43,8 @@ public class StrategyController {
         TravelStrategy travelStrategy = strategyService.findTravelStrategyById(id);
         //如果用户显示已经关注,就是查看关注列表
         Boolean flag = strategyService.isStrategy(request, id);
+        List<TravelStrategy> top10Strategy = strategyService.findTop10Strategy();
+        model.addAttribute("top10Strategy", top10Strategy);
         model.addAttribute("travelStrategy", travelStrategy);
         model.addAttribute("flag", flag);
         return "strategy/travelStrategy-details";
@@ -55,6 +59,8 @@ public class StrategyController {
     @RequestMapping("/strategyManageUI")
     public String strategyManageUI(Model model, HttpServletRequest request) {
         List<UserStrategy> userStrategyList = strategyService.getTravelStrategyByUser(request);
+        List<TravelStrategy> top10Strategy = strategyService.findTop10Strategy();
+        model.addAttribute("top10Strategy", top10Strategy);
         model.addAttribute("userStrategyList", userStrategyList);
         return "strategy/strategy-manage";
     }
@@ -68,6 +74,8 @@ public class StrategyController {
     @RequestMapping("/pushStrategyListUI")
     public String pushStrategyListUI(HttpServletRequest request, Model model, @ModelAttribute("searchName") String searchName, @PageableDefault(size = 10) Pageable pageable) {
         Page<TravelStrategy> page = strategyService.PushStrategyListUI(request,searchName, pageable);
+        List<TravelStrategy> top10Strategy = strategyService.findTop10Strategy();
+        model.addAttribute("top10Strategy", top10Strategy);
         model.addAttribute("page", page);
         return "strategy/pushStrategy";
     }
