@@ -149,9 +149,9 @@ public class StrategyService {
             }
         } else {
             //有id的情况
-            TravelStrategy oldAttractions = getTravelStrategyById(travelStrategy.getId());
-            travelStrategy.setStatus(oldAttractions.getStatus());
-            travelStrategy.setCreateDate(oldAttractions.getCreateDate());
+            TravelStrategy oldTravelStrategy = getTravelStrategyById(travelStrategy.getId());
+            travelStrategy.setStatus(oldTravelStrategy.getStatus());
+            travelStrategy.setCreateDate(oldTravelStrategy.getCreateDate());
         }
         travelStrategyRepository.saveAndFlush(travelStrategy);
         return ResultGenerator.genSuccessResult();

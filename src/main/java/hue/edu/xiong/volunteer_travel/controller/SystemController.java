@@ -161,7 +161,7 @@ public class SystemController {
 
     @RequestMapping("/saveTravelStrategy")
     @ResponseBody
-    public Result saveTravelStrategy(TravelStrategy travelStrategy) {
-        return systemService.saveTravelStrategy(travelStrategy);
+    public Result saveTravelStrategy(HttpServletRequest request,TravelStrategy travelStrategy) {
+        return systemService.saveTravelStrategy(request,travelStrategy);
     }
 }

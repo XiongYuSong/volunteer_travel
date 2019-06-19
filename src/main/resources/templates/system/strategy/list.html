@@ -30,15 +30,13 @@
                         <td th:text="${travelStrategy.title}"></td>
                         <td th:text="${travelStrategy.describe}"></td>
                         <td>
-                            <div align="left" style="float:left">
-                                <button type="button" th:onclick="updateMember([[${travelStrategy.id}]])" class="btn btn-default btn-info">修改</button>
-                            </div>
-                            <div th:if="${travelStrategy.status == 0}" align="left">
-                                <button type="button" th:onclick="updateTravelStrategyStatus([[${travelStrategy.id}]])" class="btn btn-default btn-danger">审核未通过</button>
-                            </div>
                             <div th:if="${travelStrategy.status == 1}" align="left">
+                                <button type="button" th:onclick="updateError([[${travelStrategy.id}]])" class="btn btn-default btn-danger">审核不通过</button>
                                 <button type="button" th:onclick="updateTravelStrategyStatus([[${travelStrategy.id}]])" class="btn btn-default btn-success">审核通过</button>
                             </div>
+                            <!--<div th:if="${travelStrategy.status == 1}" align="left">-->
+
+                            <!--</div>-->
                         </td>
                     </tr>
                     </tbody>
@@ -55,18 +53,18 @@
                         <h4 class="modal-title" id="exampleModalLabel"></h4>
                     </div>
                     <div class="modal-body">
-                        <form method="post" name="insertTravelRouteMember"
-                              id="insertTravelRouteMember" class="form-horizontal">
+                        <form method="post" name="insertTravelStrategyMember"
+                              id="insertTravelStrategyMember" class="form-horizontal">
                             <!--隐藏的-->
                             <input type="text" id="id" name="id" hidden>
 
                             <div class="form-group m-b-10" style="text-align:right">
                                 <label class="col-sm-4 control-label">
-                                    路线描述:
+                                    错误理由描述:
                                 </label>
                                 <div class="col-sm-7">
-                                <textarea type="text" rows="7" cols="20" class="form-control" id="describe"
-                                          name="describe">
+                                <textarea type="text" rows="7" cols="20" class="form-control" id="errorMessage"
+                                          name="errorMessage">
                                 </textarea>
                                 </div>
                             </div>
@@ -84,7 +82,7 @@
     <script th:inline="javascript">
 
 
-        function updateMember(id) {
+        function updateError(id) {
             $.ajax({
                 url: '/travel/system/getTravelStrategyById',
                 data: {"id": id},
@@ -92,13 +90,15 @@
                 dataType: 'json',
                 success: function (result) {
                     if (result.code == 200) {
-                        var travelRoute = result.data;
+                        var travelStrategy = result.data;
                         //全部清空
                         $('#exampleModalLabel').text('修改攻略');
                         //id
-                        $('#id').val(travelRoute.id);
+                        $('#id').val(travelStrategy.id);
                         //describe
-                        $('#describe').val(travelRoute.describe);
+                        $('#describe').val(travelStrategy.describe);
+                        //errorMessage
+                        $('#errorMessage').val(travelStrategy.errorMessage);
                         //显示模态框
                         $('#exampleModal').modal('show')
                     }
@@ -130,7 +130,7 @@
 
             $.ajax({
                 url: '/travel/system/saveTravelStrategy',
-                data: $("#insertTravelRouteMember").serialize(),
+                data: $("#insertTravelStrategyMember").serialize(),
                 type: 'post',
                 dataType: 'json',
                 success: function (result) {

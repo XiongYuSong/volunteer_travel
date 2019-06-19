@@ -14,6 +14,10 @@ public enum StatusEnum implements CodeEnum {
      * 停用
      */
     DOWM_STATUS(1, "停用"),
+    /**
+     *
+     */
+    Third_STATUS(2, " "),
     ;
 
     private Integer code;

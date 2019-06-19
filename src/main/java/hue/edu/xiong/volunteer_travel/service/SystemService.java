@@ -281,7 +281,7 @@ public class SystemService {
 
 
     @Transactional(rollbackFor = Exception.class)
-    public Result saveTravelStrategy(TravelStrategy travelStrategy) {
+    public Result saveTravelStrategy(HttpServletRequest request,TravelStrategy travelStrategy) {
 
         if (StringUtils.isEmpty(travelStrategy.getId())) {//没有id的情况
             travelStrategy.setId(IdGenerator.id());
@@ -292,11 +292,13 @@ public class SystemService {
             }
         } else {
             //有id的情况
-            TravelStrategy oldTravelRoute = getTravelStrategyById(travelStrategy.getId());
-            travelStrategy.setStatus(oldTravelRoute.getStatus());
-            travelStrategy.setCreateDate(oldTravelRoute.getCreateDate());
-            travelStrategy.setUser(oldTravelRoute.getUser());
-            travelStrategy.setTitle(oldTravelRoute.getTitle());
+            TravelStrategy oldTravelStrategy = getTravelStrategyById(travelStrategy.getId());
+            travelStrategy.setStatus(StatusEnum.Third_STATUS.getCode());
+            travelStrategy.setCreateDate(oldTravelStrategy.getCreateDate());
+            travelStrategy.setUser(oldTravelStrategy.getUser());
+            travelStrategy.setTitle(oldTravelStrategy.getTitle());
+            travelStrategy.setDescribe(oldTravelStrategy.getDescribe());
+            travelStrategy.setErrorMessage(request.getParameter("errorMessage"));
         }
         travelStrategyRepository.saveAndFlush(travelStrategy);
         return ResultGenerator.genSuccessResult();

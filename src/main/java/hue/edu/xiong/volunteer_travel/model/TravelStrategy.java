@@ -29,6 +29,17 @@ public class TravelStrategy {
     @Column(name = "strategy_status")
     private Integer status;
 
+    @Column(name = "error_message")
+    private String errorMessage;
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
     public User getUser() {
         return user;
     }
