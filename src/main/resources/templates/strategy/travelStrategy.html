@@ -15,7 +15,7 @@
                         <div class="med_tittle_cont">
                             <ol class="breadcrumb">
                                 <li><a th:href="@{/}">首页</a></li>
-                                <li><a th:href="@{/strategy/travelStrategyListUI}">旅游攻略列表</a></li>
+                                <li><a th:href="@{/strategy/travelStrategyListUI}">旅游路线列表</a></li>
                             </ol>
                         </div>
                     </div>
@@ -36,11 +36,14 @@
                             </li>
                             <li class="pull-right">
                                 <div class="search-tags">
-                                    <form th:action="@{/strategy/travelStrategyListUI}" methed="post" name="search-form"  id="search-form" class="form-inline">
+                                    <form th:action="@{/strategy/travelStrategyListUI}" methed="post" name="search-form"
+                                          id="search-form" class="form-inline">
                                         <div class="input-group">
-                                            <input type="text" name="searchName" th:value="${searchName}" class="form-control">
+                                            <input type="text" name="searchName" th:value="${searchName}"
+                                                   class="form-control">
                                             <span class="input-group-btn">
-                                                <input class="btn btn-info" type="submit" value="名称搜索"><i class="fa fa-search"></i>  </input>
+                                                <input class="btn btn-info" type="submit" value="名称搜索"><i
+                                                    class="fa fa-search"></i></input>
                                             </span>
                                         </div>
                                     </form>

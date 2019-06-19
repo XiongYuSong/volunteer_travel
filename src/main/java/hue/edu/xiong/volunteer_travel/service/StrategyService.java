@@ -45,7 +45,7 @@ public class StrategyService {
             predicates.add((cb.equal(root.get("status"), 0)));
             //攻略name模糊查询
             if (!StringUtils.isEmpty(searchName)) {
-                predicates.add((cb.like(root.get("name"), "%" + searchName + "%")));
+                predicates.add((cb.like(root.get("title"), "%" + searchName + "%")));
             }
             query.where(predicates.toArray(new Predicate[]{}));
             query.orderBy(cb.desc(root.get("createDate")));
