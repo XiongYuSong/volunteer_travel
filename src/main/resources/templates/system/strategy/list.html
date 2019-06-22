@@ -135,7 +135,7 @@
                 dataType: 'json',
                 success: function (result) {
                     if (result.code === 200) {
-                        window.location.href = "/travel/system/travelStrategyListUI";
+                        window.location.reload();
                     } else {
                         layer.open({
                             title: '错误提示',
