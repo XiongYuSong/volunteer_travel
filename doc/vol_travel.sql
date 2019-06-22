@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 22/06/2019 10:51:05
+ Date: 22/06/2019 18:23:39
 */
 
 SET NAMES utf8mb4;
@@ -39,7 +39,6 @@ INSERT INTO `attractions` VALUES ('1', 'MY_jingdian_01', '清凉寨景区', '蔡
 INSERT INTO `attractions` VALUES ('10', 'MY_jingdian_02', '黄山风景区', '黄山市', '黄山自古以来就是中国数一数二的名山，奇松、怪石、云海、温泉被称为黄山的“四绝”。除此之外，雾凇、雪景、日出也是游人不会错过的景观，古人有“五岳归来不看山，黄山归来不看岳”的说法。 景区游览主要分为前山、后山两条上山路线，都通向主峰之一光明顶，在光明顶的另一侧，还有一条环线-西海大峡谷。\r\n\r\n', 0, '2019-06-04 20:00:09');
 INSERT INTO `attractions` VALUES ('11', 'MY_jingdian_03', '屯溪老街', '黄山市屯溪区中心地段', '市内有名的小吃街、商业街。老街不宽，铺着青石板路，两侧林立着一幢幢徽派建筑，店铺便开在临街的屋子里，出售的也都是徽州特产。 一般晚上的老街要比白天更热闹些，店铺开了灯，一串串红灯笼与白墙黑瓦相映，带个三脚架，吃饭、逛街之余可以拍拍夜景。', 0, '2019-06-04 20:00:09');
 INSERT INTO `attractions` VALUES ('12', 'MY_jingdian_06', '宏村景区', '黄山市', '徽派古村中的代表，可拍摄南湖、月沼美景，欣赏精致的徽派三雕。 宏村是徽派古村中的代表，有“中国画里乡村”的美誉。来宏村一是看水利系统带来的水景，南湖、月沼是精华所在，二是看建筑上的徽派三雕，砖雕、石雕、木雕，像剪纸一样精细。而来此写生的美院学生又是另一道风景。', 0, '2019-06-04 20:00:09');
-INSERT INTO `attractions` VALUES ('12ba3036e13f4479a299d4975f78faf6', 'MY_jingdian_08', 'a', 'a', 'a', 1, '2019-06-19 03:15:18');
 INSERT INTO `attractions` VALUES ('13', 'MY_jingdian_06', '九寨沟', '四川省南坪县城西45千米处', '自然风景点都集中在沟两侧。九寨沟以原始的生态环境，一尘不染的清新空气和雪山、森林、湖泊组合成神妙、奇幻、幽美的自然风光，显现“自然的美，美的自然”，被誉为“童话世界”、“人间仙境”。九寨沟的高峰、彩林、翠海、叠瀑和藏族风情被称为“五绝”。\r\n', 0, '2019-06-04 20:00:09');
 INSERT INTO `attractions` VALUES ('14', 'MY_jingdian_06', '峨眉山', '四川中南部，四川盆地西南边缘的峨眉境内，距成都约一百六十公里', '峨眉山以其秀丽的自然风光和神话般的佛教胜迹而闻名于世。她古雅神奇，巍峨媚丽。其山脉绵亘曲折、千岩万壑、瀑布溪流、奇秀清雅，故有“峨眉天下秀”之美称。', 0, '2019-06-04 20:00:09');
 INSERT INTO `attractions` VALUES ('15', 'MY_jingdian_06', '青城山', '都江堰市西南', '位于邛崃山东坡与成都平原交接处，背靠岷山雪岭，面向成都平原，山体主要由砾岸组成，有36峰，最高峰海拔1600余米。为道教第五洞天，全称洞天第五宝仙九室之天。', 0, '2019-06-04 20:00:09');
@@ -116,12 +115,8 @@ INSERT INTO `hotel` VALUES ('5', 'MY_kezhan_01', '百合花酒店', '上海市�
 INSERT INTO `hotel` VALUES ('6', 'MY_kezhan_01', '福州如家快捷酒店', '福州市', '酒店按欧式风格设计装修，环境优美，格调高雅。客房舒适、豪华，餐饮风味独特，各类康乐休闲设施一应俱全，设施先进的商务中心随时为您提供周到、快捷的服务。', 0, '2019-06-04 19:32:46');
 INSERT INTO `hotel` VALUES ('7', 'MY_kezhan_01', '宝丽来酒店', '深圳市', '酒店店拥有三百余间客房和套房，步入其中令人耳目一新。每间客房均配有景观阳台，置身于此，便可一览壮丽的曲江盛景。房内配有特色睡床，及备受喜爱的Bliss洗浴用品、先进的娱乐设施等，为您打造潮奢的入住体验。', 0, '2019-06-04 19:32:43');
 INSERT INTO `hotel` VALUES ('8', 'MY_kezhan_01', '联城酒店', '安徽省合肥市', '酒店功能完善，设有包括总统套房、豪华商务套房等各色客房297间，酒店拥有中餐厅、西餐厅、韩国餐厅、火锅餐厅四个不同风味的餐饮场所，就餐总座位数1600余位，另设有可接待500人的宴会厅、可容纳400人的国际会议中心以及夜总会、spa桑拿及足道、露天泳池、健身中心和网球场', 0, '2019-06-04 19:32:41');
-INSERT INTO `hotel` VALUES ('84756b62364c4ac79bd42df482ffcdbe', 'MY_kezhan_01', '12312', '3123123', '12312312', 0, '2019-06-04 19:32:38');
-INSERT INTO `hotel` VALUES ('8477c26de2bd493394849358ef0b1107', 'MY_kezhan_01', '123123', '3123123123', '1231232131231', 0, '2019-06-04 19:32:35');
-INSERT INTO `hotel` VALUES ('9', 'MY_kezhan_01', 'test9', NULL, 'test9', 0, '2019-06-04 19:32:31');
-INSERT INTO `hotel` VALUES ('a681c8c228724482a5635b5706665f4d', 'MY_kezhan_01', '111111111111', '11111111111111', '111111111111111111', 1, '2019-06-04 11:51:32');
-INSERT INTO `hotel` VALUES ('ba1e6b9f82714fa3b3ac204a340b7850', 'MY_kezhan_03', '阿真酒店', '1321321312', '酒店功能完善，设有包括总统套房、豪华商务套房等各色客房297间，酒店拥有中餐厅、西餐厅、韩国餐厅、火锅餐厅四个不同风味的餐饮场所，就餐总座位数1600余位，另设有可接待500人的宴会厅、可容纳400人的国际会议中心以及夜总会、spa桑拿及足道、露天泳池、健身中心和网球场，可为宾客提供各式全新五星水准的酒店住宿、饮食、宴会、会议、康体和娱乐一体化的服务。另500多个车位的大型停车场，为宾客的出行提供了更多的便利。', 0, '2019-06-05 11:57:40');
-INSERT INTO `hotel` VALUES ('fb548675a46646d3915ecfb10b677af5', 'MY_kezhan_02', '明阳酒店', '111111111111', '酒店按欧式风格设计装修，环境优美，格调高雅。客房舒适、豪华，餐饮风味独特，各类康乐休闲设施一应俱全，设施先进的商务中心随时为您提供周到、快捷的服务。', 0, '2019-06-05 11:57:51');
+INSERT INTO `hotel` VALUES ('ba1e6b9f82714fa3b3ac204a340b7850', 'MY_kezhan_03', '阿真酒店', '湖北省武汉市', '酒店功能完善，设有包括总统套房、豪华商务套房等各色客房297间，酒店拥有中餐厅、西餐厅、韩国餐厅、火锅餐厅四个不同风味的餐饮场所，就餐总座位数1600余位，另设有可接待500人的宴会厅、可容纳400人的国际会议中心以及夜总会、spa桑拿及足道、露天泳池、健身中心和网球场，可为宾客提供各式全新五星水准的酒店住宿、饮食、宴会、会议、康体和娱乐一体化的服务。另500多个车位的大型停车场，为宾客的出行提供了更多的便利。', 1, '2019-06-05 11:57:40');
+INSERT INTO `hotel` VALUES ('fb548675a46646d3915ecfb10b677af5', 'MY_kezhan_02', '明阳酒店', '湖北省武汉市', '酒店按欧式风格设计装修，环境优美，格调高雅。客房舒适、豪华，餐饮风味独特，各类康乐休闲设施一应俱全，设施先进的商务中心随时为您提供周到、快捷的服务。', 1, '2019-06-05 11:57:51');
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -158,8 +153,6 @@ CREATE TABLE `travel_route`  (
 -- ----------------------------
 -- Records of travel_route
 -- ----------------------------
-INSERT INTO `travel_route` VALUES ('0430ec9dbd1d447893655590b7bebcdb', '123123123', '3312312321312212', 1, '123123123', 0, '2019-06-15 11:01:37', NULL);
-INSERT INTO `travel_route` VALUES ('1', '线路一', '这是线路', 1, '湖北', 0, '2019-06-09 16:52:12', NULL);
 INSERT INTO `travel_route` VALUES ('10', '台湾高雄旅游路线', 'D1捷运美丽岛站光之穹顶(0.5小时) → 驳二艺术特区(2小时) → 打狗鉄道故事馆(1小时) → 西子湾风景区(1小时) → 打狗英国领事馆(1小时) → 真爱码头(0.5小时) → 高雄爱河(0.5小时) → 高雄六合夜市(2小时)', 0, '台湾高雄旅', 0, '2019-06-19 09:37:40', NULL);
 INSERT INTO `travel_route` VALUES ('11', '澳门旅游路线', 'D1大三巴牌坊(1小时以下) → 恋爱巷(1小时以下) → 疯堂斜巷(1小时以下) → 澳门渔人码头(3小时以上)', 0, '澳门', 0, '2019-06-19 09:37:47', NULL);
 INSERT INTO `travel_route` VALUES ('12', '\r\n江西婺源旅游路线', 'D1婺源汽车北站(老站)(10分钟) → 月亮湾(30分钟) → 李坑(2小时) → 江岭(2小时) → 庆源村(1小时)\r\n\r\nD2庆源村(1小时) → 晓起(3小时) → 汪口(2小时)\r\n\r\nD3婺源汽车北站(老站)(10分钟) → 思溪延村(2小时) → 彩虹桥(2小时) → 婺源博物馆(1小时)', 0, '\r\n江西婺源', 0, '2019-06-19 09:37:51', NULL);
@@ -167,21 +160,14 @@ INSERT INTO `travel_route` VALUES ('13', '杭州旅游路线', 'D1西湖(2小时
 INSERT INTO `travel_route` VALUES ('14', '青岛旅游路线', 'D1栈桥(1小时) → 圣弥厄尔大教堂(1小时) → 中山路商业街(1-2小时) → 青岛啤酒博物馆(1-2小时) → 八大关风景区(1-3小时) → 青岛奥林匹克帆船中心(1-2小时) → 五四广场(1-2小时)\r\n\r\nD2仰口风景游览区(1-3小时) → 崂山太清宫(1-3小时)\r\n\r\nD3金沙滩(1-3小时) → 青岛东方影都万达乐园(1-3小时)', 0, '青岛', 0, '2019-06-19 09:38:01', NULL);
 INSERT INTO `travel_route` VALUES ('15', '河北北戴河旅游路线：', '\r\nD1老虎石海上公园(4小时) → 碧螺塔酒吧公园(3小时)\r\n\r\nD2鸽子窝公园(2小时) → 奥林匹克大道公园(1小时) → 秦皇岛北戴河怪楼奇园景区(1小时) → 北戴河海滨浴场(2小时)', 0, '河北北戴河', 0, '2019-06-19 09:38:05', NULL);
 INSERT INTO `travel_route` VALUES ('2', '云南路线', 'Day1，昆明接机，住昆明\r\nDay2，昆明乘车至石林，晚住楚雄\r\nDay3，楚雄至大理，大理VIP游艇、吉普车环洱海、大理古城，住大理\r\nDay4，大理至丽江，拉市海、丽水金沙、丽江古城，住丽江\r\nDay5，丽江雪山大索道、蓝月谷景区，晚火车卧铺回昆明\r\nDay6，昆明花市，送到昆明机场，结束愉快的行程  ', 0, '云南', 0, '2019-06-19 09:36:51', NULL);
-INSERT INTO `travel_route` VALUES ('2b7de99c3d2444f69d8b08fdefc7f518', 'qqqqqqqqq', 'qqqqqqqqqqqqqq', 1, '1qqqqqqq', 0, '2019-06-15 06:37:21', NULL);
 INSERT INTO `travel_route` VALUES ('3', '上海旅游路线', '上海旅游路线\r\n第一站：城隍庙\r\n第二站：逛马路\r\n第三站：外滩\r\n第四站：东方明珠\r\n第五站：上海海洋水族馆\r\n第六站：正大广场\r\n第七站：滨江大道', 0, '上海', 0, '2019-06-19 09:37:01', NULL);
-INSERT INTO `travel_route` VALUES ('3bd4c1300154475988bf91a3cf77e9c1', '熊XX2', '熊XX2', 1, '熊XX2', 0, '2019-06-15 10:33:28', NULL);
 INSERT INTO `travel_route` VALUES ('4', '北京旅游路线', 'D1天安门广场(1.5小时) → 故宫(3小时) → 景山公园(1小时) → 北京全聚德(前门店)(1小时)\r\n\r\nD2雍和宫(2小时) → 孔庙和国子监博物馆(1.5小时) → 五道营胡同(1小时) → 簋街(2小时)\r\n\r\nD3恭王府(2.5小时) → 什刹海(3小时) → 南锣鼓巷(机动选择，1.5小时)\r\n\r\nD4天坛公园(2小时) → 鸟巢(0.5小时) → 水立方(0.5小时)', 0, '北京', 0, '2019-06-19 09:37:08', NULL);
 INSERT INTO `travel_route` VALUES ('5', '海南旅游路线', 'D1大东海旅游区(2小时)\r\n\r\nD2鹿回头风景区(2小时) → 三亚千古情景区(3小时)\r\n\r\nD3海南槟榔谷黎苗文化旅游区(4小时) → 三亚湾椰梦长廊(2小时)\r\n\r\nD4分界洲岛(4小时) → 南湾猴岛(3小时)', 0, '海南', 0, '2019-06-19 09:37:14', NULL);
-INSERT INTO `travel_route` VALUES ('58c8c1598fef4dd3b6fc4f101d05bd8a', '熊XX', '熊XX', 1, '熊XX', 0, '2019-06-15 10:33:22', NULL);
 INSERT INTO `travel_route` VALUES ('6', '云南大理旅游路线', 'D1大理古城(2-3小时) → 崇圣寺三塔(2小时) → 三塔倒影公园(1小时) → 人民路(1-2小时)\r\n\r\nD2大理古城(出发) → 喜洲古镇(1-2小时) → 蝴蝶泉(1小时) → 双廊古镇(2小时) → 南诏风情岛(1小时) → 挖色镇(2小时) → 小普陀(30分钟) → 大理古城(返回)', 0, '云南大理', 0, '2019-06-19 09:37:19', NULL);
-INSERT INTO `travel_route` VALUES ('631f6b34fa074dc1a2076a5c52bbbaf2', '12312', '12312312312', 1, '213123213', 0, '2019-06-15 04:33:00', NULL);
 INSERT INTO `travel_route` VALUES ('7', '广州旅游路线', 'D1石室圣心大教堂(1小时) → 沙面岛(3小时) → 陈家祠(1小时) → 上下九步行街(3小时)\r\n\r\nD2越秀公园(2小时) → 中山纪念堂(2小时) → 北京路步行街(3小时) → 广州珠江夜游(1小时)\r\n\r\nD3中山大学(2小时) → 红专厂创意园(3小时) → 海心沙广场(1小时) → 广州塔(2小时)\r\n', 0, '广州', 0, '2019-06-19 09:37:24', NULL);
 INSERT INTO `travel_route` VALUES ('8', '阿尔山旅游路线', 'D1阿尔山国家森林公园(一天)\r\n\r\nD2阿尔山国家森林公园(2小时以上) → 五里泉(1小时) → 阿尔山火车站(2小时) → 阿尔山温泉(2小时)\r\n\r\nD3阿尔山奥伦布坎景区(2小时) → 白狼峰景区(2小时) → 鹿村(2小时', 0, '阿尔山', 0, '2019-06-19 09:37:30', NULL);
-INSERT INTO `travel_route` VALUES ('87619ce995d14f11b873ef658b6e6b40', '熊XX3', '熊XX3', 1, '熊XX3', 0, '2019-06-15 10:33:39', NULL);
-INSERT INTO `travel_route` VALUES ('89dc537473f74ec88071dd956d940e0b', '1111111111', '11111111111111', 1, '11111111111111111', 0, '2019-06-15 11:01:33', NULL);
 INSERT INTO `travel_route` VALUES ('9', '拉萨路线', 'D1布达拉宫(3小时) → 宗角禄康公园(1小时) → 大昭寺(1.5小时) → 八廓街(2小时)\r\n\r\nD2哲蚌寺(2小时) → 娘热民俗风情园(2小时) → 色拉寺(2小时)\r\n\r\nD3念青唐古拉山(30分钟) → 那根拉(30分钟) → 纳木错(2小时)', 0, '拉萨', 0, '2019-06-19 09:37:36', NULL);
 INSERT INTO `travel_route` VALUES ('b83c74c939064c26bae9884fc8c488b5', '湖北武汉一日游', '    咸宁隐水洞\r\n    旅游小贴士：洞内有三重十二关三十六大经典景点十分新颖，可以考考自己的想象力哦。如“众仙护丹”、“天鹅之吻”、“金瀑布”、“银瀑布”、“仙人造田”、“天将神靴”、“寒山古钟”、“玉兔观桃”、“龙宫洞府”、“鲤鱼跃龙门”、“玉树撑天”、“雏鹰展翅”、“观音送子”、“八卦迷宫”、“大圣腾空”、“东海神龟”、“玉雕溪窟”、“龙王戏妃”、“倒挂石林”、“长江三峡”、“水生石莲”、“八百罗汉”、“金字塔”、“女娲补天”等，吸引我们的眼球，真可谓是“三步一岩，五步一景，十步一变”。　　', 0, '湖北武汉', 0, '2019-06-15 07:49:16', NULL);
-INSERT INTO `travel_route` VALUES ('eae4175b8af746b4b42b97f8dc2d273e', 'x1d', 'a', 1, 'a', 0, '2019-06-19 03:15:27', NULL);
 INSERT INTO `travel_route` VALUES ('ff99bc4eba4f4018a7ff375766fdf8ac', '北京故宫', '	咸宁隐水洞 旅游小贴士：洞内有三重十二关三十六大经典景点十分新颖，可以考考自己的想象力哦。如“众仙护丹”、“天鹅之吻”、“金瀑布”、“银瀑布”、“仙人造田”、“天将神靴”、“寒山古钟”、“玉兔观桃”、“龙宫洞府”、“鲤鱼跃龙门”、“玉树撑天”、“雏鹰展翅”、“观音送子”、“八卦迷宫”、“大圣腾空”、“东海神龟”、“玉雕溪窟”、“龙王戏妃”、“倒挂石林”、“长江三峡”、“水生石莲”、“八百罗汉”、“金字塔”、“女娲补天”等，吸引我们的眼球，真可谓是“三步一岩，五步一景，十步一变”。　　', 0, '北京', 0, '2019-06-15 10:29:33', NULL);
 
 -- ----------------------------
@@ -198,47 +184,22 @@ CREATE TABLE `travel_strategy`  (
   `error_message` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
-  CONSTRAINT `travel_strategy_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `travel_strategy_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of travel_strategy
 -- ----------------------------
-INSERT INTO `travel_strategy` VALUES ('01986ffeae9e432db5823fedbf556086', '123123123', '12311111111111111111', 1, '2019-06-15 04:40:26', '111111111111', NULL);
-INSERT INTO `travel_strategy` VALUES ('1', '123123123', '这是第一篇攻略', 2, '2019-06-09 16:52:39', '这是第一篇攻略', 'qqq');
 INSERT INTO `travel_strategy` VALUES ('10', '0bc85e2aa9ac44fbb6cb415271bb5014', '上海迪士尼离浦东机场打车30分钟，比虹桥近，想下飞机直接过去玩的小伙伴可以落在浦东。\r\n\r\n　　迪士尼有两个酒店??，一个是“乐园酒店”，一个是“玩具总动员酒店”，住这两个酒店的好处是在官网预定的话可以比别人多领一张?FP(快速通行证)，可以比别人早入园，早入园的好处我后面会讲。\r\n\r\n　　两个酒店都有班车去乐园，乐园酒店的班车还要再早10分钟。', 0, '2019-06-19 09:42:48', '迪士尼乐园攻略', NULL);
 INSERT INTO `travel_strategy` VALUES ('11', '0bc85e2aa9ac44fbb6cb415271bb5014', '1）机票，3月份定港龙航空杭州直飞香港，1280/位；#原创新人#澳门—繁华又精致（4天3晚自由行）实际使用下来体验还不错~\r\n\r\n　　（3）淘宝、携程、Booking、Agoda几乎天天逛一圈，我们是提前一个月在Agoda上定的尖沙咀华美达，3晚含税1000，我就不说提前一周看的时候总价降到800多了#原创新人#澳门—繁华又精致（4天3晚自由行）\r\n\r\n　　（3）要带的东西：港澳通行证，港币（记得换些零钱，坐公交打车等），上网卡（通关处卖100港币，网上只要几十，网购需至少提前三天　\r\n买\r\n', 0, '2019-06-19 09:42:53', '香港旅游攻略', NULL);
 INSERT INTO `travel_strategy` VALUES ('12', '0bc85e2aa9ac44fbb6cb415271bb5014', '　东方明珠塔的陈列馆还是非常值得一逛哦，特别是对于上海宁，这里是上海城市历史发展陈列馆 里面很多的历史场景，也许还都是你爷爷奶奶外公外婆辈的呢呢，所以也很值得带长辈来玩 就是可能会走比较累。\r\n\r\n　　登塔时间：\r\n\r\n　　如果想看白天的上海那就下午去，最好1点-3点。如果要看太阳西落及夜景，那就5点再去（必然会排队）去之前我查过很多攻略，都说登塔排队拍了好几个小时，我下午3点去的（本来定的2点，但买喜茶耽误到3点了）排队15分钟。', 0, '2019-06-19 09:43:02', '上海东方明珠广播电视塔攻略', '123');
-INSERT INTO `travel_strategy` VALUES ('13', '0bc85e2aa9ac44fbb6cb415271bb5014', NULL, 2, '2019-06-19 09:43:07', '稻城亚丁攻略', '333322');
-INSERT INTO `travel_strategy` VALUES ('14', '0bc85e2aa9ac44fbb6cb415271bb5014', NULL, 0, '2019-06-19 09:43:17', '武夷山攻略', '11');
 INSERT INTO `travel_strategy` VALUES ('2', '0bc85e2aa9ac44fbb6cb415271bb5014', '有草原，河流，森林，口岸，能体验蒙古族和俄罗斯民族风情，不论到哪里旅游都是为了孩子开心快乐啊！\r\n\r\n　　呼伦贝尔首先是整个中国安全的地方，再有呼伦贝尔地广人稀，一公里才平均分布一人。蓝天白云绿草地，风吹草低现牛羊，带孩子亲近自然是一件特别美好的事情，而且来到草原后发现，那些高楼大厦不见了，车辆不见了，陌生人不见了，能看到的只有同行的家人和孩子。那种感觉真的是美极了。\r\n', 0, '2019-06-19 09:41:38', '游呼伦贝尔自由行攻略', NULL);
-INSERT INTO `travel_strategy` VALUES ('205abafd8971446da8eeda22e4c9ee55', '123123123', 'oldTravelRoute凄凄切切群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群oldTravelRoute凄凄切切群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群群', 2, '2019-06-15 10:18:35', 'oldTravelRoute', '');
-INSERT INTO `travel_strategy` VALUES ('3', '0bc85e2aa9ac44fbb6cb415271bb5014', NULL, 0, '2019-06-19 09:41:53', '庐山攻略', NULL);
-INSERT INTO `travel_strategy` VALUES ('34b267f02dc3490ba875202b0e138d45', '123123123', '哈哈哈哈哈哈哈哈哈哈或或或或', 0, '2019-06-19 09:59:20', 'first test', NULL);
 INSERT INTO `travel_strategy` VALUES ('4', '0bc85e2aa9ac44fbb6cb415271bb5014', '\r\n　　比起以往的大巴团，自驾，火车，航班，而邮轮对于很多人来说却还是一种全新的旅游方式，充满陌生感和新奇感。\r\n\r\n　　而这次将搭乘前往西沙设施最豪华的邮轮——长乐公主号，从三亚到西沙群岛，四天的时间，去一次便能领略西沙群岛不同海岛的风貌。\r\n\r\n　　不得不说，相比人挤人的海岛游，这确实是一次诚意满满的海岛之旅。\r\n\r\n　　整个行程节奏把控的特别好，缓解了人们在路上的奔波疲劳，更加劳逸结合。', 0, '2019-06-19 09:42:01', '西沙群岛旅游攻略', NULL);
 INSERT INTO `travel_strategy` VALUES ('5', '0bc85e2aa9ac44fbb6cb415271bb5014', '国内唯一一艘旅游潜艇，最大深度据说40米，芬兰进口，票价，不分大人小孩，超过1米，一律310元，找旅行社有优惠，260元\r\n\r\n　　分界洲岛不仅提供潜水、海钓等常规的海洋项目，而且还提供与众多海洋动物（海豚、海狮、海龟等）亲密互动的机会。\r\n\r\n　　等潜水艇游玩，上岸后，小船直接给送到海洋馆，海洋馆上午表演时间间隔较大，第一场9:30，第二场11:30\r\n\r\n　　有不少儿童互动项目：喂海豚，喂海龟\r\n意料之外的景点—海南省博物馆\r\n', 0, '2019-06-19 09:42:09', '分界洲岛攻略', NULL);
-INSERT INTO `travel_strategy` VALUES ('5c3f4532d4f94549bcecff58d2b7a29e', '0bc85e2aa9ac44fbb6cb415271bb5014', 'fffffffffffffffffffffffffffffff', 2, '2019-06-15 10:17:47', 'fffffffffffffffffffffffffff', '');
-INSERT INTO `travel_strategy` VALUES ('6', '0bc85e2aa9ac44fbb6cb415271bb5014', NULL, 0, '2019-06-19 09:42:14', '留院攻略', '水水水水水水水水是是是');
-INSERT INTO `travel_strategy` VALUES ('6d260c1eba2647ddb3de50a1642e6148', '123123123', NULL, 0, '2019-06-19 07:51:30', NULL, NULL);
-INSERT INTO `travel_strategy` VALUES ('7', '0bc85e2aa9ac44fbb6cb415271bb5014', NULL, 2, '2019-06-19 09:42:26', '天平山攻略', '111');
-INSERT INTO `travel_strategy` VALUES ('75d0c49489844a8cbf425f39672a41af', '123123123', NULL, 2, '2019-06-19 02:17:36', 'jjjjjj', '');
-INSERT INTO `travel_strategy` VALUES ('778fc56295064035b102ba279b80c5bf', '123123123', '123231231', 1, '2019-06-15 06:37:45', '3123123', NULL);
-INSERT INTO `travel_strategy` VALUES ('7b6b5e731815458087f311192c2c9a46', '123123123', 'sadas', 0, '2019-06-19 03:14:19', 'dsada', NULL);
-INSERT INTO `travel_strategy` VALUES ('7ef575e5f7604f45847f3d6c0b1bc851', '0bc85e2aa9ac44fbb6cb415271bb5014', 'ccccccccccccccccccccccccccccc', 2, '2019-06-15 10:17:28', 'cccccccccccccccccccccc', '');
 INSERT INTO `travel_strategy` VALUES ('8', '0bc85e2aa9ac44fbb6cb415271bb5014', '1、南普陀请香与别处不同：小木屋可免费请一支清香（不可多取），功德随意投入，一元二元不拘，不投也无妨；\r\n\r\n　　2、烧香的地方在天王殿外，香烛不可带进寺院里面；如随身带有香烛的，可以寄放在天王殿门口的义工处，出来时取；\r\n旅行攻略8：\r\n鼓浪屿攻略\r\n至于游玩鼓浪屿的线路，建议走经典线路：龙头路+八卦楼+菽庄花园\r\n', 0, '2019-06-19 09:42:33', '厦门大学攻略', NULL);
-INSERT INTO `travel_strategy` VALUES ('81a92fd94c5d415589c5856b516b49a3', '123123123', '21222222222222222222', 2, '2019-06-15 06:39:59', '122222222', 'qqq');
-INSERT INTO `travel_strategy` VALUES ('8ae08e34b9ff4c508887acfa9cf83024', '123123123', '这是第一个测试', 0, '2019-06-19 08:28:55', 'test1', NULL);
-INSERT INTO `travel_strategy` VALUES ('8f64563a77c14caa86f463ac9a419350', '123123123', '哈哈哈', 2, '2019-06-19 10:10:07', 'second test', '带得多');
 INSERT INTO `travel_strategy` VALUES ('9', '0bc85e2aa9ac44fbb6cb415271bb5014', '\r\n　　朱家角景区有一南一北两个门，以河道为界划分成南北两片区域，当中以放生桥相联结。放生桥\r\n\r\n　　作为“国际著名景点”，放生桥不得不看。代表朱家角形象的非他莫属，全桥总长72米，宽5.8米，高7.4米 为古代上海最大的五孔石桥。放生桥不但大气，且文气，素有“井带长虹 的美称，串起桥畔北大街上众多的百年老店。', 0, '2019-06-19 09:42:41', '朱家角古镇攻略', NULL);
-INSERT INTO `travel_strategy` VALUES ('93dc53e2cd4341078166bac2c2242c9d', '0bc85e2aa9ac44fbb6cb415271bb5014', 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 2, '2019-06-15 10:17:22', 'bbbbbbbbbbbbbbbbbbbbb', '');
-INSERT INTO `travel_strategy` VALUES ('b5d7efb0316a4aa39dfb74351be5ca4b', '123123123', '111111111111111111', 0, '2019-06-19 08:42:28', 'test3', NULL);
-INSERT INTO `travel_strategy` VALUES ('b67d401d2728404bbbe4923ebbb2e714', '0bc85e2aa9ac44fbb6cb415271bb5014', NULL, 2, '2019-06-15 10:17:41', 'eeeeeeeeeeeeeeeeeeeeeeee', '1');
-INSERT INTO `travel_strategy` VALUES ('b6a0fff2d6324e9d818498c367c8d099', '123123123', '这是第二个测试', 0, '2019-06-19 08:32:07', 'test2', NULL);
-INSERT INTO `travel_strategy` VALUES ('c338e6b8c7d64a718d91ed6d9f487c89', '0bc85e2aa9ac44fbb6cb415271bb5014', 'test', 2, '2019-06-22 02:07:09', 'test', 'qqqqqqqqqqqqqqqqq');
-INSERT INTO `travel_strategy` VALUES ('d77aca19739e4616af9221aebaf39c2b', '0bc85e2aa9ac44fbb6cb415271bb5014', 'ddddddddddddddddddddddddd', 2, '2019-06-15 10:17:34', 'ddddddddddddddddddd', '哈哈哈哈哈');
+INSERT INTO `travel_strategy` VALUES ('bd2cbc4285774cc3898e1130032f5b16', '0bc85e2aa9ac44fbb6cb415271bb5014', '1、南普陀请香与别处不同：小木屋可免费请一支清香（不可多取），功德随意投入，一元二元不拘，不投也无妨； 　　2、烧香的地方在天王殿外，香烛不可带进寺院里面；如随身带有香烛的，可以寄放在天王殿门口的义工处，出来时取； 旅行攻略8： 鼓浪屿攻略 至于游玩鼓浪屿的线路，建议走经典线路：龙头路+八卦楼+菽庄花园', 0, '2019-06-22 03:17:54', 'test', NULL);
 INSERT INTO `travel_strategy` VALUES ('d9b05e29c91942f9859a9621286421a0', '0bc85e2aa9ac44fbb6cb415271bb5014', '东方明珠塔的陈列馆还是非常值得一逛哦，特别是对于上海宁，这里是上海城市历史发展陈列馆 里面很多的历史场景，也许还都是你爷爷奶奶外公外婆辈的呢呢，所以也很值得带长辈来玩 就是可能会走比较累。 　　登塔时间： 　　如果想看白天的上海那就下午去，最好1点-3点。如果要看太阳西落及夜景，那就5点再去（必然会排队）去之前我查过很多攻略，都说登塔排队拍了好几个小时，我下午3点去的（本来定的2点，但买喜茶耽误到3点了）排队15分钟。', 2, '2019-06-22 02:17:18', '上海东方明珠攻略', '攻略写的不够详细');
-INSERT INTO `travel_strategy` VALUES ('e52faf093b25423683d7eaa634201301', '123123123', '22222222222222222', 2, '2019-06-15 06:39:14', '222222222', '');
-INSERT INTO `travel_strategy` VALUES ('fa1e67ef321a4c56956fae5a0799fb71', '0bc85e2aa9ac44fbb6cb415271bb5014', 'aaaaaaaaaaaaaaaaaaaaaaa', 2, '2019-06-15 10:17:15', 'aaaaaaaaaaaaaaa', '');
 
 -- ----------------------------
 -- Table structure for user
@@ -255,10 +216,8 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('0bc85e2aa9ac44fbb6cb415271bb5014', 'qwe', 'qwe', '张XX');
-INSERT INTO `user` VALUES ('111', 'xiong', 'xiong', '熊XX');
+INSERT INTO `user` VALUES ('0bc85e2aa9ac44fbb6cb415271bb5014', 'qwe', '1234', '张XXx');
 INSERT INTO `user` VALUES ('123123123', 'root', '111', 'admin11');
-INSERT INTO `user` VALUES ('8b03d27c1b6b43bb9c8e7287ebd97dcf', 'rootdda', '1234', NULL);
 
 -- ----------------------------
 -- Table structure for user_attractions
@@ -278,11 +237,6 @@ CREATE TABLE `user_attractions`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of user_attractions
--- ----------------------------
-INSERT INTO `user_attractions` VALUES ('315106b893a54e9c8125284a5782b33e', '0bc85e2aa9ac44fbb6cb415271bb5014', '1', NULL, '2019-06-15 07:12:04');
-
--- ----------------------------
 -- Table structure for user_hotel
 -- ----------------------------
 DROP TABLE IF EXISTS `user_hotel`;
@@ -298,11 +252,6 @@ CREATE TABLE `user_hotel`  (
   CONSTRAINT `user_hotel_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `user_hotel_ibfk_2` FOREIGN KEY (`hotel_id`) REFERENCES `hotel` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of user_hotel
--- ----------------------------
-INSERT INTO `user_hotel` VALUES ('d4c7bbe55aef4d949e35cea484bf5533', '123123123', 'fb548675a46646d3915ecfb10b677af5', NULL, '2019-06-19 03:17:02');
 
 -- ----------------------------
 -- Table structure for user_route
@@ -321,13 +270,6 @@ CREATE TABLE `user_route`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of user_route
--- ----------------------------
-INSERT INTO `user_route` VALUES ('5efba8900fdb48c48b3b171cd7703b42', '123123123', 'b83c74c939064c26bae9884fc8c488b5', '2019-06-15 08:04:29.916000');
-INSERT INTO `user_route` VALUES ('a33e4984c72f420aae9fdf2b30152add', '123123123', '631f6b34fa074dc1a2076a5c52bbbaf2', '2019-06-15 04:33:21.874000');
-INSERT INTO `user_route` VALUES ('db22bcd0d4f94eb29e17ac51c37a38da', '123123123', '15', '2019-06-19 03:14:30.536000');
-
--- ----------------------------
 -- Table structure for user_strategy
 -- ----------------------------
 DROP TABLE IF EXISTS `user_strategy`;
@@ -343,12 +285,5 @@ CREATE TABLE `user_strategy`  (
   CONSTRAINT `user_strategy_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `user_strategy_ibfk_2` FOREIGN KEY (`strategy_id`) REFERENCES `travel_strategy` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of user_strategy
--- ----------------------------
-INSERT INTO `user_strategy` VALUES ('21c6f311dfce421ab51403f9eff4796c', '123123123', '14', '2019-06-19 03:14:10', NULL);
-INSERT INTO `user_strategy` VALUES ('7e58ed4355864453a111ceb487593e1b', '0bc85e2aa9ac44fbb6cb415271bb5014', '205abafd8971446da8eeda22e4c9ee55', '2019-06-15 10:58:27', NULL);
-INSERT INTO `user_strategy` VALUES ('a4084658c59646eba00d6ea2f98a5511', '123123123', '01986ffeae9e432db5823fedbf556086', '2019-06-15 04:43:05', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;
